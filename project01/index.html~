@@ -10,7 +10,7 @@ function submitForm(){
 	if(document.feelings.feel.value == ""){
 		alert("Surely you feel something!");
 	}
-return false;
+return true;
 }
 </script>
 
@@ -41,7 +41,7 @@ return false;
 
 <div id="mainContents" class="main">
 <h2> Lorem Ipsum Dolor Sit Amet. </h2>
-<form name="feelings" action="#" onSubmit="return submitForm();return false">
+<form name="feelings" onSubmit="return submitForm()">
 <table>
 <tr>
 	<td><label for="feel"> How do you feel today? </label></td>

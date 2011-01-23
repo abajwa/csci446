@@ -1,0 +1,95 @@
+body {
+	background-color:#AAAAAA;
+	font-family:sans-serif;
+}
+h1 {
+	font-size:2.3em;
+	font-weight:bolder;
+}
+h2 {
+	font-weight:800;
+}
+h3 {
+	font-size:1em;
+	font-weight:bold;
+}
+h4 {
+	font-size:1em;
+	font-weight:normal;
+}
+h5 {
+	font-size:.8em;
+	font-weight:normal;
+}
+a {
+	text-decoration:none;
+	color:white;
+}
+a:hover {
+	color:red;
+}
+table {
+	width: 480px;
+}
+textarea {
+	font-size:.86em;
+}
+label {
+	display:inline-block;
+}
+li {
+	display:inline;
+	list-style-type:none;
+	margin-right:4em;
+	margin-left:-2em;
+}
+.main {
+	border-style:solid;
+	border-width:.12em;
+	margin-right:12em;
+	margin-left:12em;
+	padding-left:1em;
+	width: 945px;
+
+}
+div#titleBar {
+	background-color:#CCCCCC;
+	letter-spacing:-2.3px;
+	height:4.5em;
+	line-height:.2em;
+}
+div#titleBar>p {
+	color:#66666F;
+	font-weight:normal;
+	font-size:.8em;
+	letter-spacing:0px;
+}
+div#menuOptions {
+	background-color:#000000;
+	color:#FFFFFF;
+	border-color:#000000;
+	letter-spacing:-.7px;
+	line-height:1pt;
+}
+div#mainContents {
+	background-color:#FCFCFC;
+	border-bottom-color:#FCFCFC;
+	height:12em;
+	line-height:1em;
+}
+div#progressMessage {
+	background-color:#F0F0FF;
+	padding-left:.5em;
+	margin-right:13em;
+	margin-top:.5em;
+	width: 21em;
+	height:6em;
+	position:absolute;
+	margin-left:800px;
+}
+div#footer {
+	background-color:#F0F0F0;
+	text-align:center;
+	border-top-color:#F0F0F0;
+	line-height:1pt;	
+}
