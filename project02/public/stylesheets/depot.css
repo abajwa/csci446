@@ -1,5 +1,6 @@
 /* Styles for main page */
 
+<<<<<<< HEAD
 #cart, #cart table {
 	font-size: smaller;
 	color: white;
@@ -9,6 +10,8 @@
 	border-bottom: 1px dotted #595 ;
 	margin-bottom: 10px;
 }
+=======
+>>>>>>> 868e3b4fb6ae6ada719128af5d841561815cc2bc
 .cart-title {
 	font: 120% bold;
 }
