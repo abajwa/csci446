@@ -1,5 +1,2 @@
 Use this README file to introduce your application and point to useful places in the API for learning more.
 Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
-
-This program creates a store page with login functionality for both users and administrators.
-As well as the ability to remove and add users, buy items, and checkout.
