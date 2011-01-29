@@ -54,4 +54,8 @@ private
 	def find_cart
 		session[:cart] ||= Cart.new
 	end
+	
+	protected
+	def authorize
+	end
 end
