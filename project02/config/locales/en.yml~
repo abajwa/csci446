@@ -1,7 +1,4 @@
 en:
-  flash:
-    thanks:         "Thank you for your order"
-    
   checkout:
     legend:         "Please Enter your Details"
     name:           "Name"

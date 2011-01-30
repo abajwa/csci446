@@ -3,33 +3,33 @@
   
   <% form_for :order, :url => {:action => :save_order} do |form| %>
     <fieldset>
-      <legend><%= I18n.t 'checkout.legend' %></legend>
+      <legend>Please Enter Your Details</legend>
       
       <div>
-        <%= form.label :name, I18n.t('checkout.name') + ":" %>
+        <%= form.label :name, "Name:" %>
         <%= form.text_field :name, :size => 40 %>
       </div>
       
       <div>
-        <%= form.label :address, I18n.t('checkout.address') + ":" %>
+        <%= form.label :address, "Address:" %>
         <%= form.text_area :address, :rows => 3, :cols => 40 %>
       </div>
       
       <div>
-        <%= form.label :email, I18n.t('checkout.email') + ":" %>
+        <%= form.label :email, "E-Mail:" %>
         <%= form.text_field :email, :size => 40 %>
       </div>
       
       <div>
-        <%= form.label :pay_type, I18n.t('checkout.pay_type') + ":" %>
+        <%= form.label :pay_type, "Pay with:" %>
         <%=
           form.select :pay_type,
           		Order::PAYMENT_TYPES,
-          		:prompt => I18n.t('checkout.pay_prompt')
+          		:prompt => "Select a payment method"
         %>
       </div>
       
-      <%= submit_tag I18n.t('checkout.submit'), :class => "submit" %>
+      <%= submit_tag "Place Order", :class => "submit" %>
     </fieldset>
   <% end %>
 </div>

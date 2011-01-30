@@ -1,5 +1,9 @@
 /* Styles for main page */
 
+.locale {
+	float:right;
+	padding-top: 0.2em
+}
 .depot-form fieldset {
 	background: #efe;
 }
