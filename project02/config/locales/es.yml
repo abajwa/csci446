@@ -7,16 +7,16 @@ es:
       template:
         body:     "Hay problemas con los siguientes campos:"
         header:
-          one:    "1 error ha impedido que este {{model}} se guarde"
-          other:  "{{count}} errores han impedido que este {{model}} se guarde"
+          one:    "1 error ha impedido que este %{model} se guarde"
+          other:  "%{count} errores han impedido que este %{model} se guarde"
       messages:
-        inclusion: "no est&aacute; incluido en la lista"
+        inclusion: "no est\xC3\xA1 incluido en la lista"
         blank:    "no puede quedar en blanco"
     models:
       order:      "pedido"
     attributes:
       order:
-        address: "Direcci&oacute;n"
+        address: "Direcci\xC3\xB3n"
         name:   "Nombre"
         email:  "E-mail"
         pay_type: "Forma de pago"

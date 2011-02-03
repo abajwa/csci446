@@ -7527,3 +7527,950 @@ Rendered store/_cart_item (0.0ms)
 Rendered store/_cart_item (0.0ms)
 Rendered store/_cart (0.0ms)
 Completed in 50ms (View: 30, DB: 0) | 200 OK [http://localhost/store/save_order?locale=es]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-02-03 10:16:40) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Redirected to http://localhost:3000/admin/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/products]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-03 10:16:43) [GET]
+Rendering template within layouts/store
+Rendering admin/login
+Completed in 27ms (View: 24, DB: 0) | 200 OK [http://localhost/admin/login]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-03 10:16:52) [GET]
+  Parameters: {"locale"=>"en"}
+Rendering template within layouts/store
+Rendering admin/login
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/admin/login?locale=en]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-03 10:16:55) [GET]
+  Parameters: {"locale"=>"en"}
+Rendering template within layouts/store
+Rendering admin/login
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/admin/login?locale=en]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-03 10:17:04) [POST]
+  Parameters: {"name"=>"dave", "commit"=>"Login", "authenticity_token"=>"OTiRs+uYBt+abouHnpdocVmPtVKqhJ82BI/zCjI4C88=", "password"=>"secet"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."name" = 'dave') LIMIT 1[0m
+Rendering template within layouts/store
+Rendering admin/login
+Completed in 64ms (View: 48, DB: 0) | 200 OK [http://localhost/admin/login]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing AdminController#login (for 127.0.0.1 at 2011-02-03 10:17:11) [POST]
+  Parameters: {"name"=>"dave", "commit"=>"Login", "authenticity_token"=>"OTiRs+uYBt+abouHnpdocVmPtVKqhJ82BI/zCjI4C88=", "password"=>"secret"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."name" = 'dave') LIMIT 1[0m
+Redirected to http://localhost:3000/admin
+Completed in 14ms (DB: 1) | 302 Found [http://localhost/admin/login]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing AdminController#index (for 127.0.0.1 at 2011-02-03 10:17:11) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "orders" [0m
+Rendering template within layouts/store
+Rendering admin/index
+Completed in 42ms (View: 15, DB: 0) | 200 OK [http://localhost/admin]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-03 10:17:14) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" ORDER BY name[0m
+Rendering template within layouts/store
+Rendering users/index
+Completed in 37ms (View: 20, DB: 1) | 200 OK [http://localhost/users]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-02-03 10:17:16) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendering template within layouts/store
+Rendering users/new
+Completed in 33ms (View: 17, DB: 1) | 200 OK [http://localhost/users/new]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2011-02-03 10:17:18) [POST]
+  Parameters: {"commit"=>"Add User", "authenticity_token"=>"OTiRs+uYBt+abouHnpdocVmPtVKqhJ82BI/zCjI4C88=", "user"=>{"name"=>"", "password_confirmation"=>"", "password"=>""}}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."name" = '') LIMIT 1[0m
+Rendering template within layouts/store
+Rendering users/new
+Completed in 37ms (View: 18, DB: 0) | 200 OK [http://localhost/users]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-03 10:17:22) [GET]
+  Parameters: {"locale"=>"en"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" ORDER BY name[0m
+Rendering template within layouts/store
+Rendering users/index
+Completed in 63ms (View: 10, DB: 1) | 200 OK [http://localhost/users?locale=en]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-03 10:17:28) [GET]
+  Parameters: {"locale"=>"es"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" ORDER BY name[0m
+Rendering template within layouts/store
+Rendering users/index
+Completed in 28ms (View: 13, DB: 0) | 200 OK [http://localhost/users?locale=es]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-02-03 10:17:33) [GET]
+  Parameters: {"locale"=>"es"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" ORDER BY name[0m
+Rendering template within layouts/store
+Rendering users/index
+Completed in 28ms (View: 12, DB: 1) | 200 OK [http://localhost/users?locale=es]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-02-03 10:17:35) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendering template within layouts/store
+Rendering users/new
+Completed in 29ms (View: 13, DB: 2) | 200 OK [http://localhost/users/new]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-02-03 10:17:38) [GET]
+  Parameters: {"locale"=>"en"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendering template within layouts/store
+Rendering users/new
+Completed in 29ms (View: 14, DB: 1) | 200 OK [http://localhost/users/new?locale=en]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-02-03 10:17:42) [GET]
+  Parameters: {"locale"=>"es"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendering template within layouts/store
+Rendering users/new
+Completed in 23ms (View: 10, DB: 1) | 200 OK [http://localhost/users/new?locale=es]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2011-02-03 10:17:46) [POST]
+  Parameters: {"commit"=>"Add User", "authenticity_token"=>"OTiRs+uYBt+abouHnpdocVmPtVKqhJ82BI/zCjI4C88=", "user"=>{"name"=>"", "password_confirmation"=>"", "password"=>""}}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."name" = '') LIMIT 1[0m
+Rendering template within layouts/store
+Rendering users/new
+Completed in 76ms (View: 17, DB: 2) | 200 OK [http://localhost/users]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2011-02-03 10:18:21) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" [0m
+Rendering template within layouts/store
+Rendering products/index
+Completed in 51ms (View: 26, DB: 1) | 200 OK [http://localhost/products]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 10:18:28) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (4.0ms)
+Completed in 40ms (View: 29, DB: 1) | 200 OK [http://localhost/store]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 10:18:31) [GET]
+  Parameters: {"locale"=>"en"}
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (2.0ms)
+Completed in 30ms (View: 18, DB: 0) | 200 OK [http://localhost/store?locale=en]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 10:18:33) [GET]
+  Parameters: {"locale"=>"en"}
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (2.0ms)
+Completed in 36ms (View: 22, DB: 1) | 200 OK [http://localhost/store?locale=en]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2011-02-03 10:18:34) [POST]
+  Parameters: {"commit"=>"Add to Cart", "authenticity_token"=>"OTiRs+uYBt+abouHnpdocVmPtVKqhJ82BI/zCjI4C88=", "id"=>"2"}
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 2) [0m
+Rendering store/add_to_cart
+Rendered store/_cart_item (4.0ms)
+Rendered store/_cart (12.0ms)
+Completed in 34ms (View: 18, DB: 1) | 200 OK [http://localhost/store/add_to_cart/2]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2011-02-03 10:18:35) [POST]
+  Parameters: {"commit"=>"Add to Cart", "authenticity_token"=>"OTiRs+uYBt+abouHnpdocVmPtVKqhJ82BI/zCjI4C88=", "id"=>"2"}
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 2) [0m
+Rendering store/add_to_cart
+Rendered store/_cart_item (2.0ms)
+Rendered store/_cart (9.0ms)
+Completed in 32ms (View: 12, DB: 1) | 200 OK [http://localhost/store/add_to_cart/2]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#checkout (for 127.0.0.1 at 2011-02-03 10:18:36) [POST]
+  Parameters: {"authenticity_token"=>"OTiRs+uYBt+abouHnpdocVmPtVKqhJ82BI/zCjI4C88="}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (2.0ms)
+Rendered store/_cart (5.0ms)
+Completed in 45ms (View: 27, DB: 1) | 200 OK [http://localhost/store/checkout]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#checkout (for 127.0.0.1 at 2011-02-03 10:18:42) [GET]
+  Parameters: {"locale"=>"en"}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (2.0ms)
+Rendered store/_cart (4.0ms)
+Completed in 73ms (View: 15, DB: 0) | 200 OK [http://localhost/store/checkout?locale=en]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2011-02-03 10:18:43) [POST]
+  Parameters: {"commit"=>"Place Order", "authenticity_token"=>"OTiRs+uYBt+abouHnpdocVmPtVKqhJ82BI/zCjI4C88=", "order"=>{"address"=>"", "name"=>"", "pay_type"=>"", "email"=>""}}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (1.0ms)
+Rendered store/_cart (3.0ms)
+Completed in 79ms (View: 33, DB: 0) | 200 OK [http://localhost/store/save_order]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2011-02-03 10:18:47) [GET]
+  Parameters: {"locale"=>"en"}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (3.0ms)
+Completed in 63ms (View: 33, DB: 1) | 200 OK [http://localhost/store/save_order?locale=en]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2011-02-03 10:18:50) [GET]
+  Parameters: {"locale"=>"es"}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (2.0ms)
+Rendered store/_cart (4.0ms)
+Completed in 125ms (View: 90, DB: 0) | 200 OK [http://localhost/store/save_order?locale=es]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2011-02-03 10:18:57) [POST]
+  Parameters: {"commit"=>"Realizar Pedido", "authenticity_token"=>"OTiRs+uYBt+abouHnpdocVmPtVKqhJ82BI/zCjI4C88=", "order"=>{"address"=>"xfgsdfgdf", "name"=>"", "pay_type"=>"", "email"=>""}}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (1.0ms)
+Rendered store/_cart (4.0ms)
+Completed in 68ms (View: 32, DB: 0) | 200 OK [http://localhost/store/save_order]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2011-02-03 10:24:09) [POST]
+  Parameters: {"commit"=>"Realizar Pedido", "authenticity_token"=>"OTiRs+uYBt+abouHnpdocVmPtVKqhJ82BI/zCjI4C88=", "order"=>{"address"=>"xfgsdfgdf", "name"=>"", "pay_type"=>"", "email"=>""}}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (0.0ms)
+Completed in 50ms (View: 20, DB: 0) | 200 OK [http://localhost/store/save_order]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 10:24:13) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (10.0ms)
+Completed in 40ms (View: 30, DB: 0) | 200 OK [http://localhost/store]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 10:24:15) [GET]
+  Parameters: {"locales"=>"en"}
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (0.0ms)
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/store?locales=en]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 10:24:28) [GET]
+  Parameters: {"locales"=>"en"}
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (0.0ms)
+Completed in 50ms (View: 30, DB: 0) | 200 OK [http://localhost/store?locales=en]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 10:24:30) [GET]
+  Parameters: {"localeto_s"=>"en"}
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (0.0ms)
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/store?localeto_s=en]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 10:24:32) [GET]
+  Parameters: {"localeto_s"=>"en"}
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (10.0ms)
+Completed in 40ms (View: 30, DB: 0) | 200 OK [http://localhost/store?localeto_s=en]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 10:24:48) [GET]
+  Parameters: {"localeto_s"=>"en"}
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (10.0ms)
+Rendered store/_cart (10.0ms)
+Completed in 60ms (View: 30, DB: 0) | 200 OK [http://localhost/store?localeto_s=en]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 10:24:51) [GET]
+  Parameters: {"localeto_s"=>"en"}
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (30.0ms)
+Rendered store/_cart (40.0ms)
+Completed in 80ms (View: 60, DB: 10) | 200 OK [http://localhost/store?localeto_s=en]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 10:25:24) [GET]
+  Parameters: {"localeto_s"=>"en"}
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (10.0ms)
+Rendered store/_cart (10.0ms)
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/store?localeto_s=en]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 10:25:26) [GET]
+  Parameters: {"locale to_s"=>"en"}
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (10.0ms)
+Completed in 40ms (View: 30, DB: 0) | 200 OK [http://localhost/store?locale+to_s=en]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 10:28:02) [GET]
+  Parameters: {"locale to_s"=>"en"}
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (0.0ms)
+Completed in 70ms (View: 60, DB: 0) | 200 OK [http://localhost/store?locale+to_s=en]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 10:28:04) [GET]
+  Parameters: {"locale"=>"en"}
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (0.0ms)
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/store?locale=en]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 10:28:06) [GET]
+  Parameters: {"locale"=>"en"}
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (0.0ms)
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/store?locale=en]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 10:31:53) [GET]
+  Parameters: {"locale"=>"en"}
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+
+ActionView::TemplateError (undefined method `localeto_s' for I18n:Module) on line #12 of app/views/layouts/store.html.erb:
+9: <body id="store">
+10:   <div id="banner">
+11:    <% form_tag '', :method => 'GET', :class => 'locale' do %>
+12:     <%= select_tag 'locale', options_for_select(LANGUAGES, I18n.localeto_s),
+13:       :onchange => 'this.form.submit()' %>
+14:     <%= submit_tag 'submit' %>
+15:     <%= javascript_tag "$$('.locale input').each(Element.hide)" %>
+
+    app/views/layouts/store.html.erb:12
+    app/views/layouts/store.html.erb:11
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (30.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 10:32:07) [GET]
+  Parameters: {"locale"=>"en"}
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+
+ActionView::TemplateError (undefined method `locales' for I18n:Module) on line #12 of app/views/layouts/store.html.erb:
+9: <body id="store">
+10:   <div id="banner">
+11:    <% form_tag '', :method => 'GET', :class => 'locale' do %>
+12:     <%= select_tag 'locale', options_for_select(LANGUAGES, I18n.locales),
+13:       :onchange => 'this.form.submit()' %>
+14:     <%= submit_tag 'submit' %>
+15:     <%= javascript_tag "$$('.locale input').each(Element.hide)" %>
+
+    app/views/layouts/store.html.erb:12
+    app/views/layouts/store.html.erb:11
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (70.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 10:32:49) [GET]
+  Parameters: {"locale"=>"en"}
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (0.0ms)
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/store?locale=en]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 10:32:52) [GET]
+  Parameters: {"locale"=>"en"}
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (0.0ms)
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/store?locale=en]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 10:33:44) [GET]
+  Parameters: {"locale"=>"en"}
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (0.0ms)
+Completed in 70ms (View: 20, DB: 0) | 200 OK [http://localhost/store?locale=en]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 10:33:46) [GET]
+  Parameters: {"locale"=>"es"}
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (10.0ms)
+Completed in 40ms (View: 30, DB: 0) | 200 OK [http://localhost/store?locale=es]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 10:33:48) [GET]
+  Parameters: {"locale"=>"en"}
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (0.0ms)
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/store?locale=en]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 10:33:50) [GET]
+  Parameters: {"locale"=>"es"}
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (0.0ms)
+Completed in 70ms (View: 20, DB: 0) | 200 OK [http://localhost/store?locale=es]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 10:33:51) [GET]
+  Parameters: {"locale"=>"en"}
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (0.0ms)
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/store?locale=en]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#empty_cart (for 127.0.0.1 at 2011-02-03 10:36:57) [POST]
+  Parameters: {"authenticity_token"=>"OTiRs+uYBt+abouHnpdocVmPtVKqhJ82BI/zCjI4C88="}
+Redirected to http://localhost:3000/store
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/store/empty_cart]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 10:36:57) [GET]
+  [4;36;1mProduct Load (10.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (0.0ms)
+Completed in 20ms (View: 10, DB: 10) | 200 OK [http://localhost/store]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2011-02-03 10:37:02) [POST]
+  Parameters: {"commit"=>"Add to Cart", "authenticity_token"=>"OTiRs+uYBt+abouHnpdocVmPtVKqhJ82BI/zCjI4C88=", "id"=>"3"}
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 3) [0m
+Rendering store/add_to_cart
+Rendered store/_cart_item (10.0ms)
+Rendered store/_cart (10.0ms)
+Completed in 30ms (View: 10, DB: 0) | 200 OK [http://localhost/store/add_to_cart/3]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 10:37:04) [GET]
+  Parameters: {"locale"=>"es"}
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (10.0ms)
+Completed in 40ms (View: 30, DB: 0) | 200 OK [http://localhost/store?locale=es]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#empty_cart (for 127.0.0.1 at 2011-02-03 10:37:05) [POST]
+  Parameters: {"authenticity_token"=>"OTiRs+uYBt+abouHnpdocVmPtVKqhJ82BI/zCjI4C88="}
+Redirected to http://localhost:3000/store
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/store/empty_cart]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 10:37:05) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (0.0ms)
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/store]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2011-02-03 10:37:07) [POST]
+  Parameters: {"commit"=>"Añadir al Carrito", "authenticity_token"=>"OTiRs+uYBt+abouHnpdocVmPtVKqhJ82BI/zCjI4C88=", "id"=>"2"}
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 2) [0m
+Rendering store/add_to_cart
+Rendered store/_cart_item (10.0ms)
+Rendered store/_cart (50.0ms)
+Completed in 60ms (View: 50, DB: 0) | 200 OK [http://localhost/store/add_to_cart/2]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#checkout (for 127.0.0.1 at 2011-02-03 10:37:08) [POST]
+  Parameters: {"authenticity_token"=>"OTiRs+uYBt+abouHnpdocVmPtVKqhJ82BI/zCjI4C88="}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (10.0ms)
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/store/checkout]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2011-02-03 10:37:10) [POST]
+  Parameters: {"commit"=>"Realizar Pedido", "authenticity_token"=>"OTiRs+uYBt+abouHnpdocVmPtVKqhJ82BI/zCjI4C88=", "order"=>{"address"=>"", "name"=>"", "pay_type"=>"", "email"=>""}}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (0.0ms)
+Completed in 60ms (View: 30, DB: 0) | 200 OK [http://localhost/store/save_order]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2011-02-03 10:39:18) [POST]
+  Parameters: {"commit"=>"Realizar Pedido", "authenticity_token"=>"OTiRs+uYBt+abouHnpdocVmPtVKqhJ82BI/zCjI4C88=", "order"=>{"address"=>"", "name"=>"", "pay_type"=>"", "email"=>""}}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (40.0ms)
+Completed in 80ms (View: 60, DB: 0) | 200 OK [http://localhost/store/save_order]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2011-02-03 10:40:02) [POST]
+  Parameters: {"commit"=>"Realizar Pedido", "authenticity_token"=>"OTiRs+uYBt+abouHnpdocVmPtVKqhJ82BI/zCjI4C88=", "order"=>{"address"=>"", "name"=>"", "pay_type"=>"", "email"=>""}}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (0.0ms)
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/store/save_order]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2011-02-03 10:40:25) [POST]
+  Parameters: {"commit"=>"Realizar Pedido", "authenticity_token"=>"OTiRs+uYBt+abouHnpdocVmPtVKqhJ82BI/zCjI4C88=", "order"=>{"address"=>"", "name"=>"", "pay_type"=>"", "email"=>""}}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (10.0ms)
+Completed in 80ms (View: 60, DB: 0) | 200 OK [http://localhost/store/save_order]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2011-02-03 10:42:42) [GET]
+  Parameters: {"locale"=>"en"}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (10.0ms)
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/store/save_order?locale=en]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2011-02-03 10:42:45) [GET]
+  Parameters: {"locale"=>"es"}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (0.0ms)
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/store/save_order?locale=es]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2011-02-03 10:46:13) [GET]
+  Parameters: {"locale"=>"es"}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (0.0ms)
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/store/save_order?locale=es]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2011-02-03 10:46:23) [GET]
+  Parameters: {"locale"=>"es"}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (10.0ms)
+Rendered store/_cart (10.0ms)
+Completed in 60ms (View: 30, DB: 0) | 200 OK [http://localhost/store/save_order?locale=es]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2011-02-03 10:48:47) [GET]
+  Parameters: {"locale"=>"es"}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (0.0ms)
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/store/save_order?locale=es]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2011-02-03 10:49:09) [GET]
+  Parameters: {"locale"=>"es"}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (10.0ms)
+Completed in 50ms (View: 30, DB: 0) | 200 OK [http://localhost/store/save_order?locale=es]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2011-02-03 11:47:33) [GET]
+  Parameters: {"locale"=>"es"}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (0.0ms)
+Completed in 50ms (View: 20, DB: 0) | 200 OK [http://localhost/store/save_order?locale=es]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2011-02-03 11:47:46) [GET]
+  Parameters: {"locale"=>"es"}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (0.0ms)
+Completed in 60ms (View: 30, DB: 0) | 200 OK [http://localhost/store/save_order?locale=es]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2011-02-03 11:49:32) [GET]
+  Parameters: {"locale"=>"es"}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (0.0ms)
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/store/save_order?locale=es]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2011-02-03 11:56:34) [GET]
+  Parameters: {"locale"=>"es"}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (10.0ms)
+Rendered store/_cart (10.0ms)
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/store/save_order?locale=es]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2011-02-03 11:57:01) [GET]
+  Parameters: {"locale"=>"es"}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (10.0ms)
+Completed in 60ms (View: 30, DB: 0) | 200 OK [http://localhost/store/save_order?locale=es]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2011-02-03 11:57:47) [GET]
+  Parameters: {"locale"=>"es"}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (0.0ms)
+Completed in 80ms (View: 60, DB: 0) | 200 OK [http://localhost/store/save_order?locale=es]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2011-02-03 11:58:13) [GET]
+  Parameters: {"locale"=>"es"}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (0.0ms)
+Completed in 60ms (View: 30, DB: 0) | 200 OK [http://localhost/store/save_order?locale=es]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2011-02-03 12:42:17) [GET]
+  Parameters: {"locale"=>"es"}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (10.0ms)
+Completed in 90ms (View: 60, DB: 0) | 200 OK [http://localhost/store/save_order?locale=es]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2011-02-03 12:43:43) [GET]
+  Parameters: {"locale"=>"es"}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (0.0ms)
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/store/save_order?locale=es]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2011-02-03 12:43:52) [POST]
+  Parameters: {"commit"=>"Realizar Pedido", "authenticity_token"=>"OTiRs+uYBt+abouHnpdocVmPtVKqhJ82BI/zCjI4C88=", "order"=>{"address"=>"", "name"=>"", "pay_type"=>"", "email"=>""}}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (10.0ms)
+Completed in 90ms (View: 30, DB: 0) | 200 OK [http://localhost/store/save_order]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#checkout (for 127.0.0.1 at 2011-02-03 12:43:55) [POST]
+  Parameters: {"authenticity_token"=>"OTiRs+uYBt+abouHnpdocVmPtVKqhJ82BI/zCjI4C88="}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (10.0ms)
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/store/checkout]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2011-02-03 12:43:57) [POST]
+  Parameters: {"commit"=>"Realizar Pedido", "authenticity_token"=>"OTiRs+uYBt+abouHnpdocVmPtVKqhJ82BI/zCjI4C88=", "order"=>{"address"=>"", "name"=>"", "pay_type"=>"", "email"=>""}}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (0.0ms)
+Completed in 60ms (View: 30, DB: 0) | 200 OK [http://localhost/store/save_order]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#empty_cart (for 127.0.0.1 at 2011-02-03 12:43:58) [POST]
+  Parameters: {"authenticity_token"=>"OTiRs+uYBt+abouHnpdocVmPtVKqhJ82BI/zCjI4C88="}
+Redirected to http://localhost:3000/store
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/store/empty_cart]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 12:43:58) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (0.0ms)
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/store]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2011-02-03 12:44:00) [POST]
+  Parameters: {"commit"=>"Añadir al Carrito", "authenticity_token"=>"OTiRs+uYBt+abouHnpdocVmPtVKqhJ82BI/zCjI4C88=", "id"=>"2"}
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 2) [0m
+Rendering store/add_to_cart
+Rendered store/_cart_item (10.0ms)
+Rendered store/_cart (10.0ms)
+Completed in 30ms (View: 10, DB: 0) | 200 OK [http://localhost/store/add_to_cart/2]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2011-02-03 12:44:01) [POST]
+  Parameters: {"commit"=>"Añadir al Carrito", "authenticity_token"=>"OTiRs+uYBt+abouHnpdocVmPtVKqhJ82BI/zCjI4C88=", "id"=>"4"}
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 4) [0m
+Rendering store/add_to_cart
+Rendered store/_cart_item (10.0ms)
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (10.0ms)
+Completed in 30ms (View: 10, DB: 0) | 200 OK [http://localhost/store/add_to_cart/4]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2011-02-03 12:44:03) [POST]
+  Parameters: {"commit"=>"Añadir al Carrito", "authenticity_token"=>"OTiRs+uYBt+abouHnpdocVmPtVKqhJ82BI/zCjI4C88=", "id"=>"3"}
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 3) [0m
+Rendering store/add_to_cart
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (10.0ms)
+Completed in 30ms (View: 10, DB: 0) | 200 OK [http://localhost/store/add_to_cart/3]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 12:44:05) [GET]
+  Parameters: {"locale"=>"en"}
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (10.0ms)
+Completed in 80ms (View: 30, DB: 0) | 200 OK [http://localhost/store?locale=en]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 12:44:06) [GET]
+  Parameters: {"locale"=>"es"}
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart_item (10.0ms)
+Rendered store/_cart_item (0.0ms)
+Rendered store/_cart (10.0ms)
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/store?locale=es]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#empty_cart (for 127.0.0.1 at 2011-02-03 12:44:07) [POST]
+  Parameters: {"authenticity_token"=>"OTiRs+uYBt+abouHnpdocVmPtVKqhJ82BI/zCjI4C88="}
+Redirected to http://localhost:3000/store
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/store/empty_cart]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 12:44:07) [GET]
+  [4;35;1mProduct Load (0.0ms)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (0.0ms)
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/store]
+DEPRECATION WARNING: protect_from_forgery only takes :only and :except options now. :digest and :secret have no effect. (called from C:/web/project02/app/controllers/application_controller.rb:10)
+
+
+Processing StoreController#index (for 127.0.0.1 at 2011-02-03 12:44:10) [GET]
+  [4;36;1mProduct Load (0.0ms)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (40.0ms)
+Completed in 80ms (View: 70, DB: 0) | 200 OK [http://localhost/store]
