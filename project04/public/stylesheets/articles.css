@@ -1,0 +1,22 @@
+/* Styles for main page */
+
+div#header {
+	text-align: center;
+}
+
+tr.titles {
+	text-align: left;
+	background-color: #CCCCCC;
+}
+
+tr.odd {
+	background-color: #EEEEEE;
+}
+
+td.button {
+	background-color: #FFFFFF;
+}
+
+td.t {
+	width: 50px;
+}

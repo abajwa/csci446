@@ -1,0 +1,5 @@
+/* Styles for main page */
+
+h1 {
+	text-algin: center;
+}
