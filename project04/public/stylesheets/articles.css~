@@ -1,5 +1,24 @@
 /* Styles for main page */
 
-h1 {
-	text-algin: center;
+div#header {
+	text-align: center;
+}
+
+table {
+}
+td {
+}
+
+tr.titles {
+	text-align: left;
+	background-color: #CCCCCC;
+}
+
+tr.odd {
+	background-color: #EEEEEE;
+}
+
+td.button {
+	background-color: #FFFFFF;
+	
 }

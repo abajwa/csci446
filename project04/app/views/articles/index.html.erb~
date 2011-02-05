@@ -1,10 +1,16 @@
+<div id="header">
 <h1>Articl.es</h1>
 <p>...with a name .com hipsters love!</p>
+</div>
 
 <h2>All the World's Articles</h2>
 
+<div id="newArticle">
+<%= link_to image_tag("new.jpg", :border=>0), new_article_path %>
+</div>
+
 <table>
-  <tr>
+  <tr class="titles">
     <th>Title</th>
     <th>Author name</th>
     <th>Body</th>
@@ -12,20 +18,17 @@
   </tr>
 
 <% @articles.each do |article| %>
-  <tr>
+  <tr class="<%= cycle('odd', 'even') %>">
     <td><%=h article.title %></td>
     <td><%=h article.author_name %></td>
     <td><%=h article.body %></td>
     <td><%=h article.creation_date %></td>
-    <td><%= link_to image_tag("view.jpg", :border=>0), article %></td>
-    <td><%= link_to image_tag("edit.jpg", :border=>0), edit_article_path(article) %></td>
-    <td><%= link_to image_tag("delete.jpg", :border=>0), article, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td class="button"><%= link_to image_tag("view.jpg", :border=>0), article %></td>
+    <td class="button"><%= link_to image_tag("edit.jpg", :border=>0), edit_article_path(article) %></td>
+    <td class="button"><%= link_to image_tag("delete.jpg", :border=>0), article, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<div id="newArticle">
-<%= link_to image_tag("new.jpg", :border=>0), new_article_path %>
-</div>
