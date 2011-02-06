@@ -24,7 +24,10 @@
     <%= f.label :body %>
     <%= f.text_area :body %>
   </p>
+  <br />
   <p>
+    <div id="submitButton">
     <%= image_submit_tag "save.jpg", :title => "save changes made to the article" %>
+    </div>
   </p>
 <% end %>

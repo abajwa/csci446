@@ -55,6 +55,9 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def store_location
+  	  session[:return_to] = request.request_uri
+  end
   # PUT /articles/1
   # PUT /articles/1.xml
   def update
@@ -63,7 +66,7 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       if @article.update_attributes(params[:article])
-        format.html { redirect_to(@article, :notice => 'Article was successfully updated.') }
+      	      format.html { redirect_to(@article, :notice => 'Article was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
