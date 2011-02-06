@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(:version => 20110205224159) do
     t.string   "creation_date"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "edits"
+    t.integer  "edits",         :default => 0
   end
 
 end

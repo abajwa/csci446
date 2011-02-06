@@ -5,6 +5,6 @@ class Article < ActiveRecord::Base
 	
 	protected
 	def author_cannot_be_sally
-		errors.add(:author_name, 'cannot be Sally') if author_name.scan(/isally/)
+		errors.add(:author_name, 'cannot be Sally') if author_name.match(/sally/i)
 	end
 end

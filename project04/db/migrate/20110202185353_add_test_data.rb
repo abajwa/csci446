@@ -15,7 +15,7 @@ class AddTestData < ActiveRecord::Migration
   	  	  	</p>},
   	  	  	:creation_date => 'Tuesday, Dec 6 2011')
   	  
-  	  Article.create(:title => 'Lorem Ipsum',
+  	  Article.create(:title => 'Lorem Ipsum2',
   	  	  :author_name => 'Robert Frost',
   	  	  :body =>
   	  	  %{<p> Lorem ipsum dolor sit amet, consectetur adipisicing 
@@ -29,7 +29,7 @@ class AddTestData < ActiveRecord::Migration
   	  	  	</p>},
   	  	  	:creation_date => 'Tuesday, Dec 6 2011')
   	  
-  	  Article.create(:title => 'Lorem Ipsum',
+  	  Article.create(:title => 'Lorem Ipsum3',
   	  	  :author_name => 'Robert Frost',
   	  	  :body =>
   	  	  %{<p> Lorem ipsum dolor sit amet, consectetur adipisicing 
@@ -43,7 +43,7 @@ class AddTestData < ActiveRecord::Migration
   	  	  	</p>},
   	  	  	:creation_date => 'Tuesday, Dec 6 2011')
   	  
-  	  Article.create(:title => 'Lorem Ipsum',
+  	  Article.create(:title => 'Lorem Ipsum4',
   	  	  :author_name => 'Robert Frost',
   	  	  :body =>
   	  	  %{<p> Lorem ipsum dolor sit amet, consectetur adipisicing 
