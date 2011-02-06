@@ -3887,3 +3887,323 @@ Processing ArticlesController#index (for 127.0.0.1 at 2011-02-05 19:27:59) [GET]
 Rendering template within layouts/articles
 Rendering articles/index
 Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-05 19:40:46) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/8/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2011-02-05 19:40:55) [PUT]
+  Parameters: {"article"=>{"body"=>"sfdsfsdfsdfsdfs\r\n\r\n\r\nthis is after two line breaks", "author_name"=>"no", "title"=>"wetewe"}, "x"=>"57", "y"=>"16", "authenticity_token"=>"xoj3RrhnU7gL+WS6o51VJEN3IpNja28BBzysjobeaq0=", "id"=>"8"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+  [4;35;1mArticle Update (0.0ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2011-02-06 02:40:55', "edits" = 1, "body" = 'sfdsfsdfsdfsdfs
+
+
+this is after two line breaks' WHERE "id" = 8[0m
+Redirected to http://localhost:3000/articles/8
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/articles/8]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 19:40:55) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/8]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-05 19:40:57) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 28ms (View: 28, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 19:40:58) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/8]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-05 19:41:00) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/8/edit]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 19:41:02) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/8]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 19:41:54) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mArticle Load (15.6ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `simple_format' for "sfdsfsdfsdfsdfs\r\n\r\n\r\nthis is after two line breaks":String) on line #23 of app/views/articles/show.html.erb:
+20: 
+21: <div id="body">
+22: <p>
+23: <%=h @article.body.simple_format %>
+24: </p>
+25: </div>
+
+    app/views/articles/show.html.erb:23
+    app/controllers/articles_controller.rb:20:in `show'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 19:42:13) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/articles/8]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-05 19:42:18) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/articles/8/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2011-02-05 19:42:32) [PUT]
+  Parameters: {"article"=>{"body"=>"sfdsfsdfsdfsdfs\r\n\r\n\r\nthis is after two line breaks\r\n\r\nsome more stuff with line breaks\r\nthis is a paragraph yay", "author_name"=>"no", "title"=>"wetewe"}, "x"=>"80", "y"=>"19", "authenticity_token"=>"xoj3RrhnU7gL+WS6o51VJEN3IpNja28BBzysjobeaq0=", "id"=>"8"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+  [4;36;1mArticle Update (0.0ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2011-02-06 02:42:32', "edits" = 2, "body" = 'sfdsfsdfsdfsdfs
+
+
+this is after two line breaks
+
+some more stuff with line breaks
+this is a paragraph yay' WHERE "id" = 8[0m
+Redirected to http://localhost:3000/articles/8
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/articles/8]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 19:42:32) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/8]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-05 19:42:34) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-05 19:42:36) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3/edit]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-05 19:42:38) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 19:42:39) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 33ms (View: 18, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-05 19:42:42) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/articles/3/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2011-02-05 19:42:59) [PUT]
+  Parameters: {"article"=>{"body"=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco\r\n  \t  \t  \tlaboris nisi ut aliquip ex ea commodo consequat. Duis aute irure \r\n  \t  \t  \tdolor in reprehenderit in voluptate velit esse cillum dolore eu \r\n  \t  \t  \tfugiat nulla pariatur. Excepteur sint occaecat cupidatat non \r\n  \t  \t  \tproident, sunt in culpa qui officia deserunt mollit anim id est \r\n  \t  \t  \tlaborum.\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco\r\n  \t  \t  \tlaboris nisi ut aliquip ex ea commodo consequat. Duis aute irure \r\n  \t  \t  \tdolor in reprehenderit in voluptate velit esse cillum dolore eu \r\n  \t  \t  \tfugiat nulla pariatur. Excepteur sint occaecat cupidatat non \r\n  \t  \t  \tproident, sunt in culpa qui officia deserunt mollit anim id est \r\n  \t  \t  \tlaborum.", "author_name"=>"Robert Frost", "title"=>"Lorem Ipsum"}, "x"=>"71", "y"=>"14", "authenticity_token"=>"xoj3RrhnU7gL+WS6o51VJEN3IpNja28BBzysjobeaq0=", "id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;36;1mArticle Update (0.0ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2011-02-06 02:42:59', "edits" = 4, "body" = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/articles/3
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 19:42:59) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 60ms (View: 10, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-05 19:43:01) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/articles/3/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2011-02-05 19:43:11) [PUT]
+  Parameters: {"article"=>{"body"=>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco\r\n  \t  \t  \tlaboris nisi ut aliquip ex ea commodo consequat. Duis aute irure \r\n  \t  \t  \tdolor in reprehenderit in voluptate velit esse cillum dolore eu \r\n  \t  \t  \tfugiat nulla pariatur. Excepteur sint occaecat cupidatat non \r\n  \t  \t  \tproident, sunt in culpa qui officia deserunt mollit anim id est \r\n  \t  \t  \tlaborum.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco\r\n  \t  \t  \tlaboris nisi ut aliquip ex ea commodo consequat. Duis aute irure \r\n  \t  \t  \tdolor in reprehenderit in voluptate velit esse cillum dolore eu \r\n  \t  \t  \tfugiat nulla pariatur. Excepteur sint occaecat cupidatat non \r\n  \t  \t  \tproident, sunt in culpa qui officia deserunt mollit anim id est \r\n  \t  \t  \tlaborum.", "author_name"=>"Robert Frost", "title"=>"Lorem Ipsum"}, "x"=>"82", "y"=>"17", "authenticity_token"=>"xoj3RrhnU7gL+WS6o51VJEN3IpNja28BBzysjobeaq0=", "id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;36;1mArticle Update (0.0ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2011-02-06 02:43:11', "edits" = 5, "body" = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/articles/3
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 19:43:11) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 30ms (View: 10, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-05 19:43:13) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 33ms (View: 18, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-05 19:43:48) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/articles/3/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2011-02-05 19:43:54) [PUT]
+  Parameters: {"article"=>{"body"=>"     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco\r\n  \t  \t  \tlaboris nisi ut aliquip ex ea commodo consequat. Duis aute irure \r\n  \t  \t  \tdolor in reprehenderit in voluptate velit esse cillum dolore eu \r\n  \t  \t  \tfugiat nulla pariatur. Excepteur sint occaecat cupidatat non \r\n  \t  \t  \tproident, sunt in culpa qui officia deserunt mollit anim id est \r\n  \t  \t  \tlaborum.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco\r\n  \t  \t  \tlaboris nisi ut aliquip ex ea commodo consequat. Duis aute irure \r\n  \t  \t  \tdolor in reprehenderit in voluptate velit esse cillum dolore eu \r\n  \t  \t  \tfugiat nulla pariatur. Excepteur sint occaecat cupidatat non \r\n  \t  \t  \tproident, sunt in culpa qui officia deserunt mollit anim id est \r\n  \t  \t  \tlaborum.", "author_name"=>"Robert Frost", "title"=>"Lorem Ipsum"}, "x"=>"43", "y"=>"12", "authenticity_token"=>"xoj3RrhnU7gL+WS6o51VJEN3IpNja28BBzysjobeaq0=", "id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;36;1mArticle Update (0.0ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2011-02-06 02:43:54', "edits" = 6, "body" = ' Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/articles/3
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 19:43:54) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 28ms (View: 10, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-05 19:44:01) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2011-02-05 19:44:05) [PUT]
+  Parameters: {"article"=>{"body"=>"     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco\r\n  \t  \t  \tlaboris nisi ut aliquip ex ea commodo consequat. Duis aute irure \r\n  \t  \t  \tdolor in reprehenderit in voluptate velit esse cillum dolore eu \r\n  \t  \t  \tfugiat nulla pariatur. Excepteur sint occaecat cupidatat non \r\n  \t  \t  \tproident, sunt in culpa qui officia deserunt mollit anim id est \r\n  \t  \t  \tlaborum.\r\n\r\n     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco\r\n  \t  \t  \tlaboris nisi ut aliquip ex ea commodo consequat. Duis aute irure \r\n  \t  \t  \tdolor in reprehenderit in voluptate velit esse cillum dolore eu \r\n  \t  \t  \tfugiat nulla pariatur. Excepteur sint occaecat cupidatat non \r\n  \t  \t  \tproident, sunt in culpa qui officia deserunt mollit anim id est \r\n  \t  \t  \tlaborum.", "author_name"=>"Robert Frost", "title"=>"Lorem Ipsum"}, "x"=>"49", "y"=>"19", "authenticity_token"=>"xoj3RrhnU7gL+WS6o51VJEN3IpNja28BBzysjobeaq0=", "id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;36;1mArticle Update (0.0ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2011-02-06 02:44:05', "edits" = 7, "body" = ' Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+
+ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/articles/3
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 19:44:05) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 11ms (View: 10, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-05 19:44:08) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 62ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]

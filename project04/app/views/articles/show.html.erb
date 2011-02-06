@@ -20,6 +20,6 @@ by <%=h @article.author_name %>. <%=h @article.edits %> edits since <%=h @articl
 
 <div id="body">
 <p>
-<%=h @article.body %>
+<%=h simple_format(@article.body) %>
 </p>
 </div>
