@@ -3728,3 +3728,162 @@ Processing ArticlesController#index (for 127.0.0.1 at 2011-02-05 19:23:33) [GET]
 Rendering template within layouts/articles
 Rendering articles/index
 Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-05 19:27:15) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-05 19:27:16) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 74ms (View: 10, DB: 0) | 200 OK [http://localhost/articles/3/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2011-02-05 19:27:18) [PUT]
+  Parameters: {"article"=>{"body"=>"<p> Lorem ipsum dolor sit amet, consectetur adipisicing \r\n  \t  \t  \telit, sed do eiusmod tempor incididunt ut labore et dolore magna \r\n  \t  \t  \taliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco\r\n  \t  \t  \tlaboris nisi ut aliquip ex ea commodo consequat. Duis aute irure \r\n  \t  \t  \tdolor in reprehenderit in voluptate velit esse cillum dolore eu \r\n  \t  \t  \tfugiat nulla pariatur. Excepteur sint occaecat cupidatat non \r\n  \t  \t  \tproident, sunt in culpa qui officia deserunt mollit anim id est \r\n  \t  \t  \tlaborum.\r\n  \t  \t  \t</p>", "author_name"=>"Robert Frost", "title"=>"Lorem Ipsum"}, "x"=>"65", "y"=>"22", "authenticity_token"=>"xoj3RrhnU7gL+WS6o51VJEN3IpNja28BBzysjobeaq0=", "id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;36;1mArticle Update (0.0ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2011-02-06 02:27:18', "edits" = 1 WHERE "id" = 3[0m
+Redirected to http://localhost:3000/articles/3
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 19:27:18) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-05 19:27:22) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-05 19:27:24) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2011-02-05 19:27:29) [PUT]
+  Parameters: {"article"=>{"body"=>"<p> Lorem ipsum dolor sit amet, consectetur adipisicing \r\n  \t  \t  \telit, sed do eiusmod tempor incididunt ut labore et dolore magna \r\n  \t  \t  \taliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco\r\n  \t  \t  \tlaboris nisi ut aliquip ex ea commodo consequat. Duis aute irure \r\n  \t  \t  \tdolor in reprehenderit in voluptate velit esse cillum dolore eu \r\n  \t  \t  \tfugiat nulla pariatur. Excepteur sint occaecat cupidatat non \r\n  \t  \t  \tproident, sunt in culpa qui officia deserunt mollit anim id est \r\n  \t  \t  \tlaborum.\r\n  \t  \t  \t</p>", "author_name"=>"roberto", "title"=>"Lorem Ipsum"}, "x"=>"60", "y"=>"5", "authenticity_token"=>"xoj3RrhnU7gL+WS6o51VJEN3IpNja28BBzysjobeaq0=", "id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;36;1mArticle Update (0.0ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2011-02-06 02:27:29', "edits" = 2, "author_name" = 'roberto' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/articles/3
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 19:27:29) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 10ms (View: 10, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-05 19:27:31) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 19:27:33) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-05 19:27:35) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 19:27:35) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 7) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/articles/7]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-05 19:27:37) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 79ms (View: 20, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 19:27:40) [GET]
+  Parameters: {"id"=>"8"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/8]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-05 19:27:42) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-05 19:27:43) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2011-02-05 19:27:55) [PUT]
+  Parameters: {"article"=>{"body"=>"Lorem ipsum dolor sit amet, consectetur adipisicing \r\n  \t  \t  \telit, sed do eiusmod tempor incididunt ut labore et dolore magna \r\n  \t  \t  \taliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco\r\n  \t  \t  \tlaboris nisi ut aliquip ex ea commodo consequat. Duis aute irure \r\n  \t  \t  \tdolor in reprehenderit in voluptate velit esse cillum dolore eu \r\n  \t  \t  \tfugiat nulla pariatur. Excepteur sint occaecat cupidatat non \r\n  \t  \t  \tproident, sunt in culpa qui officia deserunt mollit anim id est \r\n  \t  \t  \tlaborum.", "author_name"=>"Robert Frost", "title"=>"Lorem Ipsum"}, "x"=>"57", "y"=>"15", "authenticity_token"=>"xoj3RrhnU7gL+WS6o51VJEN3IpNja28BBzysjobeaq0=", "id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;35;1mArticle Update (0.0ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2011-02-06 02:27:55', "edits" = 3, "author_name" = 'Robert Frost', "body" = 'Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/articles/3
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 19:27:55) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-05 19:27:59) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/articles]
