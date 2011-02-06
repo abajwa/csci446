@@ -81,5 +81,5 @@ class ArticlesController < ApplicationController
       format.html { redirect_to(articles_url) }
       format.xml  { head :ok }
     end
-  end
+  end  	  
 end

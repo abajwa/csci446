@@ -4,7 +4,7 @@
 </div>
 
 <div id="buttonBar">
-<%= link_to image_tag("backb.jpg", :border=>0), articles_path %>
+<%= link_to image_tag("backb.jpg", :border=>0), :back, :title => "to articles list or article display" %>
 </div>
 
 <h2>Editing "<%=h @article.title %>"</h2>
@@ -25,6 +25,6 @@
     <%= f.text_area :body %>
   </p>
   <p>
-    <%= image_submit_tag("save.jpg") %>
+    <%= image_submit_tag "save.jpg", :title => "save changes made to the article" %>
   </p>
 <% end %>

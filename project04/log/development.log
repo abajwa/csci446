@@ -3358,3 +3358,1598 @@ Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-04 23:58:35) [GET]
 Rendering template within layouts/articles
 Rendering articles/edit
 Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3/edit]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-05 12:24:11) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 13:01:56) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+ERROR: compiling _run_erb_app47views47articles47show46html46erb RAISED compile error
+C:/web/project04/app/views/articles/show.html.erb:7: syntax error, unexpected ')', expecting tASSOC
+...e => "Test" }, articles_path ).to_s); @output_buffer.concat ...
+                              ^
+Function body:           def _run_erb_app47views47articles47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"header\">\n<h1>Articl.es</h1>\n<p>...what's \"Articl\" in Spanish anyway?</p>\n</div>\n\n<div id=\"buttonBar\">\n"
+
+
+
+
+
+; @output_buffer.concat(( link_to image_tag("back.jpg", :border=>0), :html => { :title => "Test" }, articles_path ).to_s); @output_buffer.concat "\n"
+; @output_buffer.concat(( link_to image_tag("editw.jpg", :border=>0), edit_article_path(@article) ).to_s); @output_buffer.concat "\n"
+; @output_buffer.concat(( link_to image_tag("deletew.jpg", :border=>0), @article, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "\n"
+; @output_buffer.concat(( mail_to image_tag("emailw.jpg", :border=>0) ).to_s); @output_buffer.concat " \n</div>\n\n<p>\n<h2>"
+
+
+
+; @output_buffer.concat((h @article.title ).to_s); @output_buffer.concat "\n</p>\n\n<p>\nby "
+
+
+
+; @output_buffer.concat((h @article.author_name ).to_s); @output_buffer.concat ". # edits since "; @output_buffer.concat((h @article.creation_date ).to_s); @output_buffer.concat "\n</p>\n\n<div id=\"body\">\n<p>\n"
+
+
+
+
+; @output_buffer.concat((h @article.body ).to_s); @output_buffer.concat "\n</p>\n</div>"
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/web/project04/app/views/articles/show.html.erb:28:in `compile!'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_view/renderable.rb:61:in `compile'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_view/renderable.rb:28:in `render'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_view/template.rb:205:in `render_template'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_view/base.rb:265:in `render'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_view/base.rb:348:in `_render_with_layout'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_view/base.rb:262:in `render'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:1252:in `render_for_file'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:942:in `render_without_benchmark'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/benchmarking.rb:51:in `render'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activesupport-2.3.10/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activesupport-2.3.10/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/benchmarking.rb:51:in `render'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/mime_responds.rb:135:in `send'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/mime_responds.rb:175:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/mime_responds.rb:175:in `respond'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/mime_responds.rb:173:in `each'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/web/project04/app/controllers/articles_controller.rb:20:in `show'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:1333:in `send'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:1333:in `perform_action_without_filters'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/filters.rb:617:in `call_filters'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activesupport-2.3.10/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activesupport-2.3.10/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/flash.rb:151:in `perform_action'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:532:in `send'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/filters.rb:606:in `process'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:391:in `process'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:386:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/routing/route_set.rb:438:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.10/lib/active_record/query_cache.rb:29:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.10/lib/active_record/query_cache.rb:29:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.10/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.10/lib/active_record/query_cache.rb:9:in `cache'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.10/lib/active_record/query_cache.rb:28:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.10/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/string_coercion.rb:25:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/params_parser.rb:15:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/session/cookie_store.rb:100:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/failsafe.rb:26:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/dispatcher.rb:114:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/reloader.rb:34:in `run'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/dispatcher.rb:108:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rails-2.3.10/lib/rails/rack/static.rb:31:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rails-2.3.10/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rails-2.3.10/lib/commands/server.rb:111
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/web/project04/app/views/articles/show.html.erb:7: syntax error, unexpected ')', expecting tASSOC
+...e => "Test" }, articles_path ).to_s); @output_buffer.concat ...
+                              ^) on line #7 of app/views/articles/show.html.erb:
+4: </div>
+5: 
+6: <div id="buttonBar">
+7: <%= link_to image_tag("back.jpg", :border=>0), :html => { :title => "Test" }, articles_path %>
+8: <%= link_to image_tag("editw.jpg", :border=>0), edit_article_path(@article) %>
+9: <%= link_to image_tag("deletew.jpg", :border=>0), @article, :confirm => 'Are you sure?', :method => :delete %>
+10: <%= mail_to image_tag("emailw.jpg", :border=>0) %> 
+
+    app/views/articles/show.html.erb:28:in `compile!'
+    app/controllers/articles_controller.rb:20:in `show'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 13:02:11) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 13:02:33) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 62ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 13:05:24) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 13:05:54) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 13:06:14) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 13:07:33) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 13:07:47) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 28ms (View: 10, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 13:08:06) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 13:29:09) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 13:31:10) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+ERROR: compiling _run_erb_app47views47articles47show46html46erb RAISED compile error
+C:/web/project04/app/views/articles/show.html.erb:10: syntax error, unexpected ',', expecting tASSOC
+...tag("emailw.jpg", :border=>0), articles_path, :title => "ema...
+                              ^
+C:/web/project04/app/views/articles/show.html.erb:10: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+...=>0), articles_path, :title => "email the article to a frien...
+                              ^
+Function body:           def _run_erb_app47views47articles47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"header\">\n<h1>Articl.es</h1>\n<p>...what's \"Articl\" in Spanish anyway?</p>\n</div>\n\n<div id=\"buttonBar\">\n"
+
+
+
+
+
+; @output_buffer.concat(( link_to image_tag("back.jpg", :border=>0), articles_path, :title => "to articles list screen" ).to_s); @output_buffer.concat "\n"
+; @output_buffer.concat(( link_to image_tag("editw.jpg", :border=>0), edit_article_path(@article), :title => "edit article" ).to_s); @output_buffer.concat "\n"
+; @output_buffer.concat(( link_to image_tag("deletew.jpg", :border=>0), @article, :confirm => 'Are you sure?', :method => :delete, :title => "delete the article" ).to_s); @output_buffer.concat "\n"
+; @output_buffer.concat(( mail_to " ", "", :subject => @article.title, image_tag("emailw.jpg", :border=>0), articles_path, :title => "email the article to a friend!" ).to_s); @output_buffer.concat " \n</div>\n\n<p>\n<h2>"
+
+
+
+; @output_buffer.concat((h @article.title ).to_s); @output_buffer.concat "\n</p>\n\n<p>\nby "
+
+
+
+; @output_buffer.concat((h @article.author_name ).to_s); @output_buffer.concat ". # edits since "; @output_buffer.concat((h @article.creation_date ).to_s); @output_buffer.concat "\n</p>\n\n<div id=\"body\">\n<p>\n"
+
+
+
+
+; @output_buffer.concat((h @article.body ).to_s); @output_buffer.concat "\n</p>\n</div>"
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/web/project04/app/views/articles/show.html.erb:28:in `compile!'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_view/renderable.rb:61:in `compile'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_view/renderable.rb:28:in `render'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_view/template.rb:205:in `render_template'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_view/base.rb:265:in `render'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_view/base.rb:348:in `_render_with_layout'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_view/base.rb:262:in `render'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:1252:in `render_for_file'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:942:in `render_without_benchmark'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/benchmarking.rb:51:in `render'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activesupport-2.3.10/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activesupport-2.3.10/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/benchmarking.rb:51:in `render'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/mime_responds.rb:135:in `send'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/mime_responds.rb:175:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/mime_responds.rb:175:in `respond'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/mime_responds.rb:173:in `each'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/web/project04/app/controllers/articles_controller.rb:20:in `show'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:1333:in `send'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:1333:in `perform_action_without_filters'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/filters.rb:617:in `call_filters'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activesupport-2.3.10/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activesupport-2.3.10/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/flash.rb:151:in `perform_action'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:532:in `send'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/filters.rb:606:in `process'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:391:in `process'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:386:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/routing/route_set.rb:438:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.10/lib/active_record/query_cache.rb:29:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.10/lib/active_record/query_cache.rb:29:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.10/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.10/lib/active_record/query_cache.rb:9:in `cache'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.10/lib/active_record/query_cache.rb:28:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.10/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/string_coercion.rb:25:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/params_parser.rb:15:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/session/cookie_store.rb:100:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/failsafe.rb:26:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/dispatcher.rb:114:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/reloader.rb:34:in `run'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/dispatcher.rb:108:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rails-2.3.10/lib/rails/rack/static.rb:31:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rails-2.3.10/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rails-2.3.10/lib/commands/server.rb:111
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/web/project04/app/views/articles/show.html.erb:10: syntax error, unexpected ',', expecting tASSOC
+...tag("emailw.jpg", :border=>0), articles_path, :title => "ema...
+                              ^
+C:/web/project04/app/views/articles/show.html.erb:10: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+...=>0), articles_path, :title => "email the article to a frien...
+                              ^) on line #10 of app/views/articles/show.html.erb:
+7: <%= link_to image_tag("back.jpg", :border=>0), articles_path, :title => "to articles list screen" %>
+8: <%= link_to image_tag("editw.jpg", :border=>0), edit_article_path(@article), :title => "edit article" %>
+9: <%= link_to image_tag("deletew.jpg", :border=>0), @article, :confirm => 'Are you sure?', :method => :delete, :title => "delete the article" %>
+10: <%= mail_to " ", "", :subject => @article.title, image_tag("emailw.jpg", :border=>0), articles_path, :title => "email the article to a friend!" %> 
+11: </div>
+12: 
+13: <p>
+
+    app/views/articles/show.html.erb:28:in `compile!'
+    app/controllers/articles_controller.rb:20:in `show'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (76.8ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 13:39:26) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 13:39:57) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 13:40:30) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 13:40:48) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 13:41:03) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-05 13:49:04) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2011-02-05 13:49:12) [PUT]
+  Parameters: {"article"=>{"body"=>"Lorem ipsum dolor sit amet, consectetur adipisicing \r\n  \t  \t  \telit, sed do eiusmod tempor incididunt ut labore et dolore magna \r\n  \t  \t  \taliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco\r\n  \t  \t  \tlaboris nisi ut aliquip ex ea commodo consequat. Duis aute irure \r\n  \t  \t  \tdolor in reprehenderit in voluptate velit esse cillum dolore eu \r\n  \t  \t  \tfugiat nulla pariatur. Excepteur sint occaecat cupidatat non \r\n  \t  \t  \tproident, sunt in culpa qui officia deserunt mollit anim id est \r\n  \t  \t  \tlaborum.", "author_name"=>"Robert Frost", "title"=>"Lorem Ipsum"}, "x"=>"72", "y"=>"12", "authenticity_token"=>"xoj3RrhnU7gL+WS6o51VJEN3IpNja28BBzysjobeaq0=", "id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;36;1mArticle Update (0.0ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2011-02-05 20:49:12', "body" = 'Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/articles/3
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 13:49:12) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 2ms (View: 0, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 13:49:43) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 13:49:44) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 13:49:47) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 13:50:19) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 15:36:40) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/articles/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20110202172943)
+Migrating to AddTestData (20110202185353)
+Migrating to AddEditsToArticle (20110205224159)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "articles" ADD "edits" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110205224159')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 15:52:04) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 46ms (View: 38, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 16:10:15) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+ERROR: compiling _run_erb_app47views47articles47show46html46erb RAISED compile error
+C:/web/project04/app/views/articles/show.html.erb:18: unknown type of %string
+...rticle.created_at.strtime( %b %d, %Y) ).to_s); @output_buffe...
+                              ^
+C:/web/project04/app/views/articles/show.html.erb:18: syntax error, unexpected $end, expecting ')'
+...rticle.created_at.strtime( %b %d, %Y) ).to_s); @output_buffe...
+                              ^
+Function body:           def _run_erb_app47views47articles47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"header\">\n<h1>Articl.es</h1>\n<p>...what's \"Articl\" in Spanish anyway?</p>\n</div>\n\n<div id=\"buttonBar\">\n"
+
+
+
+
+
+; @output_buffer.concat(( link_to image_tag("back.jpg", :border=>0), articles_path, :title => "to articles list screen" ).to_s); @output_buffer.concat "\n"
+; @output_buffer.concat(( link_to image_tag("editw.jpg", :border=>0), edit_article_path(@article), :title => "edit article" ).to_s); @output_buffer.concat "\n"
+; @output_buffer.concat(( link_to image_tag("deletew.jpg", :border=>0), @article, :confirm => 'Are you sure?', :method => :delete, :title => "delete the article" ).to_s); @output_buffer.concat "\n"
+; @output_buffer.concat(( mail_to(" ", image_tag("emailw.jpg", :border=>0), :subject => @article.title, :body => link_to (article_path)) ).to_s); @output_buffer.concat " \n</div>\n\n<p>\n<h2>"
+
+
+
+; @output_buffer.concat((h @article.title ).to_s); @output_buffer.concat "\n</p>\n\n<p>\nby "
+
+
+
+; @output_buffer.concat((h @article.author_name ).to_s); @output_buffer.concat ". # edits since "; @output_buffer.concat((h @article.created_at.strtime( %b %d, %Y) ).to_s); @output_buffer.concat "\n</p>\n\n<div id=\"body\">\n<p>\n"
+
+
+
+
+; @output_buffer.concat((h @article.body ).to_s); @output_buffer.concat "\n</p>\n</div>"
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/web/project04/app/views/articles/show.html.erb:18:in `compile!'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_view/renderable.rb:61:in `compile'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_view/renderable.rb:28:in `render'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_view/template.rb:205:in `render_template'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_view/base.rb:265:in `render'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_view/base.rb:348:in `_render_with_layout'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_view/base.rb:262:in `render'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:1252:in `render_for_file'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:942:in `render_without_benchmark'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/benchmarking.rb:51:in `render'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activesupport-2.3.10/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activesupport-2.3.10/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/benchmarking.rb:51:in `render'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/mime_responds.rb:135:in `send'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/mime_responds.rb:175:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/mime_responds.rb:175:in `respond'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/mime_responds.rb:173:in `each'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/web/project04/app/controllers/articles_controller.rb:20:in `show'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:1333:in `send'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:1333:in `perform_action_without_filters'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/filters.rb:617:in `call_filters'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activesupport-2.3.10/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activesupport-2.3.10/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/flash.rb:151:in `perform_action'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:532:in `send'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/filters.rb:606:in `process'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:391:in `process'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:386:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/routing/route_set.rb:438:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.10/lib/active_record/query_cache.rb:29:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.10/lib/active_record/query_cache.rb:29:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.10/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.10/lib/active_record/query_cache.rb:9:in `cache'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.10/lib/active_record/query_cache.rb:28:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.10/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/string_coercion.rb:25:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/params_parser.rb:15:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/session/cookie_store.rb:100:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/failsafe.rb:26:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/dispatcher.rb:114:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/reloader.rb:34:in `run'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/dispatcher.rb:108:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rails-2.3.10/lib/rails/rack/static.rb:31:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rails-2.3.10/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rails-2.3.10/lib/commands/server.rb:111
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/web/project04/app/views/articles/show.html.erb:18: unknown type of %string
+...rticle.created_at.strtime( %b %d, %Y) ).to_s); @output_buffe...
+                              ^
+C:/web/project04/app/views/articles/show.html.erb:18: syntax error, unexpected $end, expecting ')'
+...rticle.created_at.strtime( %b %d, %Y) ).to_s); @output_buffe...
+                              ^) on line #18 of app/views/articles/show.html.erb:
+15: </p>
+16: 
+17: <p>
+18: by <%=h @article.author_name %>. # edits since <%=h @article.created_at.strtime( %b %d, %Y) %>
+19: </p>
+20: 
+21: <div id="body">
+
+    app/views/articles/show.html.erb:18:in `compile!'
+    app/controllers/articles_controller.rb:20:in `show'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 16:10:36) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+
+ActionView::TemplateError (undefined method `strtime' for Wed Feb 02 18:59:54 UTC 2011:Time) on line #18 of app/views/articles/show.html.erb:
+15: </p>
+16: 
+17: <p>
+18: by <%=h @article.author_name %>. # edits since <%=h @article.created_at.strtime( "%b %d, %Y") %>
+19: </p>
+20: 
+21: <div id="body">
+
+    app/views/articles/show.html.erb:18
+    app/controllers/articles_controller.rb:20:in `show'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.8ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 16:10:49) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 16:11:02) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-05 16:13:46) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-05 16:14:38) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3/edit]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-05 16:15:51) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3/edit]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-05 16:21:08) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/articles/3/edit]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-05 16:21:15) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-05 16:22:33) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+
+ActionView::TemplateError (wrong number of arguments (3 for 2)) on line #28 of app/views/articles/edit.html.erb:
+25:     <%= f.text_area :body %>
+26:   </p>
+27:   <p>
+28:     <%= image_submit_tag "save.jpg", :back,  :title => "save changes made to the article" %>
+29:   </p>
+30: <% end %>
+
+    app/views/articles/edit.html.erb:28:in `image_submit_tag'
+    app/views/articles/edit.html.erb:28
+    app/views/articles/edit.html.erb:12
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (37.6ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-05 16:22:46) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/articles/3/edit]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-05 16:31:29) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 16:31:31) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 84ms (View: 69, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-02-05 16:31:53) [POST]
+  Parameters: {"article"=>{"body"=>"ertertetretert\r\n\r\nertetertert\r\n\r\n\r\nertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertert", "author_name"=>"rtert", "title"=>"rtrterte"}, "x"=>"34", "y"=>"10", "authenticity_token"=>"xoj3RrhnU7gL+WS6o51VJEN3IpNja28BBzysjobeaq0="}
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "edits") VALUES('2011-02-05 23:31:53', 'rtrterte', 'rtert', 'ertertetretert
+
+ertetertert
+
+
+ertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertertert', NULL, '2011-02-05 23:31:53', NULL)[0m
+Redirected to http://localhost:3000/articles/10
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 16:31:53) [GET]
+  Parameters: {"id"=>"10"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 10) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/10]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-05 17:11:50) [GET]
+
+SyntaxError (C:/web/project04/app/models/article.rb:9: syntax error, unexpected kEND):
+  app/controllers/articles_controller.rb:6:in `index'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-05 17:15:33) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 17:15:41) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-02-05 17:15:45) [POST]
+  Parameters: {"article"=>{"body"=>"", "author_name"=>"sally", "title"=>""}, "x"=>"47", "y"=>"9", "authenticity_token"=>"xoj3RrhnU7gL+WS6o51VJEN3IpNja28BBzysjobeaq0="}
+
+NoMethodError (undefined method `upcase' for :author_name:Symbol):
+  app/models/article.rb:8:in `author_cannot_be_sally'
+  app/controllers/articles_controller.rb:48:in `create'
+  app/controllers/articles_controller.rb:47:in `create'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.8ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-02-05 17:31:48) [POST]
+  Parameters: {"article"=>{"body"=>"", "author_name"=>"sally", "title"=>""}, "x"=>"47", "y"=>"9", "authenticity_token"=>"xoj3RrhnU7gL+WS6o51VJEN3IpNja28BBzysjobeaq0="}
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-02-05 17:32:06) [POST]
+  Parameters: {"article"=>{"body"=>"", "author_name"=>"sally", "title"=>""}, "x"=>"36", "y"=>"9", "authenticity_token"=>"xoj3RrhnU7gL+WS6o51VJEN3IpNja28BBzysjobeaq0="}
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 38ms (View: 26, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-02-05 17:32:11) [POST]
+  Parameters: {"article"=>{"body"=>"", "author_name"=>"SALLY", "title"=>""}, "x"=>"29", "y"=>"22", "authenticity_token"=>"xoj3RrhnU7gL+WS6o51VJEN3IpNja28BBzysjobeaq0="}
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 26ms (View: 17, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-02-05 17:39:58) [POST]
+  Parameters: {"article"=>{"body"=>"", "author_name"=>"SALLY", "title"=>""}, "x"=>"29", "y"=>"22", "authenticity_token"=>"xoj3RrhnU7gL+WS6o51VJEN3IpNja28BBzysjobeaq0="}
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 60ms (View: 50, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-02-05 17:40:05) [POST]
+  Parameters: {"article"=>{"body"=>"", "author_name"=>"sally", "title"=>""}, "x"=>"42", "y"=>"18", "authenticity_token"=>"xoj3RrhnU7gL+WS6o51VJEN3IpNja28BBzysjobeaq0="}
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-02-05 17:40:28) [POST]
+  Parameters: {"article"=>{"body"=>"", "author_name"=>"sally", "title"=>""}, "x"=>"42", "y"=>"18", "authenticity_token"=>"xoj3RrhnU7gL+WS6o51VJEN3IpNja28BBzysjobeaq0="}
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-02-05 17:40:42) [POST]
+  Parameters: {"article"=>{"body"=>"", "author_name"=>"sally", "title"=>""}, "x"=>"42", "y"=>"18", "authenticity_token"=>"xoj3RrhnU7gL+WS6o51VJEN3IpNja28BBzysjobeaq0="}
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 10ms (View: 10, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-02-05 17:40:50) [POST]
+  Parameters: {"article"=>{"body"=>"", "author_name"=>"sally", "title"=>""}, "x"=>"42", "y"=>"18", "authenticity_token"=>"xoj3RrhnU7gL+WS6o51VJEN3IpNja28BBzysjobeaq0="}
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-02-05 17:40:57) [POST]
+  Parameters: {"article"=>{"body"=>"", "author_name"=>"SALLy", "title"=>""}, "x"=>"40", "y"=>"8", "authenticity_token"=>"xoj3RrhnU7gL+WS6o51VJEN3IpNja28BBzysjobeaq0="}
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-02-05 17:43:40) [POST]
+  Parameters: {"article"=>{"body"=>"", "author_name"=>"SALLy", "title"=>""}, "x"=>"40", "y"=>"8", "authenticity_token"=>"xoj3RrhnU7gL+WS6o51VJEN3IpNja28BBzysjobeaq0="}
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/models/article.rb:8:in `scan'
+  app/models/article.rb:8:in `author_cannot_be_sally'
+  app/controllers/articles_controller.rb:48:in `create'
+  app/controllers/articles_controller.rb:47:in `create'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (70.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-02-05 17:43:53) [POST]
+  Parameters: {"article"=>{"body"=>"", "author_name"=>"SALLy", "title"=>""}, "x"=>"40", "y"=>"8", "authenticity_token"=>"xoj3RrhnU7gL+WS6o51VJEN3IpNja28BBzysjobeaq0="}
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-02-05 17:45:18) [POST]
+  Parameters: {"article"=>{"body"=>"", "author_name"=>"SALLy", "title"=>""}, "x"=>"40", "y"=>"8", "authenticity_token"=>"xoj3RrhnU7gL+WS6o51VJEN3IpNja28BBzysjobeaq0="}
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-02-05 17:45:25) [POST]
+  Parameters: {"article"=>{"body"=>"", "author_name"=>"salLY", "title"=>""}, "x"=>"48", "y"=>"17", "authenticity_token"=>"xoj3RrhnU7gL+WS6o51VJEN3IpNja28BBzysjobeaq0="}
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-02-05 17:45:30) [POST]
+  Parameters: {"article"=>{"body"=>"", "author_name"=>"salLY net", "title"=>""}, "x"=>"23", "y"=>"10", "authenticity_token"=>"xoj3RrhnU7gL+WS6o51VJEN3IpNja28BBzysjobeaq0="}
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-02-05 17:45:37) [POST]
+  Parameters: {"article"=>{"body"=>"", "author_name"=>"nosally no", "title"=>""}, "x"=>"44", "y"=>"11", "authenticity_token"=>"xoj3RrhnU7gL+WS6o51VJEN3IpNja28BBzysjobeaq0="}
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-02-05 17:47:33) [POST]
+  Parameters: {"article"=>{"body"=>"", "author_name"=>"nosally no", "title"=>""}, "x"=>"44", "y"=>"11", "authenticity_token"=>"xoj3RrhnU7gL+WS6o51VJEN3IpNja28BBzysjobeaq0="}
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 20ms (View: 20, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-05 17:47:37) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-05 17:47:44) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 17:47:45) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 17:50:15) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 17:50:27) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 64ms (View: 2, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 17:52:13) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 17:53:04) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 17:53:13) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 17:53:23) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 17:55:54) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 17:56:05) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 17:56:15) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 17:56:38) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 17:56:58) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 17:58:07) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 17:58:14) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 17:58:20) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 18:02:29) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 18:02:44) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 18:03:02) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 18:05:49) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 18:06:37) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 18:06:54) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 18:07:09) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 74ms (View: 10, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 18:07:15) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 18:07:38) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 18:07:47) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 18:08:02) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 18:08:19) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 18:08:52) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 18:09:14) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 18:09:24) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 18:09:33) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 18:09:45) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 18:09:57) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 18:10:05) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 18:10:31) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 18:10:52) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 18:11:02) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-05 18:11:31) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-05 18:11:34) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3/edit]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-05 18:12:05) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3/edit]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-05 18:12:23) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 21ms (View: 20, DB: 0) | 200 OK [http://localhost/articles/3/edit]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-05 18:12:36) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3/edit]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-05 18:12:48) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3/edit]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-05 18:13:09) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3/edit]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-05 18:13:23) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 18:13:25) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-05 18:13:27) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 38ms (View: 20, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 18:13:47) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 18:14:11) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+ERROR: compiling _run_erb_app47views47articles47new46html46erb RAISED compile error
+C:/web/project04/app/views/articles/new.html.erb:30: syntax error, unexpected ',', expecting ')'
+...mage_submit_tag("create.jpg"), :title => "click to create th...
+                              ^
+Function body:           def _run_erb_app47views47articles47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div id=\"header\">\n<h1>Articl.es</h1>\n<p>...not just the country of Spain</p>\n</div>\n\n<div id=\"buttonBar\">\n"
+
+
+
+
+
+; @output_buffer.concat(( link_to image_tag("back.jpg", :border=>0), articles_path, :title => "to articles list screen" ).to_s); @output_buffer.concat "\n</div>\n\n<h2>Creating a New Article</h2>\n\n"
+
+
+
+
+;  form_for(@article) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :title ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.text_field :title ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :author_name ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.text_field :author_name ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :body ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.text_area :body ).to_s); @output_buffer.concat "\n  </p>\n  <br />\n  <p>\n    <div id=\"submitButton\">\n    "
+
+
+
+
+; @output_buffer.concat(( image_submit_tag("create.jpg"), :title => "click to create the article").to_s); @output_buffer.concat "\n    </div>\n  </p>\n"
+
+
+;  end ; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/web/project04/app/views/articles/new.html.erb:36:in `compile!'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_view/renderable.rb:61:in `compile'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_view/renderable.rb:28:in `render'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_view/template.rb:205:in `render_template'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_view/base.rb:265:in `render'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_view/base.rb:348:in `_render_with_layout'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_view/base.rb:262:in `render'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:1252:in `render_for_file'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:942:in `render_without_benchmark'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/benchmarking.rb:51:in `render'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activesupport-2.3.10/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activesupport-2.3.10/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/benchmarking.rb:51:in `render'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/mime_responds.rb:135:in `send'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/mime_responds.rb:175:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/mime_responds.rb:175:in `respond'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/mime_responds.rb:173:in `each'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/web/project04/app/controllers/articles_controller.rb:31:in `new'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:1333:in `send'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:1333:in `perform_action_without_filters'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/filters.rb:617:in `call_filters'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activesupport-2.3.10/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activesupport-2.3.10/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/flash.rb:151:in `perform_action'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:532:in `send'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/filters.rb:606:in `process'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:391:in `process'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/base.rb:386:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/routing/route_set.rb:438:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.10/lib/active_record/query_cache.rb:29:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.10/lib/active_record/query_cache.rb:29:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.10/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.10/lib/active_record/query_cache.rb:9:in `cache'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.10/lib/active_record/query_cache.rb:28:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/activerecord-2.3.10/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/string_coercion.rb:25:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/params_parser.rb:15:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/session/cookie_store.rb:100:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/failsafe.rb:26:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/dispatcher.rb:114:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/reloader.rb:34:in `run'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-2.3.10/lib/action_controller/dispatcher.rb:108:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rails-2.3.10/lib/rails/rack/static.rb:31:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rails-2.3.10/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/rails-2.3.10/lib/commands/server.rb:111
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/RailsInstaller/Ruby1.8.7/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/web/project04/app/views/articles/new.html.erb:30: syntax error, unexpected ',', expecting ')'
+...mage_submit_tag("create.jpg"), :title => "click to create th...
+                              ^) on line #30 of app/views/articles/new.html.erb:
+27:   <br />
+28:   <p>
+29:     <div id="submitButton">
+30:     <%= image_submit_tag("create.jpg"), :title => "click to create the article"%>
+31:     </div>
+32:   </p>
+33: <% end %>
+
+    app/views/articles/new.html.erb:36:in `compile!'
+    app/controllers/articles_controller.rb:31:in `new'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.6ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-05 18:14:48) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-05 18:15:52) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-05 18:18:22) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 8) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/8/edit]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-05 18:22:05) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 18:22:07) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 18:23:48) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/articles/3]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 18:27:05) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20110202172943)
+Migrating to AddTestData (20110202185353)
+Migrating to AddEditsToArticle (20110205224159)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-05 18:27:19) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/3]

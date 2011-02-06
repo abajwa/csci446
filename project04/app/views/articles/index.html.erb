@@ -22,7 +22,7 @@
     <td><%=h article.title %></td>
     <td><%=h article.author_name %></td>
     <td><%=h article.body %></td>
-    <td><%=h article.creation_date %></td>
+    <td><%=h article.created_at.strftime("%A, %b %d %Y") %></td>
     <td class="button"><%= link_to image_tag("view.jpg", :border=>0), article %></td>
     <td class="button"><%= link_to image_tag("edit.jpg", :border=>0), edit_article_path(article) %></td>
     <td class="button"><%= link_to image_tag("delete.jpg", :border=>0), article, :confirm => 'Are you sure?', :method => :delete %></td>

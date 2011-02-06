@@ -4,10 +4,10 @@
 </div>
 
 <div id="buttonBar">
-<%= link_to image_tag("back.jpg", :border=>0), articles_path %>
-<%= link_to image_tag("editw.jpg", :border=>0), edit_article_path(@article) %>
-<%= link_to image_tag("deletew.jpg", :border=>0), @article, :confirm => 'Are you sure?', :method => :delete %>
-<%= mail_to image_tag("emailw.jpg", :border=>0) %> 
+<%= link_to image_tag("back.jpg", :border=>0), articles_path, :title => "to articles list screen" %>
+<%= link_to image_tag("editw.jpg", :border=>0), edit_article_path(@article), :title => "edit article" %>
+<%= link_to image_tag("deletew.jpg", :border=>0), @article, :confirm => 'Are you sure?', :method => :delete, :title => "delete the article" %>
+<%= mail_to(" ", image_tag("emailw.jpg", :border=>0), :subject => @article.title, :body => link_to (article_path)) %> 
 </div>
 
 <p>
@@ -15,7 +15,7 @@
 </p>
 
 <p>
-by <%=h @article.author_name %>. # edits since <%=h @article.creation_date %>
+by <%=h @article.author_name %>. <%=h @article.edits %> edits since <%=h @article.created_at.strftime( "%b %d, %Y.") %>
 </p>
 
 <div id="body">

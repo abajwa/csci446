@@ -1,9 +1,11 @@
 class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.xml
+
   def index
     @articles = Article.all
-
+    @total_articles = Article.count
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @articles }
@@ -79,5 +81,5 @@ class ArticlesController < ApplicationController
       format.html { redirect_to(articles_url) }
       format.xml  { head :ok }
     end
-  end
+  end  	  
 end

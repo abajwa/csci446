@@ -1,7 +1,14 @@
 /* Styles for main page */
-
+a:hover {
+	text-decoration: none;
+	color: white;
+}
 div#header {
 	text-align: center;
+}
+
+div#buttonBar > a {
+	padding-right: 50px;
 }
 
 table {
@@ -22,3 +29,5 @@ td.button {
 	background-color: #FFFFFF;
 	
 }
+
+
