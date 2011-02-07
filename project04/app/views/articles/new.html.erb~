@@ -1,10 +1,10 @@
 <div id="header">
 <h1>Articl.es</h1>
-<p>...my cousin works for Bit.ly</p>
+<p>...not just the country of Spain</p>
 </div>
 
 <div id="buttonBar">
-<%= link_to image_tag("back.jpg", :border=>0), articles_path %>
+<%= link_to image_tag("arrow_left.png", :border=>0) + ' list all articles', articles_path, :title => "to articles list screen" %>
 </div>
 
 <h2>Creating a New Article</h2>
@@ -24,7 +24,10 @@
     <%= f.label :body %>
     <%= f.text_area :body %>
   </p>
+  <br />
   <p>
-    <%= image_submit_tag("create.jpg") %>
+    <div id="submitButton">
+    <%= button_to "Create", :title => "click to create the article"%>
+    </div>
   </p>
 <% end %>

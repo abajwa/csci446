@@ -2,6 +2,8 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.xml
 
+  before_filter :set_return, :only => [:edit]
+    
   def index
     @articles = Article.all
     @total_articles = Article.count
@@ -36,7 +38,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
-    @article = Article.find(params[:id])
+    @article = Article.find(params[:id]) 
   end
 
   # POST /articles
@@ -55,9 +57,6 @@ class ArticlesController < ApplicationController
     end
   end
 
-  def store_location
-  	  session[:return_to] = request.request_uri
-  end
   # PUT /articles/1
   # PUT /articles/1.xml
   def update
@@ -66,7 +65,7 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       if @article.update_attributes(params[:article])
-      	      format.html { redirect_to(@article, :notice => 'Article was successfully updated.') }
+      	      format.html { redirect_to(session[:return_to], :notice => 'Article was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -85,5 +84,10 @@ class ArticlesController < ApplicationController
       format.html { redirect_to(articles_url) }
       format.xml  { head :ok }
     end
-  end  	  
+  end
+  
+  private
+  def set_return
+  	  session[:return_to] = request.referer
+  end
 end

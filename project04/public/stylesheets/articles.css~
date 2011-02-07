@@ -41,9 +41,12 @@ div#body {
 /* index page */
 div#scrollTable {
 	overflow: auto;
-	height: 217px;
-	width: 825px;
-	border-bottom: solid 1px red;
+	height: 200px;
+	width: 820px;
+}
+div#borderBottom {
+	width: 712px;
+	border-bottom: solid 1px black;
 }
 table {
 	width: 800px;
@@ -53,7 +56,6 @@ table {
 }
 table#innerTable {
 	border-top:solid 1px white;
-	border-bottom: solid 1px black;
 }
 td, th {
 	border-right: solid 1px black;

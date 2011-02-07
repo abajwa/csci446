@@ -1,9 +1,18 @@
 /* Styles for main page */
 
 /* general */
+a {
+	color: #000000;
+	text-decoration: none;
+	color: #000000;
+}
 a:hover {
 	text-decoration: none;
 	background-color:#FFFFFF;
+	color: #000000;
+}
+a:visited {
+	color: #000000;
 }
 body {
 	font-family: "Comic Sans MS"
@@ -37,12 +46,11 @@ div#body {
 	width: 450px;
 }
 
-
 /* index page */
 div#scrollTable {
 	overflow: auto;
-	height: 217px;
-	width: 825px;
+	height: 200px;
+	width: 820px;
 }
 div#borderBottom {
 	width: 712px;

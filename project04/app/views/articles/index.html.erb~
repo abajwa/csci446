@@ -3,11 +3,8 @@
 <p>...with a name .com hipsters love!</p>
 </div>
 
-<p>
 <h2>All the World's Articles</h2>
 <%= link_to image_tag("new.jpg", :border=>0), new_article_path, :class=> "new", :title => "create a new article" %>
-</p>
-
 
 <table id="headers">
   <tr class="titles">
@@ -37,6 +34,9 @@
 </table>
 </div>
 
+<div id="borderBottom">
+</div>
+
 <br />
 
 <div>
@@ -44,4 +44,3 @@
 </div>
 
 <br />
-
