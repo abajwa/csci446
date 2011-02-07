@@ -10896,3 +10896,166 @@ Processing ArticlesController#index (for 127.0.0.1 at 2011-02-06 22:55:09) [GET]
 Rendering template within layouts/articles
 Rendering articles/index
 Completed in 42ms (View: 36, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-06 22:59:18) [GET]
+  Parameters: {"id"=>"19"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 19) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 25ms (View: 13, DB: 0) | 200 OK [http://localhost/articles/19]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-06 22:59:23) [GET]
+  Parameters: {"id"=>"19"}
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 19) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/articles/19/edit]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-06 22:59:25) [GET]
+  Parameters: {"id"=>"19"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 19) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://localhost/articles/19]
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2011-02-06 22:59:29) [DELETE]
+  Parameters: {"authenticity_token"=>"R+xG7oXfD6SnNJU+TAxG0pT+3n7b84cNA/ryGcd/OeQ=", "id"=>"19"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 19) [0m
+  [4;35;1mArticle Destroy (1.0ms)[0m   [0mDELETE FROM "articles" WHERE "id" = 19[0m
+Redirected to http://localhost:3000/articles
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/articles/19]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-06 22:59:29) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 48ms (View: 39, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2011-02-06 22:59:33) [DELETE]
+  Parameters: {"authenticity_token"=>"R+xG7oXfD6SnNJU+TAxG0pT+3n7b84cNA/ryGcd/OeQ=", "id"=>"25"}
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 25) [0m
+  [4;35;1mArticle Destroy (1.0ms)[0m   [0mDELETE FROM "articles" WHERE "id" = 25[0m
+Redirected to http://localhost:3000/articles
+Completed in 14ms (DB: 2) | 302 Found [http://localhost/articles/25]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-06 22:59:33) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 45ms (View: 36, DB: 2) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-06 22:59:34) [GET]
+  Parameters: {"id"=>"27"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 27) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 17ms (View: 9, DB: 0) | 200 OK [http://localhost/articles/27/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2011-02-06 22:59:42) [PUT]
+  Parameters: {"article"=>{"body"=>"\tLorem ipsum dolor sit amet, consectetur adipisicing \r\n  \t  \t  \telit, sed do eiusmod tempor incididunt ut labore et dolore magna \r\n  \t  \t  \taliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco\r\njlo\r\n  \t  \t  \tlaborum.\r\n  \t  \t  \t</p>", "author_name"=>"Robert Frost", "title"=>"Lorem Ipsum"}, "authenticity_token"=>"R+xG7oXfD6SnNJU+TAxG0pT+3n7b84cNA/ryGcd/OeQ=", "id"=>"27"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 27) [0m
+  [4;36;1mArticle Update (1.0ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2011-02-07 05:59:42', "edits" = 1, "body" = '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+jlo
+ 	 	 	laborum.
+ 	 	 	</p>' WHERE "id" = 27[0m
+Redirected to http://localhost:3000/articles
+Completed in 16ms (DB: 1) | 302 Found [http://localhost/articles/27]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-06 22:59:42) [GET]
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 37ms (View: 31, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-06 22:59:47) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-02-06 22:59:57) [POST]
+  Parameters: {"article"=>{"body"=>"etrkjwetr\r\n", "author_name"=>"sally", "title"=>"gtfd"}, "authenticity_token"=>"R+xG7oXfD6SnNJU+TAxG0pT+3n7b84cNA/ryGcd/OeQ="}
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 52ms (View: 46, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-02-06 23:00:06) [POST]
+  Parameters: {"article"=>{"body"=>"etrkjwetr\r\n", "author_name"=>"buttlicker", "title"=>"gtfd"}, "authenticity_token"=>"R+xG7oXfD6SnNJU+TAxG0pT+3n7b84cNA/ryGcd/OeQ="}
+  [4;35;1mArticle Create (1.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "edits") VALUES('2011-02-07 06:00:06', 'gtfd', 'buttlicker', 'etrkjwetr
+', NULL, '2011-02-07 06:00:06', 0)[0m
+Redirected to http://localhost:3000/articles/31
+Completed in 16ms (DB: 1) | 302 Found [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-06 23:00:07) [GET]
+  Parameters: {"id"=>"31"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 31) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/articles/31]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-06 23:00:20) [GET]
+  [4;35;1mArticle Load (2.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 50ms (View: 37, DB: 2) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-06 23:00:36) [GET]
+  Parameters: {"id"=>"31"}
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 31) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 20ms (View: 11, DB: 1) | 200 OK [http://localhost/articles/31/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2011-02-06 23:00:51) [PUT]
+  Parameters: {"article"=>{"body"=>"they taste goooood\r\n", "author_name"=>"buttlicker", "title"=>"why I lick butts"}, "authenticity_token"=>"R+xG7oXfD6SnNJU+TAxG0pT+3n7b84cNA/ryGcd/OeQ=", "id"=>"31"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 31) [0m
+  [4;35;1mArticle Update (0.0ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2011-02-07 06:00:51', "title" = 'why I lick butts', "edits" = 1, "body" = 'they taste goooood
+' WHERE "id" = 31[0m
+Redirected to http://localhost:3000/articles
+Completed in 18ms (DB: 0) | 302 Found [http://localhost/articles/31]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-06 23:00:51) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 39ms (View: 33, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2011-02-06 23:01:18) [DELETE]
+  Parameters: {"authenticity_token"=>"R+xG7oXfD6SnNJU+TAxG0pT+3n7b84cNA/ryGcd/OeQ=", "id"=>"31"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 31) [0m
+  [4;35;1mArticle Destroy (1.0ms)[0m   [0mDELETE FROM "articles" WHERE "id" = 31[0m
+Redirected to http://localhost:3000/articles
+Completed in 11ms (DB: 1) | 302 Found [http://localhost/articles/31]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-06 23:01:18) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 45ms (View: 37, DB: 2) | 200 OK [http://localhost/articles]
