@@ -4,7 +4,7 @@
 </div>
 
 <h2>All the World's Articles</h2>
-<%= link_to image_tag("new.jpg", :border=>0), new_article_path, :class=> "new", :title => "create a new article" %>
+<%= link_to image_tag("book_add.png", :border=>0) + ' new article', new_article_path, :class=> "new", :title => "create a new article" %>
 
 <table id="headers">
   <tr class="titles">
@@ -25,9 +25,9 @@
     <td id="author"><%=h article.author_name %></td>
     <td id="body"><%=h truncate(article.body, :length => 45) %></td>
     <td id="date"><%=h article.created_at.strftime("%A, %b %d %Y") %></td>
-    <td class="button"><%= link_to image_tag("view.jpg", :border=>0), article, :title => "view the article" %></td>
-    <td class="button"><%= link_to image_tag("edit.jpg", :border=>0), edit_article_path(article), :title => "edit the article" %></td>
-    <td class="button"><%= link_to image_tag("delete.jpg", :border=>0), article, :confirm => 'Are you sure?', :method => :delete, :title => "delete the article" %></td>
+    <td class="button"><%= link_to image_tag("zoom.png", :border=>0), article, :title => "view the article" %></td>
+    <td class="button"><%= link_to image_tag("book_edit.png", :border=>0), edit_article_path(article), :title => "edit the article" %></td>
+    <td class="button"><%= link_to image_tag("delete.png", :border=>0), article, :confirm => 'Are you sure?', :method => :delete, :title => "delete the article" %></td>
   </tr>
 <% end %>
 </table>

@@ -7,7 +7,6 @@
 #   Major.create(:name => 'Daley', :city => cities.first)
 	Article.delete_all
 	Article.create(:title => 'Lorem Ipsum',
-  	  	  :author_name => 'Robert Frost',
   	  	  :body =>
   	  	  %{	Lorem ipsum dolor sit amet, consectetur adipisicing 
   	  	  	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
@@ -17,10 +16,10 @@
   	  	  	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
   	  	  	proident, sunt in culpa qui officia deserunt mollit anim id est 
   	  	  	laborum.
-  	  	  	</p>})
+  	  	  	},
+  	  	  	:author_id => 13)
   	  
   	  Article.create(:title => 'Invest',
-  	  	  :author_name => 'Anonymous',
   	  	  :body =>
   	  	  	  %{	So what are some specific things you can do? For starters, if you aren't a reader,
   	  	  		you should start with that. Reading books can really expand your mind and allow you 
@@ -38,10 +37,10 @@
   	  	  		before you start, you will want to make sure you have a goal in mind. You want to be clear on what you 
   	  	  		will gain out of doing all of these things. Are you looking to become a better husband or wife? Do you 
   	  	  		want to get in the best shape of your life? Do you want to be a better cook perhaps? How about becoming a writer?
-  	  	  		})
+  	  	  		},
+  	  	  		:author_id => 14)
   	  
   	  Article.create(:title => 'Lorem Ipsum',
-  	  	  :author_name => 'Robert Frost',
   	  	  :body =>
   	  	  %{	Lorem ipsum dolor sit amet, consectetur adipisicing 
   	  	  	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
@@ -51,10 +50,10 @@
   	  	  	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
   	  	  	proident, sunt in culpa qui officia deserunt mollit anim id est 
   	  	  	laborum.
-  	  	  	})
+  	  	  	},
+  	  	  	:author_id => 13)
   	  
   	  Article.create(:title => 'Lorem Ipsum',
-  	  	  :author_name => 'Bob',
   	  	  :body =>
   	  	  %{	What I learned in Robbins Personal Power program is a set of skills that 
   	  		allowed me to get myself to take action. It's not always easy though. Sometimes 
@@ -71,9 +70,10 @@
   	  		take action long enough for those actions to become a habit. Once it becomes a habit, 
   	  		things get a lot easier. People who have been going to the gym 5 days a week for years 
   	  		don't have to motivate themselves to go. It's a habit, like brushing your teeth.
-  	  	  	})
+  	  	  	},
+  	  	  	:author_id => 14)
+  	  
   	  Article.create(:title => 'Lorem Ipsum',
-  	  	  :author_name => 'Robert Frost',
   	  	  :body =>
   	  	  %{	Lorem ipsum dolor sit amet, consectetur adipisicing 
   	  	  	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
@@ -83,10 +83,10 @@
   	  	  	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
   	  	  	proident, sunt in culpa qui officia deserunt mollit anim id est 
   	  	  	laborum.
-  	  	  	</p>})
+  	  	  	},
+  	  	  	:author_id => 13)
   	  
   	  Article.create(:title => 'Invest',
-  	  	  :author_name => 'Anonymous',
   	  	  :body =>
   	  	  	  %{	So what are some specific things you can do? For starters, if you aren't a reader,
   	  	  		you should start with that. Reading books can really expand your mind and allow you 
@@ -104,10 +104,10 @@
   	  	  		before you start, you will want to make sure you have a goal in mind. You want to be clear on what you 
   	  	  		will gain out of doing all of these things. Are you looking to become a better husband or wife? Do you 
   	  	  		want to get in the best shape of your life? Do you want to be a better cook perhaps? How about becoming a writer?
-  	  	  		})
+  	  	  		},
+  	  	  		:author_id => 14)
   	  
   	  Article.create(:title => 'Lorem Ipsum',
-  	  	  :author_name => 'Robert Frost',
   	  	  :body =>
   	  	  %{	Lorem ipsum dolor sit amet, consectetur adipisicing 
   	  	  	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
@@ -117,10 +117,10 @@
   	  	  	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
   	  	  	proident, sunt in culpa qui officia deserunt mollit anim id est 
   	  	  	laborum.
-  	  	  	})
+  	  	  	},
+  	  	  	:author_id => 13)
   	  
   	  Article.create(:title => 'Lorem Ipsum',
-  	  	  :author_name => 'Bob',
   	  	  :body =>
   	  	  %{	What I learned in Robbins Personal Power program is a set of skills that 
   	  		allowed me to get myself to take action. It's not always easy though. Sometimes 
@@ -137,9 +137,9 @@
   	  		take action long enough for those actions to become a habit. Once it becomes a habit, 
   	  		things get a lot easier. People who have been going to the gym 5 days a week for years 
   	  		don't have to motivate themselves to go. It's a habit, like brushing your teeth.
-  	  	  	})
+  	  	  	},
+  	  	  	:author_id => 14)
   	  Article.create(:title => 'Lorem Ipsum',
-  	  	  :author_name => 'Robert Frost',
   	  	  :body =>
   	  	  %{	Lorem ipsum dolor sit amet, consectetur adipisicing 
   	  	  	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
@@ -149,10 +149,10 @@
   	  	  	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
   	  	  	proident, sunt in culpa qui officia deserunt mollit anim id est 
   	  	  	laborum.
-  	  	  	</p>})
+  	  	  	},
+  	  	  	:author_id => 13)
   	  
   	  Article.create(:title => 'Invest',
-  	  	  :author_name => 'Anonymous',
   	  	  :body =>
   	  	  	  %{	So what are some specific things you can do? For starters, if you aren't a reader,
   	  	  		you should start with that. Reading books can really expand your mind and allow you 
@@ -170,10 +170,10 @@
   	  	  		before you start, you will want to make sure you have a goal in mind. You want to be clear on what you 
   	  	  		will gain out of doing all of these things. Are you looking to become a better husband or wife? Do you 
   	  	  		want to get in the best shape of your life? Do you want to be a better cook perhaps? How about becoming a writer?
-  	  	  		})
+  	  	  		},
+  	  	  		:author_id => 13)
   	  
   	  Article.create(:title => 'Lorem Ipsum',
-  	  	  :author_name => 'Robert Frost',
   	  	  :body =>
   	  	  %{	Lorem ipsum dolor sit amet, consectetur adipisicing 
   	  	  	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
@@ -183,10 +183,10 @@
   	  	  	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
   	  	  	proident, sunt in culpa qui officia deserunt mollit anim id est 
   	  	  	laborum.
-  	  	  	})
+  	  	  	},
+  	  	  	:author_id => 14)
   	  
   	  Article.create(:title => 'Lorem Ipsum',
-  	  	  :author_name => 'Anonymous',
   	  	  :body =>
   	  	  %{	What I learned in Robbins Personal Power program is a set of skills that 
   	  		allowed me to get myself to take action. It's not always easy though. Sometimes 
@@ -203,4 +203,11 @@
   	  		take action long enough for those actions to become a habit. Once it becomes a habit, 
   	  		things get a lot easier. People who have been going to the gym 5 days a week for years 
   	  		don't have to motivate themselves to go. It's a habit, like brushing your teeth.
-  	  	  	})
+  	  	  	},
+  	  	  	:author_id => 13)
+  	  
+  	  Author.delete_all
+  	  Author.create(:author_name => 'Robert Frost', 
+  	  	  :photo_url => 'frost.jpg')
+  	  Author.create(:author_name => 'Anonymous', 
+  	  	  :photo_url => 'frost.jpg')

@@ -5,8 +5,6 @@ class CreateArticles < ActiveRecord::Migration
       t.string :author_name
       t.text :body
       t.string :creation_date
-      t.string :author_id, :null => false, 
-      :options => "CONSTRAINT fk_articles_author_id REFERENCES authors(id)"
 
       t.timestamps
     end

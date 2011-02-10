@@ -11059,3 +11059,1719 @@ Processing ArticlesController#index (for 127.0.0.1 at 2011-02-06 23:01:18) [GET]
 Rendering template within layouts/articles
 Rendering articles/index
 Completed in 45ms (View: 37, DB: 2) | 200 OK [http://localhost/articles]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-10 10:01:09) [GET]
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: authors: SELECT * FROM "authors" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: authors: SELECT * FROM "authors" ):
+  app/controllers/authors_controller.rb:5:in `index'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-10 10:01:12) [GET]
+
+ActionController::RoutingError (No route matches "/author" with {:method=>:get}):
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20110202172943)
+Migrating to AddTestData (20110202185353)
+Migrating to AddEditsToArticle (20110205224159)
+Migrating to CreateAuthors (20110210165846)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "author_name" varchar(255), "photo_url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110210165846')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("authors")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-10 10:01:33) [GET]
+
+ActionController::RoutingError (No route matches "/author" with {:method=>:get}):
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-10 10:01:41) [GET]
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#new (for 127.0.0.1 at 2011-02-10 10:02:39) [GET]
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 3806ms (View: 3791, DB: 0) | 200 OK [http://localhost/authors/new]
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2011-02-10 10:02:50) [POST]
+  Parameters: {"commit"=>"Create", "author"=>{"author_name"=>"Sally", "photo_url"=>"jhh"}, "authenticity_token"=>"NEIUvqyqgE2U0oB9tOHu7y0DoJkYmRatxpmsbvFc7u4="}
+  [4;36;1mAuthor Create (0.0ms)[0m   [0;1mINSERT INTO "authors" ("created_at", "author_name", "updated_at", "photo_url") VALUES('2011-02-10 17:02:50', 'Sally', '2011-02-10 17:02:50', 'jhh')[0m
+Redirected to http://localhost:3000/authors/1
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/authors]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-10 10:02:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/authors/1]
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-10 10:02:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/authors/1/edit]
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-10 10:04:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/authors/1/edit]
+
+
+Processing AuthorsController#update (for 127.0.0.1 at 2011-02-10 10:04:34) [PUT]
+  Parameters: {"commit"=>"Update", "author"=>{"author_name"=>"Sally", "photo_url"=>"jhh"}, "authenticity_token"=>"NEIUvqyqgE2U0oB9tOHu7y0DoJkYmRatxpmsbvFc7u4=", "id"=>"1"}
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/authors/1]
+
+
+Processing AuthorsController#update (for 127.0.0.1 at 2011-02-10 10:04:40) [PUT]
+  Parameters: {"commit"=>"Update", "author"=>{"author_name"=>"test", "photo_url"=>"jhh"}, "authenticity_token"=>"NEIUvqyqgE2U0oB9tOHu7y0DoJkYmRatxpmsbvFc7u4=", "id"=>"1"}
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mAuthor Update (0.0ms)[0m   [0;1mUPDATE "authors" SET "updated_at" = '2011-02-10 17:04:40', "author_name" = 'test' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/authors/1
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/authors/1]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-10 10:04:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/authors/1]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-10 10:04:42) [GET]
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-10 10:04:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/authors/1]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-10 10:05:25) [GET]
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-10 10:05:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/authors/1]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-10 10:25:04) [GET]
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#new (for 127.0.0.1 at 2011-02-10 10:25:07) [GET]
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/authors/new]
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2011-02-10 10:25:09) [POST]
+  Parameters: {"commit"=>"Create", "author"=>{"author_name"=>"xgdfgd", "photo_url"=>"fgdfgd"}, "authenticity_token"=>"NEIUvqyqgE2U0oB9tOHu7y0DoJkYmRatxpmsbvFc7u4="}
+  [4;35;1mAuthor Create (0.0ms)[0m   [0mINSERT INTO "authors" ("created_at", "author_name", "updated_at", "photo_url") VALUES('2011-02-10 17:25:09', 'xgdfgd', '2011-02-10 17:25:09', 'fgdfgd')[0m
+Redirected to http://localhost:3000/authors/2
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/authors]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-10 10:25:09) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 2) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/authors/2]
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-10 10:25:10) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 2) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/authors/2/edit]
+
+
+Processing AuthorsController#update (for 127.0.0.1 at 2011-02-10 10:25:11) [PUT]
+  Parameters: {"commit"=>"Update", "author"=>{"author_name"=>"xgdfgd", "photo_url"=>"fgdfgd"}, "authenticity_token"=>"NEIUvqyqgE2U0oB9tOHu7y0DoJkYmRatxpmsbvFc7u4=", "id"=>"2"}
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 2) [0m
+Redirected to http://localhost:3000/authors/2
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/authors/2]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-10 10:25:11) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 2) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/authors/2]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-10 10:25:12) [GET]
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-10 10:25:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/authors/1]
+
+
+Processing AuthorsController#destroy (for 127.0.0.1 at 2011-02-10 10:25:19) [DELETE]
+  Parameters: {"authenticity_token"=>"NEIUvqyqgE2U0oB9tOHu7y0DoJkYmRatxpmsbvFc7u4=", "id"=>"2"}
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 2) [0m
+  [4;35;1mAuthor Destroy (0.0ms)[0m   [0mDELETE FROM "authors" WHERE "id" = 2[0m
+Redirected to http://localhost:3000/authors
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/authors/2]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-10 10:25:19) [GET]
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/authors]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20110202172943)
+Migrating to AddTestData (20110202185353)
+Migrating to AddEditsToArticle (20110205224159)
+Migrating to CreateAuthors (20110210165846)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("authors")[0m
+  [4;36;1mArticle Delete all (15.6ms)[0m   [0;1mDELETE FROM "articles" WHERE 1=1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20110202172943)
+Migrating to AddTestData (20110202185353)
+Migrating to AddEditsToArticle (20110205224159)
+Migrating to CreateAuthors (20110210165846)
+Migrating to AddAuthorIdToArticle (20110210173014)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "articles" ADD "author_id" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110210173014')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("authors")[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM "articles" WHERE 1=1[0m
+  [4;35;1mArticle Create (15.6ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 17:33:55', 'Lorem Ipsum', NULL, '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', NULL, '2011-02-10 17:33:55', 1, 0)[0m
+  [4;36;1mAuthor Delete all (0.0ms)[0m   [0;1mDELETE FROM "authors" WHERE 1=1[0m
+  [4;35;1mAuthor Create (0.0ms)[0m   [0mINSERT INTO "authors" ("created_at", "author_name", "updated_at", "photo_url") VALUES('2011-02-10 17:33:55', 'Robert Frost', '2011-02-10 17:33:55', 'frost.jpg')[0m
+  [4;36;1mAuthor Create (0.0ms)[0m   [0;1mINSERT INTO "authors" ("created_at", "author_name", "updated_at", "photo_url") VALUES('2011-02-10 17:33:55', 'Anonymous', '2011-02-10 17:33:55', 'frost.jpg')[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM "articles" WHERE 1=1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 17:34:21', 'Lorem Ipsum', NULL, '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', NULL, '2011-02-10 17:34:21', 1, 0)[0m
+  [4;36;1mArticle Create (15.6ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 17:34:21', 'Invest', NULL, '	So what are some specific things you can do? For starters, if you aren''t a reader,
+ 	 	 		you should start with that. Reading books can really expand your mind and allow you 
+ 	 	 		to learn so many different skills and gain knowledge that will help you in all areas 
+ 	 	 		of your life. I''m not talking about fiction books here. I''m talking about business books, 
+ 	 	 		personal development books, or any book where you will actually learn a new skill by reading it. 
+
+ 	 	 		You can also take courses and attend seminars. Think about it. These programs are taught by people
+ 	 	 		who have spent decades figuring out how to make some aspect of their life work and now they are going 
+ 	 	 		to teach you how to do it. Of course, you want to do some research before you invest in some of these
+ 	 	 		seminars and make sure you''re not just paying for some sales presentation. 
+
+ 	 	 		Reading, listening to audio tapes while you drive or workout, attending seminars, and doing anything
+ 	 	 		that will increase your knowledge and skill base are all great ways to invest your money. However,
+ 	 	 		before you start, you will want to make sure you have a goal in mind. You want to be clear on what you 
+ 	 	 		will gain out of doing all of these things. Are you looking to become a better husband or wife? Do you 
+ 	 	 		want to get in the best shape of your life? Do you want to be a better cook perhaps? How about becoming a writer?
+ 	 	 		', NULL, '2011-02-10 17:34:21', 2, 0)[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 17:34:21', 'Lorem Ipsum', NULL, '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', NULL, '2011-02-10 17:34:21', 1, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 17:34:21', 'Lorem Ipsum', NULL, '	What I learned in Robbins Personal Power program is a set of skills that 
+ 	 		allowed me to get myself to take action. It''s not always easy though. Sometimes 
+ 	 		you can know what to do, know how to get yourself to take action, and still not
+ 	 		want to do anything. The biggest mistake that I made years ago was that I didn''t 
+ 	 		set goals that I truly wanted. I set goals that were seen as success in other people''s
+ 	 		eyes instead of my own. I went around in circles for years feeling frustrated and wondering
+ 	 		why I wasn''t able to get myself to take the actions necessary to achieve those goals. I found
+ 	 		out later on that I didn''t really want those goals. 
+
+ 	 		Once I was able to set the kind of goals that I really wanted, using my personal power
+ 	 		became a hundred times easier. Again, the concept is simple but putting it into action 
+ 	 		is a bit more difficult. Once you know what you want, you will need to get yourself to 
+ 	 		take action long enough for those actions to become a habit. Once it becomes a habit, 
+ 	 		things get a lot easier. People who have been going to the gym 5 days a week for years 
+ 	 		don''t have to motivate themselves to go. It''s a habit, like brushing your teeth.
+ 	 	 	', NULL, '2011-02-10 17:34:21', 1, 0)[0m
+  [4;35;1mAuthor Delete all (0.0ms)[0m   [0mDELETE FROM "authors" WHERE 1=1[0m
+  [4;36;1mAuthor Create (0.0ms)[0m   [0;1mINSERT INTO "authors" ("created_at", "author_name", "updated_at", "photo_url") VALUES('2011-02-10 17:34:21', 'Robert Frost', '2011-02-10 17:34:21', 'frost.jpg')[0m
+  [4;35;1mAuthor Create (0.0ms)[0m   [0mINSERT INTO "authors" ("created_at", "author_name", "updated_at", "photo_url") VALUES('2011-02-10 17:34:21', 'Anonymous', '2011-02-10 17:34:21', 'frost.jpg')[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM "articles" WHERE 1=1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 17:35:19', 'Lorem Ipsum', NULL, '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', NULL, '2011-02-10 17:35:19', 1, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 17:35:19', 'Invest', NULL, '	So what are some specific things you can do? For starters, if you aren''t a reader,
+ 	 	 		you should start with that. Reading books can really expand your mind and allow you 
+ 	 	 		to learn so many different skills and gain knowledge that will help you in all areas 
+ 	 	 		of your life. I''m not talking about fiction books here. I''m talking about business books, 
+ 	 	 		personal development books, or any book where you will actually learn a new skill by reading it. 
+
+ 	 	 		You can also take courses and attend seminars. Think about it. These programs are taught by people
+ 	 	 		who have spent decades figuring out how to make some aspect of their life work and now they are going 
+ 	 	 		to teach you how to do it. Of course, you want to do some research before you invest in some of these
+ 	 	 		seminars and make sure you''re not just paying for some sales presentation. 
+
+ 	 	 		Reading, listening to audio tapes while you drive or workout, attending seminars, and doing anything
+ 	 	 		that will increase your knowledge and skill base are all great ways to invest your money. However,
+ 	 	 		before you start, you will want to make sure you have a goal in mind. You want to be clear on what you 
+ 	 	 		will gain out of doing all of these things. Are you looking to become a better husband or wife? Do you 
+ 	 	 		want to get in the best shape of your life? Do you want to be a better cook perhaps? How about becoming a writer?
+ 	 	 		', NULL, '2011-02-10 17:35:19', 2, 0)[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 17:35:19', 'Lorem Ipsum', NULL, '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', NULL, '2011-02-10 17:35:19', 1, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 17:35:19', 'Lorem Ipsum', NULL, '	What I learned in Robbins Personal Power program is a set of skills that 
+ 	 		allowed me to get myself to take action. It''s not always easy though. Sometimes 
+ 	 		you can know what to do, know how to get yourself to take action, and still not
+ 	 		want to do anything. The biggest mistake that I made years ago was that I didn''t 
+ 	 		set goals that I truly wanted. I set goals that were seen as success in other people''s
+ 	 		eyes instead of my own. I went around in circles for years feeling frustrated and wondering
+ 	 		why I wasn''t able to get myself to take the actions necessary to achieve those goals. I found
+ 	 		out later on that I didn''t really want those goals. 
+
+ 	 		Once I was able to set the kind of goals that I really wanted, using my personal power
+ 	 		became a hundred times easier. Again, the concept is simple but putting it into action 
+ 	 		is a bit more difficult. Once you know what you want, you will need to get yourself to 
+ 	 		take action long enough for those actions to become a habit. Once it becomes a habit, 
+ 	 		things get a lot easier. People who have been going to the gym 5 days a week for years 
+ 	 		don''t have to motivate themselves to go. It''s a habit, like brushing your teeth.
+ 	 	 	', NULL, '2011-02-10 17:35:19', 1, 0)[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 17:35:19', 'Lorem Ipsum', NULL, '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', NULL, '2011-02-10 17:35:19', 1, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 17:35:19', 'Invest', NULL, '	So what are some specific things you can do? For starters, if you aren''t a reader,
+ 	 	 		you should start with that. Reading books can really expand your mind and allow you 
+ 	 	 		to learn so many different skills and gain knowledge that will help you in all areas 
+ 	 	 		of your life. I''m not talking about fiction books here. I''m talking about business books, 
+ 	 	 		personal development books, or any book where you will actually learn a new skill by reading it. 
+
+ 	 	 		You can also take courses and attend seminars. Think about it. These programs are taught by people
+ 	 	 		who have spent decades figuring out how to make some aspect of their life work and now they are going 
+ 	 	 		to teach you how to do it. Of course, you want to do some research before you invest in some of these
+ 	 	 		seminars and make sure you''re not just paying for some sales presentation. 
+
+ 	 	 		Reading, listening to audio tapes while you drive or workout, attending seminars, and doing anything
+ 	 	 		that will increase your knowledge and skill base are all great ways to invest your money. However,
+ 	 	 		before you start, you will want to make sure you have a goal in mind. You want to be clear on what you 
+ 	 	 		will gain out of doing all of these things. Are you looking to become a better husband or wife? Do you 
+ 	 	 		want to get in the best shape of your life? Do you want to be a better cook perhaps? How about becoming a writer?
+ 	 	 		', NULL, '2011-02-10 17:35:19', 2, 0)[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 17:35:19', 'Lorem Ipsum', NULL, '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', NULL, '2011-02-10 17:35:19', 1, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 17:35:19', 'Lorem Ipsum', NULL, '	What I learned in Robbins Personal Power program is a set of skills that 
+ 	 		allowed me to get myself to take action. It''s not always easy though. Sometimes 
+ 	 		you can know what to do, know how to get yourself to take action, and still not
+ 	 		want to do anything. The biggest mistake that I made years ago was that I didn''t 
+ 	 		set goals that I truly wanted. I set goals that were seen as success in other people''s
+ 	 		eyes instead of my own. I went around in circles for years feeling frustrated and wondering
+ 	 		why I wasn''t able to get myself to take the actions necessary to achieve those goals. I found
+ 	 		out later on that I didn''t really want those goals. 
+
+ 	 		Once I was able to set the kind of goals that I really wanted, using my personal power
+ 	 		became a hundred times easier. Again, the concept is simple but putting it into action 
+ 	 		is a bit more difficult. Once you know what you want, you will need to get yourself to 
+ 	 		take action long enough for those actions to become a habit. Once it becomes a habit, 
+ 	 		things get a lot easier. People who have been going to the gym 5 days a week for years 
+ 	 		don''t have to motivate themselves to go. It''s a habit, like brushing your teeth.
+ 	 	 	', NULL, '2011-02-10 17:35:19', 1, 0)[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 17:35:19', 'Lorem Ipsum', NULL, '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', NULL, '2011-02-10 17:35:19', 1, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 17:35:19', 'Invest', NULL, '	So what are some specific things you can do? For starters, if you aren''t a reader,
+ 	 	 		you should start with that. Reading books can really expand your mind and allow you 
+ 	 	 		to learn so many different skills and gain knowledge that will help you in all areas 
+ 	 	 		of your life. I''m not talking about fiction books here. I''m talking about business books, 
+ 	 	 		personal development books, or any book where you will actually learn a new skill by reading it. 
+
+ 	 	 		You can also take courses and attend seminars. Think about it. These programs are taught by people
+ 	 	 		who have spent decades figuring out how to make some aspect of their life work and now they are going 
+ 	 	 		to teach you how to do it. Of course, you want to do some research before you invest in some of these
+ 	 	 		seminars and make sure you''re not just paying for some sales presentation. 
+
+ 	 	 		Reading, listening to audio tapes while you drive or workout, attending seminars, and doing anything
+ 	 	 		that will increase your knowledge and skill base are all great ways to invest your money. However,
+ 	 	 		before you start, you will want to make sure you have a goal in mind. You want to be clear on what you 
+ 	 	 		will gain out of doing all of these things. Are you looking to become a better husband or wife? Do you 
+ 	 	 		want to get in the best shape of your life? Do you want to be a better cook perhaps? How about becoming a writer?
+ 	 	 		', NULL, '2011-02-10 17:35:19', 2, 0)[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 17:35:19', 'Lorem Ipsum', NULL, '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', NULL, '2011-02-10 17:35:19', 1, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 17:35:19', 'Lorem Ipsum', NULL, '	What I learned in Robbins Personal Power program is a set of skills that 
+ 	 		allowed me to get myself to take action. It''s not always easy though. Sometimes 
+ 	 		you can know what to do, know how to get yourself to take action, and still not
+ 	 		want to do anything. The biggest mistake that I made years ago was that I didn''t 
+ 	 		set goals that I truly wanted. I set goals that were seen as success in other people''s
+ 	 		eyes instead of my own. I went around in circles for years feeling frustrated and wondering
+ 	 		why I wasn''t able to get myself to take the actions necessary to achieve those goals. I found
+ 	 		out later on that I didn''t really want those goals. 
+
+ 	 		Once I was able to set the kind of goals that I really wanted, using my personal power
+ 	 		became a hundred times easier. Again, the concept is simple but putting it into action 
+ 	 		is a bit more difficult. Once you know what you want, you will need to get yourself to 
+ 	 		take action long enough for those actions to become a habit. Once it becomes a habit, 
+ 	 		things get a lot easier. People who have been going to the gym 5 days a week for years 
+ 	 		don''t have to motivate themselves to go. It''s a habit, like brushing your teeth.
+ 	 	 	', NULL, '2011-02-10 17:35:19', 2, 0)[0m
+  [4;35;1mAuthor Delete all (15.6ms)[0m   [0mDELETE FROM "authors" WHERE 1=1[0m
+  [4;36;1mAuthor Create (0.0ms)[0m   [0;1mINSERT INTO "authors" ("created_at", "author_name", "updated_at", "photo_url") VALUES('2011-02-10 17:35:19', 'Robert Frost', '2011-02-10 17:35:19', 'frost.jpg')[0m
+  [4;35;1mAuthor Create (0.0ms)[0m   [0mINSERT INTO "authors" ("created_at", "author_name", "updated_at", "photo_url") VALUES('2011-02-10 17:35:19', 'Anonymous', '2011-02-10 17:35:19', 'frost.jpg')[0m
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-10 10:35:24) [GET]
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-10 10:35:32) [GET]
+
+ActionController::RoutingError (No route matches "/aticles" with {:method=>:get}):
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-10 10:35:40) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-10 10:37:42) [GET]
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-10 11:03:29) [GET]
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-10 11:05:05) [GET]
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+
+ActionView::TemplateError (undefined local variable or method `articles' for #<ActionView::Base:0x929cb38>) on line #12 of app/views/authors/index.html.erb:
+9: 
+10: <% @authors.each do |author| %>
+11:   <tr>
+12:     <td><%=h articles.find(params[:id]) %></td>
+13:     <td><%=h author.author_name %></td>
+14:     <td><%=h author.photo_url %></td>
+15:     <td><%= link_to 'Show', author %></td>
+
+    app/views/authors/index.html.erb:12
+    app/views/authors/index.html.erb:10:in `each'
+    app/views/authors/index.html.erb:10
+    app/controllers/authors_controller.rb:7:in `index'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-10 11:05:14) [GET]
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+
+ActionView::TemplateError (undefined local variable or method `authors' for #<ActionView::Base:0x90f3570>) on line #12 of app/views/authors/index.html.erb:
+9: 
+10: <% @authors.each do |author| %>
+11:   <tr>
+12:     <td><%=h authors.find(params[:id]) %></td>
+13:     <td><%=h author.author_name %></td>
+14:     <td><%=h author.photo_url %></td>
+15:     <td><%= link_to 'Show', author %></td>
+
+    app/views/authors/index.html.erb:12
+    app/views/authors/index.html.erb:10:in `each'
+    app/views/authors/index.html.erb:10
+    app/controllers/authors_controller.rb:7:in `index'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-10 11:05:32) [GET]
+  [4;36;1mAuthor Load (15.6ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+
+ActionView::TemplateError (undefined method `find' for #<Author:0x922cc68>) on line #12 of app/views/authors/index.html.erb:
+9: 
+10: <% @authors.each do |author| %>
+11:   <tr>
+12:     <td><%=h author.find(params[:id]) %></td>
+13:     <td><%=h author.author_name %></td>
+14:     <td><%=h author.photo_url %></td>
+15:     <td><%= link_to 'Show', author %></td>
+
+    app/views/authors/index.html.erb:12
+    app/views/authors/index.html.erb:10:in `each'
+    app/views/authors/index.html.erb:10
+    app/controllers/authors_controller.rb:7:in `index'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-10 11:14:47) [GET]
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-10 11:16:20) [GET]
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-10 11:16:28) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-10 11:17:30) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+
+ActionView::TemplateError (undefined local variable or method `author' for #<ActionView::Base:0x9169b90>) on line #25 of app/views/articles/index.html.erb:
+22: <% @articles.each do |article| %>
+23:   <tr class="<%= cycle('odd', 'even') %>">
+24:     <td id="title"><%=h article.title %></td>
+25:     <td id="author"><%=h author.find(params[article.author_name]) %></td>
+26:     <td id="body"><%=h truncate(article.body, :length => 45) %></td>
+27:     <td id="date"><%=h article.created_at.strftime("%A, %b %d %Y") %></td>
+28:     <td class="button"><%= link_to image_tag("zoom.png", :border=>0), article, :title => "view the article" %></td>
+
+    app/views/articles/index.html.erb:25
+    app/views/articles/index.html.erb:22:in `each'
+    app/views/articles/index.html.erb:22
+    app/controllers/articles_controller.rb:11:in `index'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-10 11:34:32) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+
+ActionView::TemplateError (undefined local variable or method `author' for #<ActionView::Base:0x92ef2f0>) on line #25 of app/views/articles/index.html.erb:
+22: <% @articles.each do |article| %>
+23:   <tr class="<%= cycle('odd', 'even') %>">
+24:     <td id="title"><%=h article.title %></td>
+25:     <td id="author"><%=h author.find(params[article.author_name]) %></td>
+26:     <td id="body"><%=h truncate(article.body, :length => 45) %></td>
+27:     <td id="date"><%=h article.created_at.strftime("%A, %b %d %Y") %></td>
+28:     <td class="button"><%= link_to image_tag("zoom.png", :border=>0), article, :title => "view the article" %></td>
+
+    app/views/articles/index.html.erb:25
+    app/views/articles/index.html.erb:22:in `each'
+    app/views/articles/index.html.erb:22
+    app/controllers/articles_controller.rb:11:in `index'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-10 11:35:00) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 78ms (View: 78, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-10 11:35:08) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-02-10 11:35:14) [POST]
+  Parameters: {"article"=>{"body"=>"cvbccb", "author_name"=>"cvbcv", "title"=>"vbcvb"}, "authenticity_token"=>"NEIUvqyqgE2U0oB9tOHu7y0DoJkYmRatxpmsbvFc7u4="}
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-02-10 11:35:19) [POST]
+  Parameters: {"article"=>{"body"=>"cvbccb", "author_name"=>"cvbcvb", "title"=>"vbcvb"}, "authenticity_token"=>"NEIUvqyqgE2U0oB9tOHu7y0DoJkYmRatxpmsbvFc7u4="}
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-10 11:35:25) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/articles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20110202172943)
+Migrating to AddTestData (20110202185353)
+Migrating to AddEditsToArticle (20110205224159)
+Migrating to CreateAuthors (20110210165846)
+Migrating to AddAuthorIdToArticle (20110210173014)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("authors")[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-10 11:38:59) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 37) [0m
+
+ActionView::TemplateError (Couldn't find Author with ID=37) on line #25 of app/views/articles/index.html.erb:
+22: <% @articles.each do |article| %>
+23:   <tr class="<%= cycle('odd', 'even') %>">
+24:     <td id="title"><%=h article.title %></td>
+25:     <td id="author"><%=h Author.find(article.id) %></td>
+26:     <td id="body"><%=h truncate(article.body, :length => 45) %></td>
+27:     <td id="date"><%=h article.created_at.strftime("%A, %b %d %Y") %></td>
+28:     <td class="button"><%= link_to image_tag("zoom.png", :border=>0), article, :title => "view the article" %></td>
+
+    app/views/articles/index.html.erb:25
+    app/views/articles/index.html.erb:22:in `each'
+    app/views/articles/index.html.erb:22
+    app/controllers/articles_controller.rb:11:in `index'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.8ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-10 11:39:18) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 37) [0m
+
+ActionView::TemplateError (Couldn't find Author with ID=37) on line #25 of app/views/articles/index.html.erb:
+22: <% @articles.each do |article| %>
+23:   <tr class="<%= cycle('odd', 'even') %>">
+24:     <td id="title"><%=h article.title %></td>
+25:     <td id="author"><%=h Author.find(article.id) %></td>
+26:     <td id="body"><%=h truncate(article.body, :length => 45) %></td>
+27:     <td id="date"><%=h article.created_at.strftime("%A, %b %d %Y") %></td>
+28:     <td class="button"><%= link_to image_tag("zoom.png", :border=>0), article, :title => "view the article" %></td>
+
+    app/views/articles/index.html.erb:25
+    app/views/articles/index.html.erb:22:in `each'
+    app/views/articles/index.html.erb:22
+    app/controllers/articles_controller.rb:11:in `index'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-10 11:39:30) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+
+ActionView::TemplateError (wrong number of arguments (0 for 1)) on line #25 of app/views/articles/index.html.erb:
+22: <% @articles.each do |article| %>
+23:   <tr class="<%= cycle('odd', 'even') %>">
+24:     <td id="title"><%=h article.title %></td>
+25:     <td id="author"><%=h  %></td>
+26:     <td id="body"><%=h truncate(article.body, :length => 45) %></td>
+27:     <td id="date"><%=h article.created_at.strftime("%A, %b %d %Y") %></td>
+28:     <td class="button"><%= link_to image_tag("zoom.png", :border=>0), article, :title => "view the article" %></td>
+
+    app/views/articles/index.html.erb:25:in `h'
+    app/views/articles/index.html.erb:25
+    app/views/articles/index.html.erb:22:in `each'
+    app/views/articles/index.html.erb:22
+    app/controllers/articles_controller.rb:11:in `index'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-10 11:39:41) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-10 11:40:10) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+
+ActionView::TemplateError (Couldn't find Author with ID=1) on line #25 of app/views/articles/index.html.erb:
+22: <% @articles.each do |article| %>
+23:   <tr class="<%= cycle('odd', 'even') %>">
+24:     <td id="title"><%=h article.title %></td>
+25:     <td id="author"><%=h Author.find(article.author_id) %></td>
+26:     <td id="body"><%=h truncate(article.body, :length => 45) %></td>
+27:     <td id="date"><%=h article.created_at.strftime("%A, %b %d %Y") %></td>
+28:     <td class="button"><%= link_to image_tag("zoom.png", :border=>0), article, :title => "view the article" %></td>
+
+    app/views/articles/index.html.erb:25
+    app/views/articles/index.html.erb:22:in `each'
+    app/views/articles/index.html.erb:22
+    app/controllers/articles_controller.rb:11:in `index'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.8ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-10 11:40:30) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/articles]
+  [4;36;1mArticle Delete all (31.2ms)[0m   [0;1mDELETE FROM "articles" WHERE 1=1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:40:45', 'Lorem Ipsum', NULL, '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', NULL, '2011-02-10 18:40:45', 7, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:40:45', 'Invest', NULL, '	So what are some specific things you can do? For starters, if you aren''t a reader,
+ 	 	 		you should start with that. Reading books can really expand your mind and allow you 
+ 	 	 		to learn so many different skills and gain knowledge that will help you in all areas 
+ 	 	 		of your life. I''m not talking about fiction books here. I''m talking about business books, 
+ 	 	 		personal development books, or any book where you will actually learn a new skill by reading it. 
+
+ 	 	 		You can also take courses and attend seminars. Think about it. These programs are taught by people
+ 	 	 		who have spent decades figuring out how to make some aspect of their life work and now they are going 
+ 	 	 		to teach you how to do it. Of course, you want to do some research before you invest in some of these
+ 	 	 		seminars and make sure you''re not just paying for some sales presentation. 
+
+ 	 	 		Reading, listening to audio tapes while you drive or workout, attending seminars, and doing anything
+ 	 	 		that will increase your knowledge and skill base are all great ways to invest your money. However,
+ 	 	 		before you start, you will want to make sure you have a goal in mind. You want to be clear on what you 
+ 	 	 		will gain out of doing all of these things. Are you looking to become a better husband or wife? Do you 
+ 	 	 		want to get in the best shape of your life? Do you want to be a better cook perhaps? How about becoming a writer?
+ 	 	 		', NULL, '2011-02-10 18:40:45', 8, 0)[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:40:45', 'Lorem Ipsum', NULL, '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', NULL, '2011-02-10 18:40:45', 7, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:40:45', 'Lorem Ipsum', NULL, '	What I learned in Robbins Personal Power program is a set of skills that 
+ 	 		allowed me to get myself to take action. It''s not always easy though. Sometimes 
+ 	 		you can know what to do, know how to get yourself to take action, and still not
+ 	 		want to do anything. The biggest mistake that I made years ago was that I didn''t 
+ 	 		set goals that I truly wanted. I set goals that were seen as success in other people''s
+ 	 		eyes instead of my own. I went around in circles for years feeling frustrated and wondering
+ 	 		why I wasn''t able to get myself to take the actions necessary to achieve those goals. I found
+ 	 		out later on that I didn''t really want those goals. 
+
+ 	 		Once I was able to set the kind of goals that I really wanted, using my personal power
+ 	 		became a hundred times easier. Again, the concept is simple but putting it into action 
+ 	 		is a bit more difficult. Once you know what you want, you will need to get yourself to 
+ 	 		take action long enough for those actions to become a habit. Once it becomes a habit, 
+ 	 		things get a lot easier. People who have been going to the gym 5 days a week for years 
+ 	 		don''t have to motivate themselves to go. It''s a habit, like brushing your teeth.
+ 	 	 	', NULL, '2011-02-10 18:40:45', 8, 0)[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:40:45', 'Lorem Ipsum', NULL, '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', NULL, '2011-02-10 18:40:45', 7, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:40:45', 'Invest', NULL, '	So what are some specific things you can do? For starters, if you aren''t a reader,
+ 	 	 		you should start with that. Reading books can really expand your mind and allow you 
+ 	 	 		to learn so many different skills and gain knowledge that will help you in all areas 
+ 	 	 		of your life. I''m not talking about fiction books here. I''m talking about business books, 
+ 	 	 		personal development books, or any book where you will actually learn a new skill by reading it. 
+
+ 	 	 		You can also take courses and attend seminars. Think about it. These programs are taught by people
+ 	 	 		who have spent decades figuring out how to make some aspect of their life work and now they are going 
+ 	 	 		to teach you how to do it. Of course, you want to do some research before you invest in some of these
+ 	 	 		seminars and make sure you''re not just paying for some sales presentation. 
+
+ 	 	 		Reading, listening to audio tapes while you drive or workout, attending seminars, and doing anything
+ 	 	 		that will increase your knowledge and skill base are all great ways to invest your money. However,
+ 	 	 		before you start, you will want to make sure you have a goal in mind. You want to be clear on what you 
+ 	 	 		will gain out of doing all of these things. Are you looking to become a better husband or wife? Do you 
+ 	 	 		want to get in the best shape of your life? Do you want to be a better cook perhaps? How about becoming a writer?
+ 	 	 		', NULL, '2011-02-10 18:40:45', 8, 0)[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:40:45', 'Lorem Ipsum', NULL, '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', NULL, '2011-02-10 18:40:45', 7, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:40:45', 'Lorem Ipsum', NULL, '	What I learned in Robbins Personal Power program is a set of skills that 
+ 	 		allowed me to get myself to take action. It''s not always easy though. Sometimes 
+ 	 		you can know what to do, know how to get yourself to take action, and still not
+ 	 		want to do anything. The biggest mistake that I made years ago was that I didn''t 
+ 	 		set goals that I truly wanted. I set goals that were seen as success in other people''s
+ 	 		eyes instead of my own. I went around in circles for years feeling frustrated and wondering
+ 	 		why I wasn''t able to get myself to take the actions necessary to achieve those goals. I found
+ 	 		out later on that I didn''t really want those goals. 
+
+ 	 		Once I was able to set the kind of goals that I really wanted, using my personal power
+ 	 		became a hundred times easier. Again, the concept is simple but putting it into action 
+ 	 		is a bit more difficult. Once you know what you want, you will need to get yourself to 
+ 	 		take action long enough for those actions to become a habit. Once it becomes a habit, 
+ 	 		things get a lot easier. People who have been going to the gym 5 days a week for years 
+ 	 		don''t have to motivate themselves to go. It''s a habit, like brushing your teeth.
+ 	 	 	', NULL, '2011-02-10 18:40:45', 7, 0)[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:40:45', 'Lorem Ipsum', NULL, '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', NULL, '2011-02-10 18:40:45', 7, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:40:45', 'Invest', NULL, '	So what are some specific things you can do? For starters, if you aren''t a reader,
+ 	 	 		you should start with that. Reading books can really expand your mind and allow you 
+ 	 	 		to learn so many different skills and gain knowledge that will help you in all areas 
+ 	 	 		of your life. I''m not talking about fiction books here. I''m talking about business books, 
+ 	 	 		personal development books, or any book where you will actually learn a new skill by reading it. 
+
+ 	 	 		You can also take courses and attend seminars. Think about it. These programs are taught by people
+ 	 	 		who have spent decades figuring out how to make some aspect of their life work and now they are going 
+ 	 	 		to teach you how to do it. Of course, you want to do some research before you invest in some of these
+ 	 	 		seminars and make sure you''re not just paying for some sales presentation. 
+
+ 	 	 		Reading, listening to audio tapes while you drive or workout, attending seminars, and doing anything
+ 	 	 		that will increase your knowledge and skill base are all great ways to invest your money. However,
+ 	 	 		before you start, you will want to make sure you have a goal in mind. You want to be clear on what you 
+ 	 	 		will gain out of doing all of these things. Are you looking to become a better husband or wife? Do you 
+ 	 	 		want to get in the best shape of your life? Do you want to be a better cook perhaps? How about becoming a writer?
+ 	 	 		', NULL, '2011-02-10 18:40:45', 8, 0)[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:40:45', 'Lorem Ipsum', NULL, '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', NULL, '2011-02-10 18:40:45', 7, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:40:45', 'Lorem Ipsum', NULL, '	What I learned in Robbins Personal Power program is a set of skills that 
+ 	 		allowed me to get myself to take action. It''s not always easy though. Sometimes 
+ 	 		you can know what to do, know how to get yourself to take action, and still not
+ 	 		want to do anything. The biggest mistake that I made years ago was that I didn''t 
+ 	 		set goals that I truly wanted. I set goals that were seen as success in other people''s
+ 	 		eyes instead of my own. I went around in circles for years feeling frustrated and wondering
+ 	 		why I wasn''t able to get myself to take the actions necessary to achieve those goals. I found
+ 	 		out later on that I didn''t really want those goals. 
+
+ 	 		Once I was able to set the kind of goals that I really wanted, using my personal power
+ 	 		became a hundred times easier. Again, the concept is simple but putting it into action 
+ 	 		is a bit more difficult. Once you know what you want, you will need to get yourself to 
+ 	 		take action long enough for those actions to become a habit. Once it becomes a habit, 
+ 	 		things get a lot easier. People who have been going to the gym 5 days a week for years 
+ 	 		don''t have to motivate themselves to go. It''s a habit, like brushing your teeth.
+ 	 	 	', NULL, '2011-02-10 18:40:45', 8, 0)[0m
+  [4;35;1mAuthor Delete all (15.6ms)[0m   [0mDELETE FROM "authors" WHERE 1=1[0m
+  [4;36;1mAuthor Create (0.0ms)[0m   [0;1mINSERT INTO "authors" ("created_at", "author_name", "updated_at", "photo_url") VALUES('2011-02-10 18:40:45', 'Robert Frost', '2011-02-10 18:40:45', 'frost.jpg')[0m
+  [4;35;1mAuthor Create (0.0ms)[0m   [0mINSERT INTO "authors" ("created_at", "author_name", "updated_at", "photo_url") VALUES('2011-02-10 18:40:45', 'Anonymous', '2011-02-10 18:40:45', 'frost.jpg')[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-10 11:40:47) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-10 11:40:59) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 7) [0m
+
+ActionView::TemplateError (Couldn't find Author with ID=7) on line #25 of app/views/articles/index.html.erb:
+22: <% @articles.each do |article| %>
+23:   <tr class="<%= cycle('odd', 'even') %>">
+24:     <td id="title"><%=h article.title %></td>
+25:     <td id="author"><%=h Author.find(article.author_id) %></td>
+26:     <td id="body"><%=h truncate(article.body, :length => 45) %></td>
+27:     <td id="date"><%=h article.created_at.strftime("%A, %b %d %Y") %></td>
+28:     <td class="button"><%= link_to image_tag("zoom.png", :border=>0), article, :title => "view the article" %></td>
+
+    app/views/articles/index.html.erb:25
+    app/views/articles/index.html.erb:22:in `each'
+    app/views/articles/index.html.erb:22
+    app/controllers/articles_controller.rb:11:in `index'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (93.6ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM "articles" WHERE 1=1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:43:56', 'Lorem Ipsum', NULL, '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', NULL, '2011-02-10 18:43:56', 1, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:43:56', 'Invest', NULL, '	So what are some specific things you can do? For starters, if you aren''t a reader,
+ 	 	 		you should start with that. Reading books can really expand your mind and allow you 
+ 	 	 		to learn so many different skills and gain knowledge that will help you in all areas 
+ 	 	 		of your life. I''m not talking about fiction books here. I''m talking about business books, 
+ 	 	 		personal development books, or any book where you will actually learn a new skill by reading it. 
+
+ 	 	 		You can also take courses and attend seminars. Think about it. These programs are taught by people
+ 	 	 		who have spent decades figuring out how to make some aspect of their life work and now they are going 
+ 	 	 		to teach you how to do it. Of course, you want to do some research before you invest in some of these
+ 	 	 		seminars and make sure you''re not just paying for some sales presentation. 
+
+ 	 	 		Reading, listening to audio tapes while you drive or workout, attending seminars, and doing anything
+ 	 	 		that will increase your knowledge and skill base are all great ways to invest your money. However,
+ 	 	 		before you start, you will want to make sure you have a goal in mind. You want to be clear on what you 
+ 	 	 		will gain out of doing all of these things. Are you looking to become a better husband or wife? Do you 
+ 	 	 		want to get in the best shape of your life? Do you want to be a better cook perhaps? How about becoming a writer?
+ 	 	 		', NULL, '2011-02-10 18:43:56', 2, 0)[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:43:56', 'Lorem Ipsum', NULL, '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', NULL, '2011-02-10 18:43:56', 1, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:43:56', 'Lorem Ipsum', NULL, '	What I learned in Robbins Personal Power program is a set of skills that 
+ 	 		allowed me to get myself to take action. It''s not always easy though. Sometimes 
+ 	 		you can know what to do, know how to get yourself to take action, and still not
+ 	 		want to do anything. The biggest mistake that I made years ago was that I didn''t 
+ 	 		set goals that I truly wanted. I set goals that were seen as success in other people''s
+ 	 		eyes instead of my own. I went around in circles for years feeling frustrated and wondering
+ 	 		why I wasn''t able to get myself to take the actions necessary to achieve those goals. I found
+ 	 		out later on that I didn''t really want those goals. 
+
+ 	 		Once I was able to set the kind of goals that I really wanted, using my personal power
+ 	 		became a hundred times easier. Again, the concept is simple but putting it into action 
+ 	 		is a bit more difficult. Once you know what you want, you will need to get yourself to 
+ 	 		take action long enough for those actions to become a habit. Once it becomes a habit, 
+ 	 		things get a lot easier. People who have been going to the gym 5 days a week for years 
+ 	 		don''t have to motivate themselves to go. It''s a habit, like brushing your teeth.
+ 	 	 	', NULL, '2011-02-10 18:43:56', 2, 0)[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:43:56', 'Lorem Ipsum', NULL, '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', NULL, '2011-02-10 18:43:56', 1, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:43:56', 'Invest', NULL, '	So what are some specific things you can do? For starters, if you aren''t a reader,
+ 	 	 		you should start with that. Reading books can really expand your mind and allow you 
+ 	 	 		to learn so many different skills and gain knowledge that will help you in all areas 
+ 	 	 		of your life. I''m not talking about fiction books here. I''m talking about business books, 
+ 	 	 		personal development books, or any book where you will actually learn a new skill by reading it. 
+
+ 	 	 		You can also take courses and attend seminars. Think about it. These programs are taught by people
+ 	 	 		who have spent decades figuring out how to make some aspect of their life work and now they are going 
+ 	 	 		to teach you how to do it. Of course, you want to do some research before you invest in some of these
+ 	 	 		seminars and make sure you''re not just paying for some sales presentation. 
+
+ 	 	 		Reading, listening to audio tapes while you drive or workout, attending seminars, and doing anything
+ 	 	 		that will increase your knowledge and skill base are all great ways to invest your money. However,
+ 	 	 		before you start, you will want to make sure you have a goal in mind. You want to be clear on what you 
+ 	 	 		will gain out of doing all of these things. Are you looking to become a better husband or wife? Do you 
+ 	 	 		want to get in the best shape of your life? Do you want to be a better cook perhaps? How about becoming a writer?
+ 	 	 		', NULL, '2011-02-10 18:43:56', 2, 0)[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:43:56', 'Lorem Ipsum', NULL, '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', NULL, '2011-02-10 18:43:56', 1, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:43:56', 'Lorem Ipsum', NULL, '	What I learned in Robbins Personal Power program is a set of skills that 
+ 	 		allowed me to get myself to take action. It''s not always easy though. Sometimes 
+ 	 		you can know what to do, know how to get yourself to take action, and still not
+ 	 		want to do anything. The biggest mistake that I made years ago was that I didn''t 
+ 	 		set goals that I truly wanted. I set goals that were seen as success in other people''s
+ 	 		eyes instead of my own. I went around in circles for years feeling frustrated and wondering
+ 	 		why I wasn''t able to get myself to take the actions necessary to achieve those goals. I found
+ 	 		out later on that I didn''t really want those goals. 
+
+ 	 		Once I was able to set the kind of goals that I really wanted, using my personal power
+ 	 		became a hundred times easier. Again, the concept is simple but putting it into action 
+ 	 		is a bit more difficult. Once you know what you want, you will need to get yourself to 
+ 	 		take action long enough for those actions to become a habit. Once it becomes a habit, 
+ 	 		things get a lot easier. People who have been going to the gym 5 days a week for years 
+ 	 		don''t have to motivate themselves to go. It''s a habit, like brushing your teeth.
+ 	 	 	', NULL, '2011-02-10 18:43:56', 1, 0)[0m
+  [4;35;1mArticle Create (15.6ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:43:56', 'Lorem Ipsum', NULL, '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', NULL, '2011-02-10 18:43:56', 1, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:43:56', 'Invest', NULL, '	So what are some specific things you can do? For starters, if you aren''t a reader,
+ 	 	 		you should start with that. Reading books can really expand your mind and allow you 
+ 	 	 		to learn so many different skills and gain knowledge that will help you in all areas 
+ 	 	 		of your life. I''m not talking about fiction books here. I''m talking about business books, 
+ 	 	 		personal development books, or any book where you will actually learn a new skill by reading it. 
+
+ 	 	 		You can also take courses and attend seminars. Think about it. These programs are taught by people
+ 	 	 		who have spent decades figuring out how to make some aspect of their life work and now they are going 
+ 	 	 		to teach you how to do it. Of course, you want to do some research before you invest in some of these
+ 	 	 		seminars and make sure you''re not just paying for some sales presentation. 
+
+ 	 	 		Reading, listening to audio tapes while you drive or workout, attending seminars, and doing anything
+ 	 	 		that will increase your knowledge and skill base are all great ways to invest your money. However,
+ 	 	 		before you start, you will want to make sure you have a goal in mind. You want to be clear on what you 
+ 	 	 		will gain out of doing all of these things. Are you looking to become a better husband or wife? Do you 
+ 	 	 		want to get in the best shape of your life? Do you want to be a better cook perhaps? How about becoming a writer?
+ 	 	 		', NULL, '2011-02-10 18:43:56', 2, 0)[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:43:56', 'Lorem Ipsum', NULL, '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', NULL, '2011-02-10 18:43:56', 1, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:43:56', 'Lorem Ipsum', NULL, '	What I learned in Robbins Personal Power program is a set of skills that 
+ 	 		allowed me to get myself to take action. It''s not always easy though. Sometimes 
+ 	 		you can know what to do, know how to get yourself to take action, and still not
+ 	 		want to do anything. The biggest mistake that I made years ago was that I didn''t 
+ 	 		set goals that I truly wanted. I set goals that were seen as success in other people''s
+ 	 		eyes instead of my own. I went around in circles for years feeling frustrated and wondering
+ 	 		why I wasn''t able to get myself to take the actions necessary to achieve those goals. I found
+ 	 		out later on that I didn''t really want those goals. 
+
+ 	 		Once I was able to set the kind of goals that I really wanted, using my personal power
+ 	 		became a hundred times easier. Again, the concept is simple but putting it into action 
+ 	 		is a bit more difficult. Once you know what you want, you will need to get yourself to 
+ 	 		take action long enough for those actions to become a habit. Once it becomes a habit, 
+ 	 		things get a lot easier. People who have been going to the gym 5 days a week for years 
+ 	 		don''t have to motivate themselves to go. It''s a habit, like brushing your teeth.
+ 	 	 	', NULL, '2011-02-10 18:43:56', 2, 0)[0m
+  [4;35;1mAuthor Delete all (0.0ms)[0m   [0mDELETE FROM "authors" WHERE 1=1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mAuthor Create (0.0ms)[0m   [0;1mINSERT INTO "authors" ("created_at", "author_name", "updated_at", "photo_url") VALUES('2011-02-10 18:43:56', 'Robert Frost', '2011-02-10 18:43:56', 'frost.jpg')[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mAuthor Create (0.0ms)[0m   [0mINSERT INTO "authors" ("created_at", "author_name", "updated_at", "photo_url") VALUES('2011-02-10 18:43:56', 'Anonymous', '2011-02-10 18:43:56', 'frost.jpg')[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM "articles" WHERE 1=1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:45:47', 'Lorem Ipsum', NULL, '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', NULL, '2011-02-10 18:45:47', 13, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:45:47', 'Invest', NULL, '	So what are some specific things you can do? For starters, if you aren''t a reader,
+ 	 	 		you should start with that. Reading books can really expand your mind and allow you 
+ 	 	 		to learn so many different skills and gain knowledge that will help you in all areas 
+ 	 	 		of your life. I''m not talking about fiction books here. I''m talking about business books, 
+ 	 	 		personal development books, or any book where you will actually learn a new skill by reading it. 
+
+ 	 	 		You can also take courses and attend seminars. Think about it. These programs are taught by people
+ 	 	 		who have spent decades figuring out how to make some aspect of their life work and now they are going 
+ 	 	 		to teach you how to do it. Of course, you want to do some research before you invest in some of these
+ 	 	 		seminars and make sure you''re not just paying for some sales presentation. 
+
+ 	 	 		Reading, listening to audio tapes while you drive or workout, attending seminars, and doing anything
+ 	 	 		that will increase your knowledge and skill base are all great ways to invest your money. However,
+ 	 	 		before you start, you will want to make sure you have a goal in mind. You want to be clear on what you 
+ 	 	 		will gain out of doing all of these things. Are you looking to become a better husband or wife? Do you 
+ 	 	 		want to get in the best shape of your life? Do you want to be a better cook perhaps? How about becoming a writer?
+ 	 	 		', NULL, '2011-02-10 18:45:47', 14, 0)[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:45:47', 'Lorem Ipsum', NULL, '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', NULL, '2011-02-10 18:45:47', 13, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:45:47', 'Lorem Ipsum', NULL, '	What I learned in Robbins Personal Power program is a set of skills that 
+ 	 		allowed me to get myself to take action. It''s not always easy though. Sometimes 
+ 	 		you can know what to do, know how to get yourself to take action, and still not
+ 	 		want to do anything. The biggest mistake that I made years ago was that I didn''t 
+ 	 		set goals that I truly wanted. I set goals that were seen as success in other people''s
+ 	 		eyes instead of my own. I went around in circles for years feeling frustrated and wondering
+ 	 		why I wasn''t able to get myself to take the actions necessary to achieve those goals. I found
+ 	 		out later on that I didn''t really want those goals. 
+
+ 	 		Once I was able to set the kind of goals that I really wanted, using my personal power
+ 	 		became a hundred times easier. Again, the concept is simple but putting it into action 
+ 	 		is a bit more difficult. Once you know what you want, you will need to get yourself to 
+ 	 		take action long enough for those actions to become a habit. Once it becomes a habit, 
+ 	 		things get a lot easier. People who have been going to the gym 5 days a week for years 
+ 	 		don''t have to motivate themselves to go. It''s a habit, like brushing your teeth.
+ 	 	 	', NULL, '2011-02-10 18:45:47', 14, 0)[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:45:47', 'Lorem Ipsum', NULL, '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', NULL, '2011-02-10 18:45:47', 13, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:45:47', 'Invest', NULL, '	So what are some specific things you can do? For starters, if you aren''t a reader,
+ 	 	 		you should start with that. Reading books can really expand your mind and allow you 
+ 	 	 		to learn so many different skills and gain knowledge that will help you in all areas 
+ 	 	 		of your life. I''m not talking about fiction books here. I''m talking about business books, 
+ 	 	 		personal development books, or any book where you will actually learn a new skill by reading it. 
+
+ 	 	 		You can also take courses and attend seminars. Think about it. These programs are taught by people
+ 	 	 		who have spent decades figuring out how to make some aspect of their life work and now they are going 
+ 	 	 		to teach you how to do it. Of course, you want to do some research before you invest in some of these
+ 	 	 		seminars and make sure you''re not just paying for some sales presentation. 
+
+ 	 	 		Reading, listening to audio tapes while you drive or workout, attending seminars, and doing anything
+ 	 	 		that will increase your knowledge and skill base are all great ways to invest your money. However,
+ 	 	 		before you start, you will want to make sure you have a goal in mind. You want to be clear on what you 
+ 	 	 		will gain out of doing all of these things. Are you looking to become a better husband or wife? Do you 
+ 	 	 		want to get in the best shape of your life? Do you want to be a better cook perhaps? How about becoming a writer?
+ 	 	 		', NULL, '2011-02-10 18:45:47', 14, 0)[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:45:47', 'Lorem Ipsum', NULL, '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', NULL, '2011-02-10 18:45:47', 13, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:45:47', 'Lorem Ipsum', NULL, '	What I learned in Robbins Personal Power program is a set of skills that 
+ 	 		allowed me to get myself to take action. It''s not always easy though. Sometimes 
+ 	 		you can know what to do, know how to get yourself to take action, and still not
+ 	 		want to do anything. The biggest mistake that I made years ago was that I didn''t 
+ 	 		set goals that I truly wanted. I set goals that were seen as success in other people''s
+ 	 		eyes instead of my own. I went around in circles for years feeling frustrated and wondering
+ 	 		why I wasn''t able to get myself to take the actions necessary to achieve those goals. I found
+ 	 		out later on that I didn''t really want those goals. 
+
+ 	 		Once I was able to set the kind of goals that I really wanted, using my personal power
+ 	 		became a hundred times easier. Again, the concept is simple but putting it into action 
+ 	 		is a bit more difficult. Once you know what you want, you will need to get yourself to 
+ 	 		take action long enough for those actions to become a habit. Once it becomes a habit, 
+ 	 		things get a lot easier. People who have been going to the gym 5 days a week for years 
+ 	 		don''t have to motivate themselves to go. It''s a habit, like brushing your teeth.
+ 	 	 	', NULL, '2011-02-10 18:45:47', 14, 0)[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:45:47', 'Lorem Ipsum', NULL, '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', NULL, '2011-02-10 18:45:47', 13, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:45:47', 'Invest', NULL, '	So what are some specific things you can do? For starters, if you aren''t a reader,
+ 	 	 		you should start with that. Reading books can really expand your mind and allow you 
+ 	 	 		to learn so many different skills and gain knowledge that will help you in all areas 
+ 	 	 		of your life. I''m not talking about fiction books here. I''m talking about business books, 
+ 	 	 		personal development books, or any book where you will actually learn a new skill by reading it. 
+
+ 	 	 		You can also take courses and attend seminars. Think about it. These programs are taught by people
+ 	 	 		who have spent decades figuring out how to make some aspect of their life work and now they are going 
+ 	 	 		to teach you how to do it. Of course, you want to do some research before you invest in some of these
+ 	 	 		seminars and make sure you''re not just paying for some sales presentation. 
+
+ 	 	 		Reading, listening to audio tapes while you drive or workout, attending seminars, and doing anything
+ 	 	 		that will increase your knowledge and skill base are all great ways to invest your money. However,
+ 	 	 		before you start, you will want to make sure you have a goal in mind. You want to be clear on what you 
+ 	 	 		will gain out of doing all of these things. Are you looking to become a better husband or wife? Do you 
+ 	 	 		want to get in the best shape of your life? Do you want to be a better cook perhaps? How about becoming a writer?
+ 	 	 		', NULL, '2011-02-10 18:45:47', 13, 0)[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:45:47', 'Lorem Ipsum', NULL, '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', NULL, '2011-02-10 18:45:47', 14, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "author_name", "body", "creation_date", "updated_at", "author_id", "edits") VALUES('2011-02-10 18:45:47', 'Lorem Ipsum', NULL, '	What I learned in Robbins Personal Power program is a set of skills that 
+ 	 		allowed me to get myself to take action. It''s not always easy though. Sometimes 
+ 	 		you can know what to do, know how to get yourself to take action, and still not
+ 	 		want to do anything. The biggest mistake that I made years ago was that I didn''t 
+ 	 		set goals that I truly wanted. I set goals that were seen as success in other people''s
+ 	 		eyes instead of my own. I went around in circles for years feeling frustrated and wondering
+ 	 		why I wasn''t able to get myself to take the actions necessary to achieve those goals. I found
+ 	 		out later on that I didn''t really want those goals. 
+
+ 	 		Once I was able to set the kind of goals that I really wanted, using my personal power
+ 	 		became a hundred times easier. Again, the concept is simple but putting it into action 
+ 	 		is a bit more difficult. Once you know what you want, you will need to get yourself to 
+ 	 		take action long enough for those actions to become a habit. Once it becomes a habit, 
+ 	 		things get a lot easier. People who have been going to the gym 5 days a week for years 
+ 	 		don''t have to motivate themselves to go. It''s a habit, like brushing your teeth.
+ 	 	 	', NULL, '2011-02-10 18:45:47', 13, 0)[0m
+  [4;35;1mAuthor Delete all (15.6ms)[0m   [0mDELETE FROM "authors" WHERE 1=1[0m
+  [4;36;1mAuthor Create (0.0ms)[0m   [0;1mINSERT INTO "authors" ("created_at", "author_name", "updated_at", "photo_url") VALUES('2011-02-10 18:45:47', 'Robert Frost', '2011-02-10 18:45:47', 'frost.jpg')[0m
+  [4;35;1mAuthor Create (0.0ms)[0m   [0mINSERT INTO "authors" ("created_at", "author_name", "updated_at", "photo_url") VALUES('2011-02-10 18:45:47', 'Anonymous', '2011-02-10 18:45:47', 'frost.jpg')[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-10 11:46:04) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-10 11:47:19) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+
+ActionView::TemplateError (wrong number of arguments (1 for 0)) on line #25 of app/views/articles/index.html.erb:
+22: <% @articles.each do |article| %>
+23:   <tr class="<%= cycle('odd', 'even') %>">
+24:     <td id="title"><%=h article.title %></td>
+25:     <td id="author"><%=h to_s(Author.find(article.author_id)) %></td>
+26:     <td id="body"><%=h truncate(article.body, :length => 45) %></td>
+27:     <td id="date"><%=h article.created_at.strftime("%A, %b %d %Y") %></td>
+28:     <td class="button"><%= link_to image_tag("zoom.png", :border=>0), article, :title => "view the article" %></td>
+
+    app/views/articles/index.html.erb:25:in `to_s'
+    app/views/articles/index.html.erb:25
+    app/views/articles/index.html.erb:22:in `each'
+    app/views/articles/index.html.erb:22
+    app/controllers/articles_controller.rb:11:in `index'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-10 11:47:59) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+
+ActionView::TemplateError (undefined method `Author' for "#<ActionView::Base:0x934dcb8>":String) on line #25 of app/views/articles/index.html.erb:
+22: <% @articles.each do |article| %>
+23:   <tr class="<%= cycle('odd', 'even') %>">
+24:     <td id="title"><%=h article.title %></td>
+25:     <td id="author"><%=h to_s.Author.find(article.author_id) %></td>
+26:     <td id="body"><%=h truncate(article.body, :length => 45) %></td>
+27:     <td id="date"><%=h article.created_at.strftime("%A, %b %d %Y") %></td>
+28:     <td class="button"><%= link_to image_tag("zoom.png", :border=>0), article, :title => "view the article" %></td>
+
+    app/views/articles/index.html.erb:25
+    app/views/articles/index.html.erb:22:in `each'
+    app/views/articles/index.html.erb:22
+    app/controllers/articles_controller.rb:11:in `index'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-10 11:48:21) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-10 11:48:42) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-10 11:48:53) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-10 11:49:26) [GET]
+  [4;36;1mArticle Load (15.6ms)[0m   [0;1mSELECT * FROM "articles" [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Completed in 62ms (View: 47, DB: 16) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-10 11:50:49) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-10 11:50:56) [GET]
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#new (for 127.0.0.1 at 2011-02-10 11:50:57) [GET]
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/authors/new]
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2011-02-10 11:51:11) [POST]
+  Parameters: {"commit"=>"Create", "author"=>{"author_name"=>"bob", "photo_url"=>"frost.jpg"}, "authenticity_token"=>"NEIUvqyqgE2U0oB9tOHu7y0DoJkYmRatxpmsbvFc7u4="}
+  [4;35;1mAuthor Create (15.6ms)[0m   [0mINSERT INTO "authors" ("created_at", "author_name", "updated_at", "photo_url") VALUES('2011-02-10 18:51:11', 'bob', '2011-02-10 18:51:11', 'frost.jpg')[0m
+Redirected to http://localhost:3000/authors/15
+Completed in 16ms (DB: 16) | 302 Found [http://localhost/authors]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-10 11:51:12) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 15) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/authors/15]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-10 11:51:13) [GET]
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/authors]
