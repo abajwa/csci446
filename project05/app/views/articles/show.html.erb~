@@ -1,0 +1,26 @@
+<div id="header">
+<h1>Articl.es</h1>
+<p>...what's "Articl" in Spanish anyway?</p>
+</div>
+
+<div id="buttonBar">
+<%= link_to image_tag("arrow_left.png", :border=>0) + ' list all articles', articles_path, :title => "to articles list screen" %>
+<%= link_to image_tag("book_edit.png", :border=>0) + ' Edit', edit_article_path(@article), :title => "edit article" %>
+<%= link_to image_tag("delete.png", :border=>0) + ' Delete', @article, :confirm => 'Are you sure?', :method => :delete, :title => "delete the article" %>
+<%= mail_to("", image_tag("email.png", :border=>0) + ' Email', :subject => @article.title, :body => article_url(@article)) %> 
+</div>
+
+<p>
+<h2><%=h @article.title %>
+</p>
+
+<p>
+by <%=h @article.author_name %>. <%=h pluralize(@article.edits, "edit") %> since <%=h @article.created_at.strftime( "%b %d, %Y.") %>
+</p>
+
+<br />
+<div id="body">
+<p>
+<%=h simple_format(@article.body) %>
+</p>
+</div>

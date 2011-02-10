@@ -1,0 +1,96 @@
+/* Styles for main page */
+
+/* general */
+a:hover {
+	text-decoration: none;
+	background-color:#FFFFFF;
+}
+body {
+	font-family: "Comic Sans MS"
+}
+h1 {
+	font-size: 40px;
+}
+h2 {
+	font-size: 25px;
+}
+label {
+	display: inline-block;
+	width: 100px;
+	text-align: right;
+	padding-right: 20px;
+	vertical-align: top;
+}
+div#submitButton {
+	margin-left:128px;
+}
+div#header {
+	text-align: center;
+	font-weight: bold;
+}
+
+div#buttonBar > a {
+	padding-right: 50px;
+}
+
+div#body {
+	width: 450px;
+}
+
+
+/* index page */
+div#scrollTable {
+	overflow: auto;
+	height: 200px;
+	width: 820px;
+}
+div#borderBottom {
+	width: 712px;
+	border-bottom: solid 1px black;
+}
+table {
+	width: 800px;
+	border-collapse: collapse;
+	border-top:solid 1px black;
+	border-bottom: solid 1px white;
+}
+table#innerTable {
+	border-top:solid 1px white;
+}
+td, th {
+	border-right: solid 1px black;
+	border-left: solid 1px black;
+}
+th#title, td#title {
+	width: 13%;
+	text-align: left;
+	
+}
+th#author, td#author {
+	width:13%;
+}
+th#body, td#body {
+	width: 40%;
+}
+th#date, td#date {
+	width: 23%;
+}
+tr.titles {
+	background-color: #CCCCCC;
+}
+tr {
+	text-align: left;
+}
+tr.odd {
+	background-color: #EEEEEE;
+}
+
+td.button, th.button {
+	background-color: #FFFFFF;
+	border: solid 1px white;
+	border-bottom: solid 1px white;
+}
+a.new {
+	display: inline-block;
+	margin-left:500px;
+}
