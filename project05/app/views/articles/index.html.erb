@@ -6,6 +6,8 @@
 <h2>All the World's Articles</h2>
 <%= link_to image_tag("book_add.png", :border=>0) + ' new article', new_article_path, :class=> "new", :title => "create a new article" %>
 
+<%= will_paginate @articles %>
+
 <table id="headers">
   <tr class="titles">
     <th id="title">Title</th>
@@ -32,10 +34,12 @@
 <% end %>
 </table>
 </table>
-</div>
 
+</div>
 <div id="borderBottom">
 </div>
+
+<%= will_paginate @articles %>
 
 <br />
 

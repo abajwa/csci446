@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
   before_filter :set_return, :only => [:edit]
     
   def index
-    @articles = Article.all
+    @articles = Article.paginate(:page => params[:page], :per_page => 10)
     @total_articles = Article.count
     
     respond_to do |format|

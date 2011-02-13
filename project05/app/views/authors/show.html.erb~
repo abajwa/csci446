@@ -10,8 +10,10 @@
 
 <p>
   <b>Articles:</b>
- </p>
+  returnedArticles = articles.find(
+  <ul>
  
+  	
 
 <%= link_to 'Edit', edit_author_path(@author) %> |
 <%= link_to 'Back', authors_path %>
