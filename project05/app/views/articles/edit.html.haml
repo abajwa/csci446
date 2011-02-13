@@ -1,0 +1,28 @@
+#header
+	%h1 Articl.es
+	%p ...my cousin works for Bit.ly
+	
+#buttonBar
+	= link_to image_tag("arrow_left.png", :border=>0) + ' back', :back, :title => "to articles list or article display"
+	
+%h2 
+	Editing
+	= @article.title
+
+- form_for @article do |f|
+	= f.error_messages
+	%p 
+		= f.label :title
+		= f.text_field :title
+	%p
+		= f.label :author_name
+		= f.text_field :title
+	%p
+		= f.label :body
+		= f.text_area :body
+		
+%br
+
+%p
+	#submitButton
+		= button_to "Save Changes", :title => "save changes made to the article"
