@@ -1,0 +1,12 @@
+/* Styles for main page */
+
+/* general */
+
+a {
+	color: #000000;
+	text-decoration: none;
+	&:hover { background-color: #FFFFFF; }
+}
+body {
+	color: red;
+}
