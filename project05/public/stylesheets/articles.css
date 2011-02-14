@@ -36,6 +36,10 @@ label {
   width: 450px; }
 
 /* index page */
+#pagination {
+  margin-left: 20%;
+  color: red; }
+
 #scrollTable {
   overflow: auto;
   height: 200px;

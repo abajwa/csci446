@@ -23750,3 +23750,122 @@ Rendering articles/index
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
 Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-13 18:09:02) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-13 18:09:27) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-13 18:10:03) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-13 18:10:05) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 10 OFFSET 10[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles?page=2]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-13 18:10:06) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mAuthor Load (15.6ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Completed in 62ms (View: 31, DB: 16) | 200 OK [http://localhost/articles?page=1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-13 18:10:08) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" LIMIT 10 OFFSET 10[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles?page=2]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-13 18:10:11) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mArticle Load (15.6ms)[0m   [0mSELECT * FROM "articles" LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Completed in 47ms (View: 31, DB: 16) | 200 OK [http://localhost/articles?page=1]
