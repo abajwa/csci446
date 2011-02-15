@@ -14,9 +14,7 @@
 		= f.text_field :title
 	%p
 		= f.label :author_name
-		= f.select {:name => "reference"} 
-		- @authors.each do |author|
-			%option author.name
+		= select("post", "author_id", Author.all.collect {|a| [ a.author_name, a.id ] }, {:prompt => 'Select Author'})
 	
 	%p
 		= f.label :body

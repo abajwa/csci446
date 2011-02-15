@@ -1,3 +1,4 @@
+
 #buttonBar
 	= link_to image_tag("arrow_left.png", :border=>0) + ' list all authors', authors_path, :title => "to authors list screen"
 	= link_to image_tag("book_edit.png", :border=>0) + ' Edit', edit_author_path(@author), :title => "edit author"
@@ -9,7 +10,6 @@
 %br	
 #picture
 	= image_tag (@author.photo_url)
-	
 %p 
 	%b Articles:
 	%ul

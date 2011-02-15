@@ -32216,3 +32216,725 @@ Rendering articles/index
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
 Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/articles?page=1]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-14 20:02:14) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-14 20:07:18) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-14 20:07:25) [POST]
+  Parameters: {"title"=>"click to create the article", "authenticity_token"=>"Ow6BAmmvXbGO4abHumXHU9wGPk23eGo32+36HpeginQ="}
+Rendering template within layouts/articles
+Rendering articles/new
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new?title=click+to+create+the+article]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-14 20:07:47) [POST]
+  Parameters: {"title"=>"click to create the article", "authenticity_token"=>"Ow6BAmmvXbGO4abHumXHU9wGPk23eGo32+36HpeginQ="}
+Rendering template within layouts/articles
+Rendering articles/new
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" [0m
+
+ActionView::TemplateError (undefined method `merge' for [["Robert Frost", 13], ["Anonymous", 14], ["bob", 15]]:Array) on line #17 of app/views/articles/new.html.haml:
+14: 		= f.text_field :title
+15: 	%p
+16: 		= f.label :author_id
+17: 		= f.select("post", "author_id", Author.all.collect {|a| [ a.author_name, a.id ] }, {:prompt => 'Select Author'})
+18: 	
+19: 	%p
+20: 		= f.label :body
+
+    app/views/articles/new.html.haml:17:in `_run_haml_app47views47articles47new46html46haml'
+    haml (3.0.25) rails/./lib/haml/helpers/action_view_mods.rb:229:in `call'
+    haml (3.0.25) rails/./lib/haml/helpers/action_view_mods.rb:229:in `form_for'
+    haml (3.0.25) lib/haml/helpers.rb:588:in `call'
+    haml (3.0.25) lib/haml/helpers.rb:588:in `haml_bind_proc'
+    haml (3.0.25) rails/./lib/haml/helpers/action_view_mods.rb:235:in `form_for'
+    app/views/articles/new.html.haml:9:in `_run_haml_app47views47articles47new46html46haml'
+    haml (3.0.25) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.25) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/articles_controller.rb:35:in `new'
+    haml (3.0.25) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-14 20:13:05) [POST]
+  Parameters: {"title"=>"click to create the article", "authenticity_token"=>"Ow6BAmmvXbGO4abHumXHU9wGPk23eGo32+36HpeginQ="}
+Rendering template within layouts/articles
+Rendering articles/new
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new?title=click+to+create+the+article]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-14 20:13:10) [POST]
+  Parameters: {"title"=>"click to create the article", "authenticity_token"=>"Ow6BAmmvXbGO4abHumXHU9wGPk23eGo32+36HpeginQ="}
+Rendering template within layouts/articles
+Rendering articles/new
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" [0m
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://localhost/articles/new?title=click+to+create+the+article]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-14 20:13:12) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Completed in 62ms (View: 62, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-14 20:13:13) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" LIMIT 10 OFFSET 10[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles?page=2]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-14 20:13:15) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" [0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-14 20:13:29) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" [0m
+
+ActionView::TemplateError (undefined method `Robert Frost13Anonymous14bob15' for #<Article:0x9284f28>) on line #17 of app/views/articles/new.html.haml:
+14: 		= f.text_field :title
+15: 	%p
+16: 		= f.label :author_id
+17: 		= f.select(Author.all.collect {|a| [ a.author_name, a.id ] }, {:prompt => 'Select Author'})
+18: 	
+19: 	%p
+20: 		= f.label :body
+
+    app/views/articles/new.html.haml:17:in `_run_haml_app47views47articles47new46html46haml'
+    haml (3.0.25) rails/./lib/haml/helpers/action_view_mods.rb:229:in `call'
+    haml (3.0.25) rails/./lib/haml/helpers/action_view_mods.rb:229:in `form_for'
+    haml (3.0.25) lib/haml/helpers.rb:588:in `call'
+    haml (3.0.25) lib/haml/helpers.rb:588:in `haml_bind_proc'
+    haml (3.0.25) rails/./lib/haml/helpers/action_view_mods.rb:235:in `form_for'
+    app/views/articles/new.html.haml:9:in `_run_haml_app47views47articles47new46html46haml'
+    haml (3.0.25) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.25) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/articles_controller.rb:35:in `new'
+    haml (3.0.25) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-14 20:14:34) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" [0m
+
+ActionView::TemplateError (undefined method `merge' for [["Robert Frost", 13], ["Anonymous", 14], ["bob", 15]]:Array) on line #17 of app/views/articles/new.html.haml:
+14: 		= f.text_field :title
+15: 	%p
+16: 		= f.label :author_id
+17: 		= f.select("article", :author_id, Author.all.collect {|a| [ a.author_name, a.id ] }, {:prompt => 'Select Author'})
+18: 	
+19: 	%p
+20: 		= f.label :body
+
+    app/views/articles/new.html.haml:17:in `_run_haml_app47views47articles47new46html46haml'
+    haml (3.0.25) rails/./lib/haml/helpers/action_view_mods.rb:229:in `call'
+    haml (3.0.25) rails/./lib/haml/helpers/action_view_mods.rb:229:in `form_for'
+    haml (3.0.25) lib/haml/helpers.rb:588:in `call'
+    haml (3.0.25) lib/haml/helpers.rb:588:in `haml_bind_proc'
+    haml (3.0.25) rails/./lib/haml/helpers/action_view_mods.rb:235:in `form_for'
+    app/views/articles/new.html.haml:9:in `_run_haml_app47views47articles47new46html46haml'
+    haml (3.0.25) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.25) rails/./lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/controllers/articles_controller.rb:35:in `new'
+    haml (3.0.25) rails/./lib/sass/plugin/rack.rb:41:in `call'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-14 20:14:43) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-14 20:14:48) [POST]
+  Parameters: {"title"=>"click to create the article", "authenticity_token"=>"Ow6BAmmvXbGO4abHumXHU9wGPk23eGo32+36HpeginQ="}
+Rendering template within layouts/articles
+Rendering articles/new
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new?title=click+to+create+the+article]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-14 20:14:49) [GET]
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-14 20:14:51) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" [0m
+Completed in 62ms (View: 62, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-14 20:20:12) [GET]
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#new (for 127.0.0.1 at 2011-02-14 20:20:16) [GET]
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/authors/new]
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2011-02-14 20:20:22) [POST]
+  Parameters: {"commit"=>"Create", "author"=>{"author_name"=>"", "photo_url"=>"frost.jpg"}, "authenticity_token"=>"Ow6BAmmvXbGO4abHumXHU9wGPk23eGo32+36HpeginQ="}
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2011-02-14 20:20:32) [POST]
+  Parameters: {"commit"=>"Create", "author"=>{"author_name"=>"Rob", "photo_url"=>"frost.jpg"}, "authenticity_token"=>"Ow6BAmmvXbGO4abHumXHU9wGPk23eGo32+36HpeginQ="}
+  [4;35;1mAuthor Create (0.0ms)[0m   [0mINSERT INTO "authors" ("created_at", "author_name", "updated_at", "photo_url") VALUES('2011-02-15 03:20:32', 'Rob', '2011-02-15 03:20:32', 'frost.jpg')[0m
+Redirected to http://localhost:3000/authors/16
+Completed in 47ms (DB: 0) | 302 Found [http://localhost/authors]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-14 20:20:32) [GET]
+  Parameters: {"id"=>"16"}
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 16) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."author_id" = 16) [0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/authors/16]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-14 20:20:36) [GET]
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-14 20:20:40) [GET]
+  Parameters: {"id"=>"16"}
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 16) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."author_id" = 16) [0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/authors/16]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-14 20:20:41) [GET]
+  [4;35;1mAuthor Load (15.6ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-14 20:20:57) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/authors/13/edit]
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-14 20:21:13) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/authors/13/edit]
+
+
+Processing AuthorsController#update (for 127.0.0.1 at 2011-02-14 20:21:18) [PUT]
+  Parameters: {"commit"=>"Update", "author"=>{"author_name"=>"Robert Frost", "photo_url"=>"view.jpg"}, "authenticity_token"=>"Ow6BAmmvXbGO4abHumXHU9wGPk23eGo32+36HpeginQ=", "id"=>"13"}
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mAuthor Update (0.0ms)[0m   [0mUPDATE "authors" SET "updated_at" = '2011-02-15 03:21:18', "photo_url" = 'view.jpg' WHERE "id" = 13[0m
+Redirected to http://localhost:3000/authors/13
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/authors/13]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-14 20:21:18) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."author_id" = 13) [0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/authors/13]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-14 20:21:20) [GET]
+  [4;36;1mAuthor Load (15.6ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 31ms (View: 16, DB: 16) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-14 20:21:22) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."author_id" = 13) [0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/authors/13]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-14 20:21:23) [GET]
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#destroy (for 127.0.0.1 at 2011-02-14 20:21:26) [DELETE]
+  Parameters: {"authenticity_token"=>"Ow6BAmmvXbGO4abHumXHU9wGPk23eGo32+36HpeginQ=", "id"=>"16"}
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 16) [0m
+  [4;35;1mAuthor Destroy (0.0ms)[0m   [0mDELETE FROM "authors" WHERE "id" = 16[0m
+Redirected to http://localhost:3000/authors
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/authors/16]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-14 20:21:26) [GET]
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-14 20:24:22) [GET]
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-14 20:24:25) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/authors/13/edit]
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-14 20:26:53) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/authors/13/edit]
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-14 20:27:03) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/authors/13/edit]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-14 20:27:13) [GET]
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-14 20:27:16) [GET]
+  Parameters: {"id"=>"73"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 73) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/articles/73/edit]
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-14 20:27:34) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/authors/13/edit]
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-14 20:27:43) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/authors/13/edit]
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-14 20:31:46) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/authors/13/edit]
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-14 20:31:59) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/authors/13/edit]
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-14 20:32:11) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/authors/13/edit]
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-14 20:36:44) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/authors/13/edit]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-14 20:36:45) [GET]
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-14 20:37:00) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."author_id" = 13) [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/authors/13]
+
+
+Processing AuthorsController#edit (for 127.0.0.1 at 2011-02-14 20:37:05) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Rendering template within layouts/authors
+Rendering authors/edit
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/authors/13/edit]
+
+
+Processing AuthorsController#update (for 127.0.0.1 at 2011-02-14 20:37:09) [PUT]
+  Parameters: {"commit"=>"Update", "author"=>{"author_name"=>"Robert Frost", "photo_url"=>"frost.jpg"}, "authenticity_token"=>"Ow6BAmmvXbGO4abHumXHU9wGPk23eGo32+36HpeginQ=", "id"=>"13"}
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+  [4;36;1mAuthor Update (0.0ms)[0m   [0;1mUPDATE "authors" SET "updated_at" = '2011-02-15 03:37:09', "photo_url" = 'frost.jpg' WHERE "id" = 13[0m
+Redirected to http://localhost:3000/authors/13
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/authors/13]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-14 20:37:09) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."author_id" = 13) [0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/authors/13]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-14 20:37:13) [GET]
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#new (for 127.0.0.1 at 2011-02-14 20:37:16) [GET]
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 62ms (View: 62, DB: 0) | 200 OK [http://localhost/authors/new]
+
+
+Processing AuthorsController#new (for 127.0.0.1 at 2011-02-14 20:37:24) [GET]
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/authors/new]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-14 20:38:52) [GET]
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#new (for 127.0.0.1 at 2011-02-14 20:38:56) [GET]
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/authors/new]
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2011-02-14 20:39:06) [POST]
+  Parameters: {"commit"=>"Create", "author"=>{"author_name"=>"Frank Davis", "photo_url"=>"rails.png"}, "authenticity_token"=>"Ow6BAmmvXbGO4abHumXHU9wGPk23eGo32+36HpeginQ="}
+  [4;35;1mAuthor Create (0.0ms)[0m   [0mINSERT INTO "authors" ("created_at", "author_name", "updated_at", "photo_url") VALUES('2011-02-15 03:39:06', 'Frank Davis', '2011-02-15 03:39:06', 'rails.png')[0m
+Redirected to http://localhost:3000/authors/17
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/authors]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-14 20:39:06) [GET]
+  Parameters: {"id"=>"17"}
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 17) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."author_id" = 17) [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/authors/17]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-14 20:39:07) [GET]
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-14 20:39:26) [GET]
+  Parameters: {"id"=>"17"}
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 17) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."author_id" = 17) [0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/authors/17]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-14 20:39:34) [GET]
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-14 20:39:36) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."author_id" = 13) [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/authors/13]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-14 20:39:38) [GET]
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-14 20:39:45) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."author_id" = 13) [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/authors/13]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-14 20:40:10) [GET]
+  Parameters: {"id"=>"17"}
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 17) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."author_id" = 17) [0m
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/authors/17]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-14 20:50:10) [GET]
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#new (for 127.0.0.1 at 2011-02-14 20:50:11) [GET]
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/authors/new]
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2011-02-14 20:50:17) [POST]
+  Parameters: {"commit"=>"Create", "author"=>{"author_name"=>"Amanreet", "photo_url"=>"arrow_left.png"}, "authenticity_token"=>"Ow6BAmmvXbGO4abHumXHU9wGPk23eGo32+36HpeginQ="}
+  [4;36;1mAuthor Create (0.0ms)[0m   [0;1mINSERT INTO "authors" ("created_at", "author_name", "updated_at", "photo_url") VALUES('2011-02-15 03:50:17', 'Amanreet', '2011-02-15 03:50:17', 'arrow_left.png')[0m
+Redirected to http://localhost:3000/authors/18
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/authors]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-14 20:50:18) [GET]
+  Parameters: {"id"=>"18"}
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 18) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."author_id" = 18) [0m
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/authors/18]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-14 20:53:31) [GET]
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-14 20:53:33) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 13) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."author_id" = 13) [0m
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/authors/13]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-14 20:53:35) [GET]
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 62ms (View: 16, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-14 20:53:36) [GET]
+  Parameters: {"id"=>"14"}
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 14) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+  [4;36;1mArticle Load (15.6ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."author_id" = 14) [0m
+Completed in 31ms (View: 0, DB: 16) | 200 OK [http://localhost/authors/14]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-14 20:53:38) [GET]
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-14 20:53:39) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 15) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+  [4;35;1mArticle Load (15.6ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."author_id" = 15) [0m
+Completed in 31ms (View: 0, DB: 16) | 200 OK [http://localhost/authors/15]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-14 20:53:41) [GET]
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-14 20:53:42) [GET]
+  Parameters: {"id"=>"17"}
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 17) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."author_id" = 17) [0m
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/authors/17]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-14 20:53:43) [GET]
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/authors]

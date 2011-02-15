@@ -9,7 +9,7 @@
   </p>
   <p>
     <%= f.label :photo_url %><br />
-    <%= f.text_field :photo_url %>
+    <%= f.file_field :photo_url %>
   </p>
   <p>
     <%= f.submit 'Create' %>

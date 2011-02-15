@@ -1,0 +1,17 @@
+#buttonsBar
+	= link_to image_tag("arrow_left.png", :border=>0) + ' back', :back, :title => "to author list or author display"
+%br
+
+%h1 Editing Author
+%br
+- form_for(@author) do |f|
+	- f.error_messages
+	%p
+		= f.label :author_name
+		= f.text_field :author_name
+	%p
+		= f.label :photo
+		= f.file_field :photo_url
+	%p
+		#submitButton
+			= f.submit 'Update'

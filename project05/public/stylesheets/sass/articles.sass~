@@ -38,6 +38,9 @@ label
 	
 /* index page */
 
+#pagination
+	:margin-left 20%
+
 #scrollTable
 	:overflow auto
 	:height 200px
