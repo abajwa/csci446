@@ -37,8 +37,7 @@ label {
 
 /* index page */
 #pagination {
-  margin-left: 20%;
-  color: red; }
+  margin-left: 20%; }
 
 #scrollTable {
   overflow: auto;

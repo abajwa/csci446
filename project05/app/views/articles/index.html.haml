@@ -1,5 +1,4 @@
 #header
-	%h1 Articl.es
 	%p ...with a name .com hipsters love!
 
 %h2 All the World's Articles
@@ -23,7 +22,7 @@
 			%td#title= article.title
 			%td#author= Author.find(article.author_id).author_name
 			%td#body= truncate(article.body, :length => 45)
-			%td#date= article.created_at.strftime("%A, %b %d %Y")
+			%td#date= article.created_at.to_s(:datetime)
 			%td.button= link_to image_tag("zoom.png", :border=>0), article, :title => "view the article"
 			%td.button= link_to image_tag("book_edit.png", :border=>0), edit_article_path(article), :title => "edit the article"
 			%td.button= link_to image_tag("delete.png", :border=>0), article, :confirm => 'Are you sure?', :method => :delete, :title => "delete the article"

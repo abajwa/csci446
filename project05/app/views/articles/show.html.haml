@@ -1,5 +1,4 @@
 #header
-	%h1 Articl.es
 	%p ...what's "Articl" in Spanish anyway
 
 #buttonBar
@@ -13,9 +12,9 @@
 %p
 	by 
 	= Author.find(@article.author_id).author_name
-	= pluralize(@article.edits, "edit")
+	= pluralize(@article.update_count, "edit")
 	since 
-	= @article.created_at.strftime( "%b %d, %Y.")
+	= @article.created_at.to_s(:shorttime)
 
 %br
 #body

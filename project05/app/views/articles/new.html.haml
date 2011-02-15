@@ -1,5 +1,4 @@
 #header
-	%h1 Articl.es
 	%p ...not just the country of Spain
 	
 #buttonBar
@@ -15,7 +14,8 @@
 		= f.text_field :title
 	%p
 		= f.label :author_name
-		= f.text_field :title
+		= select("post", "author_id", Author.all.collect {|a| [ a.author_name, a.id ] }, {:prompt => 'Select Author'})
+	
 	%p
 		= f.label :body
 		= f.text_area :body

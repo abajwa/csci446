@@ -6,6 +6,8 @@ class ArticlesController < ApplicationController
     
   def index
     @articles = Article.paginate(:page => params[:page], :per_page => 10)
+    # has to be Article.count instead of @articles.size for this one because
+    # of the pagination, otherwise it doesn't show the total number
     @total_articles = Article.count
     
     respond_to do |format|
@@ -61,7 +63,6 @@ class ArticlesController < ApplicationController
   # PUT /articles/1.xml
   def update
     @article = Article.find(params[:id])
-    @article.edits += 1
 
     respond_to do |format|
       if @article.update_attributes(params[:article])
@@ -87,7 +88,9 @@ class ArticlesController < ApplicationController
   end
   
   private
+  
   def set_return
   	  session[:return_to] = request.referer
   end
+  
 end

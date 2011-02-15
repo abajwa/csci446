@@ -1,0 +1,2 @@
+Time::DATE_FORMATS[:datetime] = "%A, %b %d %Y"
+Time::DATE_FORMAT[:shorttime] = "%b %d, %Y"

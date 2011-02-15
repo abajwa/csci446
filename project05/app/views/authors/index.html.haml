@@ -1,0 +1,20 @@
+%h1 Authors Listing
+
+= link_to image_tag("book_add.png", :border=>0) + ' new author', new_author_path, :class=> "new", :title => "create a new author" 
+
+%table#headers
+	%tr.titles
+		%th#title ID
+		%th#author Author Name
+		%th.button
+		%th.button
+		%th.button
+		
+	- @authors.each do |author|
+		%tr{:class => cycle('odd','even')}
+			%td#title= author.id
+			%td#author= author.author_name
+			%td.button= link_to image_tag("zoom.png", :border=>0), author, :title => "view the author"
+			%td.button= link_to image_tag("book_edit.png", :border=>0), edit_author_path(author), :title => "edit the author"
+			%td.button= link_to image_tag("delete.png", :border=>0), author, :confirm => 'Are you sure?', :method => :delete, :title => "delete the author"
+#borderBottom
