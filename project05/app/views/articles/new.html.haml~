@@ -13,8 +13,8 @@
 		= f.label :title
 		= f.text_field :title
 	%p
-		= f.label :author_name
-		= select("post", "author_id", Author.all.collect {|a| [ a.author_name, a.id ] }, {:prompt => 'Select Author'})
+		= f.label :author_id
+		= f.select(:author_id, Author.all.collect {|a| [ a.author_name, a.id ] }, {:prompt => 'Select Author'})
 	
 	%p
 		= f.label :body

@@ -3,7 +3,7 @@
 
 %h2 New Author
 
-- form_for(@author) do |f|
+- form_for @author, :html => { :multipart => true } do |f|
 	- f.error_messages
 	
 	%p
@@ -11,7 +11,7 @@
 		= f.text_field :author_name
 	%p
 		= f.label :photo
-		= f.file_field :photo_url
+		= f.file_field :photo
 	%p
 		#submitButton
 			= f.submit 'Create'

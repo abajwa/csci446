@@ -2,7 +2,7 @@
 	= link_to image_tag("arrow_left.png", :border=>0) + ' back', :back, :title => "to author list or author display"
 %br
 
-%h1 Editing Author
+%h2 Editing Author
 %br
 - form_for(@author) do |f|
 	- f.error_messages
