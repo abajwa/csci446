@@ -1,6 +1,9 @@
+#buttonsBar
+	= link_to image_tag("book.png", :border=>0) + "Articles", articles_path
+	
 %h1 Authors Listing
 
-= link_to image_tag("book_add.png", :border=>0) + ' new author', new_author_path, :class=> "new", :title => "create a new author" 
+= link_to image_tag("emoticon_smile.png", :border=>0) + ' new author', new_author_path, :class=> "new", :title => "create a new author" 
 
 %table#headers
 	%tr.titles

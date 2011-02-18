@@ -14,7 +14,7 @@
 	%b Articles:
 	%ul
 		- @articles = Article.find_all_by_author_id(@author.id)
-		= if @articles.empty?
+		- if @articles.empty?
 			No articles by this author.
 		- @articles.each do |article|
 			%li= article.title

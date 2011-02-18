@@ -14,14 +14,15 @@
 		= f.label :title
 		= f.text_field :title
 	%p
-		= f.label :author_name
-		= f.text_field :title
+		= f.label :author_id
+		= f.select(:author_id, Author.all.collect {|a| [ a.author_name, a.id ] }, {:prompt => 'Select Author'})
+
 	%p
 		= f.label :body
 		= f.text_area :body
 		
-%br
+	%br
 
-%p
-	#submitButton
-		= button_to "Save Changes", :title => "save changes made to the article"
+	%p
+		#submitButton
+			= button_to "Save Changes", :title => "save changes made to the article"

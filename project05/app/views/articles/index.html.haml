@@ -1,6 +1,9 @@
 #header
 	%p ...with a name .com hipsters love!
 
+#buttonsBar
+	= link_to image_tag("emoticon_smile.png", :border=>0) + "Authors", authors_path
+	
 %h2 All the World's Articles
 = link_to image_tag("book_add.png", :border=>0) + ' new article', new_article_path, :class=> "new", :title => "create a new article" 
 

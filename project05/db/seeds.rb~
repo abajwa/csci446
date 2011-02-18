@@ -17,7 +17,7 @@
   	  	  	proident, sunt in culpa qui officia deserunt mollit anim id est 
   	  	  	laborum.
   	  	  	},
-  	  	  	:author_id => 7)
+  	  	  	:author_id => 13)
   	  
   	  Article.create(:title => 'Invest',
   	  	  :body =>
@@ -38,7 +38,7 @@
   	  	  		will gain out of doing all of these things. Are you looking to become a better husband or wife? Do you 
   	  	  		want to get in the best shape of your life? Do you want to be a better cook perhaps? How about becoming a writer?
   	  	  		},
-  	  	  		:author_id => 8)
+  	  	  		:author_id => 14)
   	  
   	  Article.create(:title => 'Lorem Ipsum',
   	  	  :body =>
@@ -51,7 +51,7 @@
   	  	  	proident, sunt in culpa qui officia deserunt mollit anim id est 
   	  	  	laborum.
   	  	  	},
-  	  	  	:author_id => 7)
+  	  	  	:author_id => 13)
   	  
   	  Article.create(:title => 'Lorem Ipsum',
   	  	  :body =>
@@ -71,7 +71,7 @@
   	  		things get a lot easier. People who have been going to the gym 5 days a week for years 
   	  		don't have to motivate themselves to go. It's a habit, like brushing your teeth.
   	  	  	},
-  	  	  	:author_id => 8)
+  	  	  	:author_id => 14)
   	  
   	  Article.create(:title => 'Lorem Ipsum',
   	  	  :body =>
@@ -84,7 +84,7 @@
   	  	  	proident, sunt in culpa qui officia deserunt mollit anim id est 
   	  	  	laborum.
   	  	  	},
-  	  	  	:author_id => 7)
+  	  	  	:author_id => 13)
   	  
   	  Article.create(:title => 'Invest',
   	  	  :body =>
@@ -105,7 +105,7 @@
   	  	  		will gain out of doing all of these things. Are you looking to become a better husband or wife? Do you 
   	  	  		want to get in the best shape of your life? Do you want to be a better cook perhaps? How about becoming a writer?
   	  	  		},
-  	  	  		:author_id => 8)
+  	  	  		:author_id => 14)
   	  
   	  Article.create(:title => 'Lorem Ipsum',
   	  	  :body =>
@@ -118,7 +118,7 @@
   	  	  	proident, sunt in culpa qui officia deserunt mollit anim id est 
   	  	  	laborum.
   	  	  	},
-  	  	  	:author_id => 7)
+  	  	  	:author_id => 13)
   	  
   	  Article.create(:title => 'Lorem Ipsum',
   	  	  :body =>
@@ -138,7 +138,7 @@
   	  		things get a lot easier. People who have been going to the gym 5 days a week for years 
   	  		don't have to motivate themselves to go. It's a habit, like brushing your teeth.
   	  	  	},
-  	  	  	:author_id => 7)
+  	  	  	:author_id => 14)
   	  Article.create(:title => 'Lorem Ipsum',
   	  	  :body =>
   	  	  %{	Lorem ipsum dolor sit amet, consectetur adipisicing 
@@ -150,7 +150,7 @@
   	  	  	proident, sunt in culpa qui officia deserunt mollit anim id est 
   	  	  	laborum.
   	  	  	},
-  	  	  	:author_id => 7)
+  	  	  	:author_id => 13)
   	  
   	  Article.create(:title => 'Invest',
   	  	  :body =>
@@ -171,7 +171,7 @@
   	  	  		will gain out of doing all of these things. Are you looking to become a better husband or wife? Do you 
   	  	  		want to get in the best shape of your life? Do you want to be a better cook perhaps? How about becoming a writer?
   	  	  		},
-  	  	  		:author_id => 8)
+  	  	  		:author_id => 13)
   	  
   	  Article.create(:title => 'Lorem Ipsum',
   	  	  :body =>
@@ -184,7 +184,7 @@
   	  	  	proident, sunt in culpa qui officia deserunt mollit anim id est 
   	  	  	laborum.
   	  	  	},
-  	  	  	:author_id => 7)
+  	  	  	:author_id => 14)
   	  
   	  Article.create(:title => 'Lorem Ipsum',
   	  	  :body =>
@@ -204,7 +204,7 @@
   	  		things get a lot easier. People who have been going to the gym 5 days a week for years 
   	  		don't have to motivate themselves to go. It's a habit, like brushing your teeth.
   	  	  	},
-  	  	  	:author_id => 8)
+  	  	  	:author_id => 13)
   	  
   	  Author.delete_all
   	  Author.create(:author_name => 'Robert Frost', 

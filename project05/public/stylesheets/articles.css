@@ -1,48 +1,7 @@
 /* Styles for main page */
-/* general */
-a {
-  color: black;
-  text-decoration: none; }
-  a:hover {
-    background-color: white;
-    color: black; }
-  a:visited {
-    color: black; }
-
-body {
-  font-family: "Comic Sans Ms"; }
-
-h2 {
-  font-size: 25px; }
-
-label {
-  display: inline-block;
-  width: 100px;
-  text-align: right;
-  padding-right: 20px;
-  vertical-align: top; }
-
-#submitButton {
-  margin-left: 128px; }
-
-#header {
-  text-align: center;
-  font-weight: bold; }
-
-#buttonBar a {
-  padding-right: 50px; }
-
-#body {
-  width: 450px; }
-
 /* index page */
 #pagination {
   margin-left: 20%; }
-
-#scrollTable {
-  overflow: auto;
-  height: 200px;
-  width: 820px; }
 
 #borderBottom {
   width: 712px;

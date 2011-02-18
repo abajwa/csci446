@@ -85,3 +85,5 @@ td, th
 .new
 	:display inline-block
 	:margin-left 500px
+#notice
+	:color green

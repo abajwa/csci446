@@ -5,7 +5,14 @@
 #   
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Major.create(:name => 'Daley', :city => cities.first)
+  	  
+  	Author.delete_all
+  	Author.create(:author_name => 'Robert Frost')
+  	Author.create(:author_name => 'Anonymous')
+  	
+  	@author = Author.find_by_author_name('Robert Frost')
 	Article.delete_all
+	
 	Article.create(:title => 'Lorem Ipsum',
   	  	  :body =>
   	  	  %{	Lorem ipsum dolor sit amet, consectetur adipisicing 
@@ -17,28 +24,30 @@
   	  	  	proident, sunt in culpa qui officia deserunt mollit anim id est 
   	  	  	laborum.
   	  	  	},
-  	  	  	:author_id => 13)
+  	  	  	:author_id => @author.id,
+  	  	  	:update_count => 0)
   	  
   	  Article.create(:title => 'Invest',
   	  	  :body =>
-  	  	  	  %{	So what are some specific things you can do? For starters, if you aren't a reader,
-  	  	  		you should start with that. Reading books can really expand your mind and allow you 
-  	  	  		to learn so many different skills and gain knowledge that will help you in all areas 
-  	  	  		of your life. I'm not talking about fiction books here. I'm talking about business books, 
-  	  	  		personal development books, or any book where you will actually learn a new skill by reading it. 
+  	  	  %{	So what are some specific things you can do? For starters, if you aren't a reader,
+  	  	  	you should start with that. Reading books can really expand your mind and allow you 
+  	  	  	to learn so many different skills and gain knowledge that will help you in all areas 
+  	  	  	of your life. I'm not talking about fiction books here. I'm talking about business books, 
+  	  	  	personal development books, or any book where you will actually learn a new skill by reading it. 
 
-  	  	  		You can also take courses and attend seminars. Think about it. These programs are taught by people
-  	  	  		who have spent decades figuring out how to make some aspect of their life work and now they are going 
-  	  	  		to teach you how to do it. Of course, you want to do some research before you invest in some of these
-  	  	  		seminars and make sure you're not just paying for some sales presentation. 
+  	  	  	You can also take courses and attend seminars. Think about it. These programs are taught by people
+  	  	  	who have spent decades figuring out how to make some aspect of their life work and now they are going 
+  	  	  	to teach you how to do it. Of course, you want to do some research before you invest in some of these
+  	  	  	seminars and make sure you're not just paying for some sales presentation. 
 
-  	  	  		Reading, listening to audio tapes while you drive or workout, attending seminars, and doing anything
-  	  	  		that will increase your knowledge and skill base are all great ways to invest your money. However,
-  	  	  		before you start, you will want to make sure you have a goal in mind. You want to be clear on what you 
-  	  	  		will gain out of doing all of these things. Are you looking to become a better husband or wife? Do you 
-  	  	  		want to get in the best shape of your life? Do you want to be a better cook perhaps? How about becoming a writer?
-  	  	  		},
-  	  	  		:author_id => 14)
+  	  	  	Reading, listening to audio tapes while you drive or workout, attending seminars, and doing anything
+  	  	  	that will increase your knowledge and skill base are all great ways to invest your money. However,
+  	  	  	before you start, you will want to make sure you have a goal in mind. You want to be clear on what you 
+  	  	  	will gain out of doing all of these things. Are you looking to become a better husband or wife? Do you 
+  	  	  	want to get in the best shape of your life? Do you want to be a better cook perhaps? How about becoming a writer?
+  	  	  	},
+  	  	  	:author_id => @author.id,
+  	  	  	:update_count => 0)
   	  
   	  Article.create(:title => 'Lorem Ipsum',
   	  	  :body =>
@@ -51,7 +60,8 @@
   	  	  	proident, sunt in culpa qui officia deserunt mollit anim id est 
   	  	  	laborum.
   	  	  	},
-  	  	  	:author_id => 13)
+  	  	  	:author_id => @author.id,
+  	  	  	:update_count => 0)
   	  
   	  Article.create(:title => 'Lorem Ipsum',
   	  	  :body =>
@@ -71,7 +81,8 @@
   	  		things get a lot easier. People who have been going to the gym 5 days a week for years 
   	  		don't have to motivate themselves to go. It's a habit, like brushing your teeth.
   	  	  	},
-  	  	  	:author_id => 14)
+  	  	  	:author_id => @author.id,
+  	  	  	:update_count => 0)
   	  
   	  Article.create(:title => 'Lorem Ipsum',
   	  	  :body =>
@@ -84,28 +95,30 @@
   	  	  	proident, sunt in culpa qui officia deserunt mollit anim id est 
   	  	  	laborum.
   	  	  	},
-  	  	  	:author_id => 13)
+  	  	  	:author_id => @author.id,
+  	  	  	:update_count => 0)
   	  
   	  Article.create(:title => 'Invest',
   	  	  :body =>
-  	  	  	  %{	So what are some specific things you can do? For starters, if you aren't a reader,
-  	  	  		you should start with that. Reading books can really expand your mind and allow you 
-  	  	  		to learn so many different skills and gain knowledge that will help you in all areas 
-  	  	  		of your life. I'm not talking about fiction books here. I'm talking about business books, 
-  	  	  		personal development books, or any book where you will actually learn a new skill by reading it. 
+  	  	  %{	So what are some specific things you can do? For starters, if you aren't a reader,
+  	  	  	you should start with that. Reading books can really expand your mind and allow you 
+  	  	  	to learn so many different skills and gain knowledge that will help you in all areas 
+  	  	  	of your life. I'm not talking about fiction books here. I'm talking about business books, 
+  	  	  	personal development books, or any book where you will actually learn a new skill by reading it. 
 
-  	  	  		You can also take courses and attend seminars. Think about it. These programs are taught by people
-  	  	  		who have spent decades figuring out how to make some aspect of their life work and now they are going 
-  	  	  		to teach you how to do it. Of course, you want to do some research before you invest in some of these
-  	  	  		seminars and make sure you're not just paying for some sales presentation. 
+  	  	  	You can also take courses and attend seminars. Think about it. These programs are taught by people
+  	  	  	who have spent decades figuring out how to make some aspect of their life work and now they are going 
+  	  	  	to teach you how to do it. Of course, you want to do some research before you invest in some of these
+  	  	  	seminars and make sure you're not just paying for some sales presentation. 
 
-  	  	  		Reading, listening to audio tapes while you drive or workout, attending seminars, and doing anything
-  	  	  		that will increase your knowledge and skill base are all great ways to invest your money. However,
-  	  	  		before you start, you will want to make sure you have a goal in mind. You want to be clear on what you 
-  	  	  		will gain out of doing all of these things. Are you looking to become a better husband or wife? Do you 
-  	  	  		want to get in the best shape of your life? Do you want to be a better cook perhaps? How about becoming a writer?
-  	  	  		},
-  	  	  		:author_id => 14)
+  	  	  	Reading, listening to audio tapes while you drive or workout, attending seminars, and doing anything
+  	  	  	that will increase your knowledge and skill base are all great ways to invest your money. However,
+  	  	  	before you start, you will want to make sure you have a goal in mind. You want to be clear on what you 
+  	  	  	will gain out of doing all of these things. Are you looking to become a better husband or wife? Do you 
+  	  	  	want to get in the best shape of your life? Do you want to be a better cook perhaps? How about becoming a writer?
+  	  	  	},
+  	  	  	:author_id => @author.id,
+  	  	  	:update_count => 0)
   	  
   	  Article.create(:title => 'Lorem Ipsum',
   	  	  :body =>
@@ -118,7 +131,8 @@
   	  	  	proident, sunt in culpa qui officia deserunt mollit anim id est 
   	  	  	laborum.
   	  	  	},
-  	  	  	:author_id => 13)
+  	  	  	:author_id => @author.id,
+  	  	  	:update_count => 0)
   	  
   	  Article.create(:title => 'Lorem Ipsum',
   	  	  :body =>
@@ -138,7 +152,8 @@
   	  		things get a lot easier. People who have been going to the gym 5 days a week for years 
   	  		don't have to motivate themselves to go. It's a habit, like brushing your teeth.
   	  	  	},
-  	  	  	:author_id => 14)
+  	  	  	:author_id => @author.id,
+  	  	  	:update_count => 0)
   	  Article.create(:title => 'Lorem Ipsum',
   	  	  :body =>
   	  	  %{	Lorem ipsum dolor sit amet, consectetur adipisicing 
@@ -150,28 +165,30 @@
   	  	  	proident, sunt in culpa qui officia deserunt mollit anim id est 
   	  	  	laborum.
   	  	  	},
-  	  	  	:author_id => 13)
+  	  	  	:author_id => @author.id,
+  	  	  	:update_count => 0)
   	  
   	  Article.create(:title => 'Invest',
   	  	  :body =>
-  	  	  	  %{	So what are some specific things you can do? For starters, if you aren't a reader,
-  	  	  		you should start with that. Reading books can really expand your mind and allow you 
-  	  	  		to learn so many different skills and gain knowledge that will help you in all areas 
-  	  	  		of your life. I'm not talking about fiction books here. I'm talking about business books, 
-  	  	  		personal development books, or any book where you will actually learn a new skill by reading it. 
+  	  	  %{	So what are some specific things you can do? For starters, if you aren't a reader,
+  	  	  	you should start with that. Reading books can really expand your mind and allow you 
+  	  	  	to learn so many different skills and gain knowledge that will help you in all areas 
+  	  	  	of your life. I'm not talking about fiction books here. I'm talking about business books, 
+  	  	  	personal development books, or any book where you will actually learn a new skill by reading it. 
 
-  	  	  		You can also take courses and attend seminars. Think about it. These programs are taught by people
-  	  	  		who have spent decades figuring out how to make some aspect of their life work and now they are going 
-  	  	  		to teach you how to do it. Of course, you want to do some research before you invest in some of these
-  	  	  		seminars and make sure you're not just paying for some sales presentation. 
+	  		You can also take courses and attend seminars. Think about it. These programs are taught by people
+  	  	  	who have spent decades figuring out how to make some aspect of their life work and now they are going 
+  	  	  	to teach you how to do it. Of course, you want to do some research before you invest in some of these
+  	  	  	seminars and make sure you're not just paying for some sales presentation. 
 
-  	  	  		Reading, listening to audio tapes while you drive or workout, attending seminars, and doing anything
-  	  	  		that will increase your knowledge and skill base are all great ways to invest your money. However,
-  	  	  		before you start, you will want to make sure you have a goal in mind. You want to be clear on what you 
-  	  	  		will gain out of doing all of these things. Are you looking to become a better husband or wife? Do you 
-  	  	  		want to get in the best shape of your life? Do you want to be a better cook perhaps? How about becoming a writer?
-  	  	  		},
-  	  	  		:author_id => 13)
+  	  	  	Reading, listening to audio tapes while you drive or workout, attending seminars, and doing anything
+  	  	  	that will increase your knowledge and skill base are all great ways to invest your money. However,
+  	  	  	before you start, you will want to make sure you have a goal in mind. You want to be clear on what you 
+  	  	  	will gain out of doing all of these things. Are you looking to become a better husband or wife? Do you 
+  	  	  	want to get in the best shape of your life? Do you want to be a better cook perhaps? How about becoming a writer?
+  	  	  	},
+  	  	  	:author_id => @author.id,
+  	  	  	:update_count => 0)
   	  
   	  Article.create(:title => 'Lorem Ipsum',
   	  	  :body =>
@@ -184,7 +201,8 @@
   	  	  	proident, sunt in culpa qui officia deserunt mollit anim id est 
   	  	  	laborum.
   	  	  	},
-  	  	  	:author_id => 14)
+  	  	  	:author_id => @author.id,
+  	  	  	:update_count => 0)
   	  
   	  Article.create(:title => 'Lorem Ipsum',
   	  	  :body =>
@@ -204,10 +222,5 @@
   	  		things get a lot easier. People who have been going to the gym 5 days a week for years 
   	  		don't have to motivate themselves to go. It's a habit, like brushing your teeth.
   	  	  	},
-  	  	  	:author_id => 13)
-  	  
-  	  Author.delete_all
-  	  Author.create(:author_name => 'Robert Frost', 
-  	  	  :photo_url => 'frost.jpg')
-  	  Author.create(:author_name => 'Anonymous', 
-  	  	  :photo_url => 'frost.jpg')
+  	  	  	:author_id => @author.id,
+  	  	  	:update_count => 0)
