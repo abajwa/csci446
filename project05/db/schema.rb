@@ -14,10 +14,10 @@ ActiveRecord::Schema.define(:version => 20110220232106) do
   create_table "articles", :force => true do |t|
     t.string   "title"
     t.text     "body"
+    t.string   "author_id",                   :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "edits",        :default => 0
-    t.integer  "author_id"
     t.integer  "update_count", :default => 0
   end
 

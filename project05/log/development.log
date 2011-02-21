@@ -37865,3 +37865,733 @@ Processing AuthorsController#index (for 127.0.0.1 at 2011-02-20 16:44:37) [GET]
 Rendering template within layouts/authors
 Rendering authors/index
 Completed in 25ms (View: 16, DB: 0) | 200 OK [http://localhost/authors]
+  [4;36;1mAuthor Delete all (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: authors: DELETE FROM "authors" WHERE 1=1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20110202172943)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "author_name" varchar(255), "body" text, "creation_date" varchar(255), "author_id" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110202172943')[0m
+Migrating to AddTestData (20110202185353)
+  [4;35;1mArticle Delete all (1.0ms)[0m   [0mDELETE FROM "articles" WHERE 1=1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110202185353')[0m
+Migrating to AddEditsToArticle (20110205224159)
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE "articles" ADD "edits" integer DEFAULT 0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110205224159')[0m
+Migrating to CreateAuthors (20110210165846)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "author_name" varchar(255), "photo_url" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110210165846')[0m
+Migrating to AddAuthorIdToArticle (20110210173014)
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: duplicate column name: author_id: ALTER TABLE "articles" ADD "author_id" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20110202172943)
+Migrating to AddTestData (20110202185353)
+Migrating to AddEditsToArticle (20110205224159)
+Migrating to CreateAuthors (20110210165846)
+Migrating to AddAuthorIdToArticle (20110210173014)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: duplicate column name: author_id: ALTER TABLE "articles" ADD "author_id" integer[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateArticles (20110202172943)
+Migrating to AddTestData (20110202185353)
+Migrating to AddEditsToArticle (20110205224159)
+Migrating to CreateAuthors (20110210165846)
+Migrating to RemoveAuthorNameFromArticles (20110210190828)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "author_name" varchar(255), "body" text, "creation_date" varchar(255), "author_id" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime, "edits" integer DEFAULT 0) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "articles"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "creation_date" varchar(255), "author_id" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime, "edits" integer DEFAULT 0) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_articles")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "altered_articles"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110210190828')[0m
+Migrating to RemoveCreationDateFromArticles (20110210191103)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "creation_date" varchar(255), "author_id" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime, "edits" integer DEFAULT 0) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("articles")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDROP TABLE "articles"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "author_id" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime, "edits" integer DEFAULT 0) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_articles")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mDROP TABLE "altered_articles"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110210191103')[0m
+Migrating to AddUpdateCountToArticle (20110214061932)
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE "articles" ADD "update_count" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110214061932')[0m
+Migrating to AddAttachmentsPhotoToAuthor (20110215040647)
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE "authors" ADD "photo_file_name" varchar(255)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "authors" ADD "photo_content_type" varchar(255)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "authors" ADD "photo_file_size" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "authors" ADD "photo_updated_at" datetime[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110215040647')[0m
+Migrating to RemovephotoUrlFromAuthor (20110218054918)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110218054918')[0m
+Migrating to ChangeColumn (20110220232106)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "author_id" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime, "edits" integer DEFAULT 0, "update_count" integer) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("articles")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mDROP TABLE "articles"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "author_id" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime, "edits" integer DEFAULT 0, "update_count" integer DEFAULT 0) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_articles")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "altered_articles"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20110220232106')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("articles")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("authors")[0m
+  [4;36;1mAuthor Delete all (0.0ms)[0m   [0;1mDELETE FROM "authors" WHERE 1=1[0m
+  [4;35;1mAuthor Create (1.0ms)[0m   [0mINSERT INTO "authors" ("created_at", "photo_file_size", "author_name", "updated_at", "photo_file_name", "photo_url", "photo_content_type", "photo_updated_at") VALUES('2011-02-21 00:04:08', NULL, 'Robert Frost', '2011-02-21 00:04:08', NULL, NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+  [4;36;1mAuthor Create (1.0ms)[0m   [0;1mINSERT INTO "authors" ("created_at", "photo_file_size", "author_name", "updated_at", "photo_file_name", "photo_url", "photo_content_type", "photo_updated_at") VALUES('2011-02-21 00:04:08', NULL, 'Anonymous', '2011-02-21 00:04:08', NULL, NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+  [4;35;1mAuthor Load (1.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."author_name" = 'Robert Frost') LIMIT 1[0m
+  [4;36;1mArticle Delete all (0.0ms)[0m   [0;1mDELETE FROM "articles" WHERE 1=1[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "body", "updated_at", "update_count", "author_id", "edits") VALUES('2011-02-21 00:04:08', 'Lorem Ipsum', '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', '2011-02-21 00:04:08', 0, 1, 0)[0m
+  [4;36;1mArticle Create (1.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "body", "updated_at", "update_count", "author_id", "edits") VALUES('2011-02-21 00:04:08', 'Invest', '	So what are some specific things you can do? For starters, if you aren''t a reader,
+ 	 	 	you should start with that. Reading books can really expand your mind and allow you 
+ 	 	 	to learn so many different skills and gain knowledge that will help you in all areas 
+ 	 	 	of your life. I''m not talking about fiction books here. I''m talking about business books, 
+ 	 	 	personal development books, or any book where you will actually learn a new skill by reading it. 
+
+ 	 	 	You can also take courses and attend seminars. Think about it. These programs are taught by people
+ 	 	 	who have spent decades figuring out how to make some aspect of their life work and now they are going 
+ 	 	 	to teach you how to do it. Of course, you want to do some research before you invest in some of these
+ 	 	 	seminars and make sure you''re not just paying for some sales presentation. 
+
+ 	 	 	Reading, listening to audio tapes while you drive or workout, attending seminars, and doing anything
+ 	 	 	that will increase your knowledge and skill base are all great ways to invest your money. However,
+ 	 	 	before you start, you will want to make sure you have a goal in mind. You want to be clear on what you 
+ 	 	 	will gain out of doing all of these things. Are you looking to become a better husband or wife? Do you 
+ 	 	 	want to get in the best shape of your life? Do you want to be a better cook perhaps? How about becoming a writer?
+ 	 	 	', '2011-02-21 00:04:08', 0, 1, 0)[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "body", "updated_at", "update_count", "author_id", "edits") VALUES('2011-02-21 00:04:08', 'Lorem Ipsum', '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', '2011-02-21 00:04:08', 0, 1, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "body", "updated_at", "update_count", "author_id", "edits") VALUES('2011-02-21 00:04:08', 'Lorem Ipsum', '	What I learned in Robbins Personal Power program is a set of skills that 
+ 	 		allowed me to get myself to take action. It''s not always easy though. Sometimes 
+ 	 		you can know what to do, know how to get yourself to take action, and still not
+ 	 		want to do anything. The biggest mistake that I made years ago was that I didn''t 
+ 	 		set goals that I truly wanted. I set goals that were seen as success in other people''s
+ 	 		eyes instead of my own. I went around in circles for years feeling frustrated and wondering
+ 	 		why I wasn''t able to get myself to take the actions necessary to achieve those goals. I found
+ 	 		out later on that I didn''t really want those goals. 
+
+ 	 		Once I was able to set the kind of goals that I really wanted, using my personal power
+ 	 		became a hundred times easier. Again, the concept is simple but putting it into action 
+ 	 		is a bit more difficult. Once you know what you want, you will need to get yourself to 
+ 	 		take action long enough for those actions to become a habit. Once it becomes a habit, 
+ 	 		things get a lot easier. People who have been going to the gym 5 days a week for years 
+ 	 		don''t have to motivate themselves to go. It''s a habit, like brushing your teeth.
+ 	 	 	', '2011-02-21 00:04:08', 0, 1, 0)[0m
+  [4;35;1mArticle Create (1.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "body", "updated_at", "update_count", "author_id", "edits") VALUES('2011-02-21 00:04:08', 'Lorem Ipsum', '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', '2011-02-21 00:04:08', 0, 1, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "body", "updated_at", "update_count", "author_id", "edits") VALUES('2011-02-21 00:04:08', 'Invest', '	So what are some specific things you can do? For starters, if you aren''t a reader,
+ 	 	 	you should start with that. Reading books can really expand your mind and allow you 
+ 	 	 	to learn so many different skills and gain knowledge that will help you in all areas 
+ 	 	 	of your life. I''m not talking about fiction books here. I''m talking about business books, 
+ 	 	 	personal development books, or any book where you will actually learn a new skill by reading it. 
+
+ 	 	 	You can also take courses and attend seminars. Think about it. These programs are taught by people
+ 	 	 	who have spent decades figuring out how to make some aspect of their life work and now they are going 
+ 	 	 	to teach you how to do it. Of course, you want to do some research before you invest in some of these
+ 	 	 	seminars and make sure you''re not just paying for some sales presentation. 
+
+ 	 	 	Reading, listening to audio tapes while you drive or workout, attending seminars, and doing anything
+ 	 	 	that will increase your knowledge and skill base are all great ways to invest your money. However,
+ 	 	 	before you start, you will want to make sure you have a goal in mind. You want to be clear on what you 
+ 	 	 	will gain out of doing all of these things. Are you looking to become a better husband or wife? Do you 
+ 	 	 	want to get in the best shape of your life? Do you want to be a better cook perhaps? How about becoming a writer?
+ 	 	 	', '2011-02-21 00:04:08', 0, 1, 0)[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "body", "updated_at", "update_count", "author_id", "edits") VALUES('2011-02-21 00:04:08', 'Lorem Ipsum', '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', '2011-02-21 00:04:08', 0, 1, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "body", "updated_at", "update_count", "author_id", "edits") VALUES('2011-02-21 00:04:08', 'Lorem Ipsum', '	What I learned in Robbins Personal Power program is a set of skills that 
+ 	 		allowed me to get myself to take action. It''s not always easy though. Sometimes 
+ 	 		you can know what to do, know how to get yourself to take action, and still not
+ 	 		want to do anything. The biggest mistake that I made years ago was that I didn''t 
+ 	 		set goals that I truly wanted. I set goals that were seen as success in other people''s
+ 	 		eyes instead of my own. I went around in circles for years feeling frustrated and wondering
+ 	 		why I wasn''t able to get myself to take the actions necessary to achieve those goals. I found
+ 	 		out later on that I didn''t really want those goals. 
+
+ 	 		Once I was able to set the kind of goals that I really wanted, using my personal power
+ 	 		became a hundred times easier. Again, the concept is simple but putting it into action 
+ 	 		is a bit more difficult. Once you know what you want, you will need to get yourself to 
+ 	 		take action long enough for those actions to become a habit. Once it becomes a habit, 
+ 	 		things get a lot easier. People who have been going to the gym 5 days a week for years 
+ 	 		don''t have to motivate themselves to go. It''s a habit, like brushing your teeth.
+ 	 	 	', '2011-02-21 00:04:08', 0, 1, 0)[0m
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "body", "updated_at", "update_count", "author_id", "edits") VALUES('2011-02-21 00:04:08', 'Lorem Ipsum', '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', '2011-02-21 00:04:08', 0, 1, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "body", "updated_at", "update_count", "author_id", "edits") VALUES('2011-02-21 00:04:08', 'Invest', '	So what are some specific things you can do? For starters, if you aren''t a reader,
+ 	 	 	you should start with that. Reading books can really expand your mind and allow you 
+ 	 	 	to learn so many different skills and gain knowledge that will help you in all areas 
+ 	 	 	of your life. I''m not talking about fiction books here. I''m talking about business books, 
+ 	 	 	personal development books, or any book where you will actually learn a new skill by reading it. 
+
+	 		You can also take courses and attend seminars. Think about it. These programs are taught by people
+ 	 	 	who have spent decades figuring out how to make some aspect of their life work and now they are going 
+ 	 	 	to teach you how to do it. Of course, you want to do some research before you invest in some of these
+ 	 	 	seminars and make sure you''re not just paying for some sales presentation. 
+
+ 	 	 	Reading, listening to audio tapes while you drive or workout, attending seminars, and doing anything
+ 	 	 	that will increase your knowledge and skill base are all great ways to invest your money. However,
+ 	 	 	before you start, you will want to make sure you have a goal in mind. You want to be clear on what you 
+ 	 	 	will gain out of doing all of these things. Are you looking to become a better husband or wife? Do you 
+ 	 	 	want to get in the best shape of your life? Do you want to be a better cook perhaps? How about becoming a writer?
+ 	 	 	', '2011-02-21 00:04:08', 0, 1, 0)[0m
+  [4;35;1mArticle Create (1.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "body", "updated_at", "update_count", "author_id", "edits") VALUES('2011-02-21 00:04:08', 'Lorem Ipsum', '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	', '2011-02-21 00:04:08', 0, 1, 0)[0m
+  [4;36;1mArticle Create (0.0ms)[0m   [0;1mINSERT INTO "articles" ("created_at", "title", "body", "updated_at", "update_count", "author_id", "edits") VALUES('2011-02-21 00:04:08', 'Lorem Ipsum', '	What I learned in Robbins Personal Power program is a set of skills that 
+ 	 		allowed me to get myself to take action. It''s not always easy though. Sometimes 
+ 	 		you can know what to do, know how to get yourself to take action, and still not
+ 	 		want to do anything. The biggest mistake that I made years ago was that I didn''t 
+ 	 		set goals that I truly wanted. I set goals that were seen as success in other people''s
+ 	 		eyes instead of my own. I went around in circles for years feeling frustrated and wondering
+ 	 		why I wasn''t able to get myself to take the actions necessary to achieve those goals. I found
+ 	 		out later on that I didn''t really want those goals. 
+
+ 	 		Once I was able to set the kind of goals that I really wanted, using my personal power
+ 	 		became a hundred times easier. Again, the concept is simple but putting it into action 
+ 	 		is a bit more difficult. Once you know what you want, you will need to get yourself to 
+ 	 		take action long enough for those actions to become a habit. Once it becomes a habit, 
+ 	 		things get a lot easier. People who have been going to the gym 5 days a week for years 
+ 	 		don''t have to motivate themselves to go. It''s a habit, like brushing your teeth.
+ 	 	 	', '2011-02-21 00:04:08', 0, 1, 0)[0m
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-20 17:04:13) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Completed in 36ms (View: 29, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-20 17:04:15) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" LIMIT 10 OFFSET 10[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mAuthor Load (1.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Completed in 28ms (View: 18, DB: 1) | 200 OK [http://localhost/articles?page=2]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-20 17:04:16) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mAuthor Load (1.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Completed in 92ms (View: 81, DB: 2) | 200 OK [http://localhost/articles?page=1]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-20 17:04:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+  [4;35;1mAuthor Load (1.0ms)[0m   [0mSELECT * FROM "authors" [0m
+Completed in 27ms (View: 17, DB: 1) | 200 OK [http://localhost/articles/1/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2011-02-20 17:04:23) [PUT]
+  Parameters: {"article"=>{"body"=>"\tLorem ipsum dolor sit amet, consectetur adipisicing \r\n  \t  \t  \telit, sed do eiusmod tempor incididunt ut labore et dolore magna \r\n  \t  \t  \taliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco\r\n  \t  \t  \tlaboris nisi ut aliquip ex ea commodo consequat. Duis aute irure \r\n  \t  \t  \tdolor in reprehenderit in voluptate velit esse cillum dolore eu \r\n  \t  \t  \tfugiat nulla pariatur. Excepteur sint occaecat cupidatat non \r\n  \t  \t  \tproident, sunt in culpa qui officia deserunt mollit anim id est \r\n  \t  \t  \tlaborum.\r\n  \t  \t  \t", "title"=>"Lorem Ipsum", "author_id"=>"2"}, "authenticity_token"=>"oKnMP5pOY8xDo2XDuptUnFKKTJv1BNJTKyPx1InOWoY=", "id"=>"1"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+  [4;35;1mArticle Update (1.0ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2011-02-21 00:04:23', "author_id" = '2', "update_count" = 1, "body" = '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/articles?page=1
+Completed in 17ms (DB: 1) | 302 Found [http://localhost/articles/1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-20 17:04:23) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 2) [0m
+  [4;36;1mAuthor Load (1.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Completed in 39ms (View: 31, DB: 3) | 200 OK [http://localhost/articles?page=1]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-20 17:04:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 1) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 2) [0m
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://localhost/articles/1]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-20 17:04:30) [GET]
+  [4;35;1mArticle Load (2.0ms)[0m   [0mSELECT * FROM "articles" LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 2) [0m
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Completed in 96ms (View: 43, DB: 3) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#destroy (for 127.0.0.1 at 2011-02-20 17:04:33) [DELETE]
+  Parameters: {"authenticity_token"=>"oKnMP5pOY8xDo2XDuptUnFKKTJv1BNJTKyPx1InOWoY=", "id"=>"10"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 10) [0m
+  [4;35;1mArticle Destroy (1.0ms)[0m   [0mDELETE FROM "articles" WHERE "id" = 10[0m
+Redirected to http://localhost:3000/articles
+Completed in 14ms (DB: 1) | 302 Found [http://localhost/articles/10]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-20 17:04:33) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mAuthor Load (1.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 2) [0m
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Completed in 53ms (View: 42, DB: 2) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-20 17:04:35) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" LIMIT 10 OFFSET 10[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Completed in 30ms (View: 20, DB: 1) | 200 OK [http://localhost/articles?page=2]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-20 17:04:37) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Completed in 27ms (View: 19, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-02-20 17:04:42) [POST]
+  Parameters: {"article"=>{"body"=>"sdfsfsdf", "title"=>"dsdfsfd", "author_id"=>"1"}, "authenticity_token"=>"oKnMP5pOY8xDo2XDuptUnFKKTJv1BNJTKyPx1InOWoY="}
+  [4;35;1mArticle Create (0.0ms)[0m   [0mINSERT INTO "articles" ("created_at", "title", "body", "updated_at", "update_count", "author_id", "edits") VALUES('2011-02-21 00:04:42', 'dsdfsfd', 'sdfsfsdf', '2011-02-21 00:04:42', 0, '1', 0)[0m
+Redirected to http://localhost:3000/articles/13
+Completed in 15ms (DB: 0) | 302 Found [http://localhost/articles]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-20 17:04:42) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 13) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;35;1mAuthor Load (1.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/articles/13]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-20 17:04:44) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 2) [0m
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Completed in 38ms (View: 31, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-20 17:04:46) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" LIMIT 10 OFFSET 10[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Completed in 24ms (View: 17, DB: 1) | 200 OK [http://localhost/articles?page=2]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-20 17:04:47) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 13) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Completed in 26ms (View: 19, DB: 1) | 200 OK [http://localhost/articles/13/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2011-02-20 17:04:50) [PUT]
+  Parameters: {"article"=>{"body"=>"sdfsfsdf", "title"=>"dsdfsfd", "author_id"=>"2"}, "authenticity_token"=>"oKnMP5pOY8xDo2XDuptUnFKKTJv1BNJTKyPx1InOWoY=", "id"=>"13"}
+  [4;35;1mArticle Load (0.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 13) [0m
+  [4;36;1mArticle Update (1.0ms)[0m   [0;1mUPDATE "articles" SET "updated_at" = '2011-02-21 00:04:50', "author_id" = '2', "update_count" = 1 WHERE "id" = 13[0m
+Redirected to http://localhost:3000/articles?page=2
+Completed in 14ms (DB: 1) | 302 Found [http://localhost/articles/13]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-20 17:04:50) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" LIMIT 10 OFFSET 10[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 2) [0m
+Completed in 34ms (View: 23, DB: 2) | 200 OK [http://localhost/articles?page=2]
+
+
+Processing ArticlesController#show (for 127.0.0.1 at 2011-02-20 17:04:53) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."id" = 13) [0m
+Rendering template within layouts/articles
+Rendering articles/show
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 2) [0m
+Completed in 26ms (View: 16, DB: 1) | 200 OK [http://localhost/articles/13]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-20 17:04:54) [GET]
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 2) [0m
+  [4;35;1mAuthor Load (1.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Completed in 52ms (View: 40, DB: 2) | 200 OK [http://localhost/articles]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-20 17:04:56) [GET]
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 18ms (View: 9, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#new (for 127.0.0.1 at 2011-02-20 17:05:02) [GET]
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 16ms (View: 9, DB: 0) | 200 OK [http://localhost/authors/new]
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2011-02-20 17:05:09) [POST]
+  Parameters: {"commit"=>"Create", "author"=>{"photo"=>#<File:C:/Users/Amanreet/AppData/Local/Temp/RackMultipart20110220-8252-28wl66-0>, "author_name"=>"sdfsdfsfsally"}, "authenticity_token"=>"oKnMP5pOY8xDo2XDuptUnFKKTJv1BNJTKyPx1InOWoY="}
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 30ms (View: 7, DB: 0) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2011-02-20 17:05:19) [POST]
+  Parameters: {"commit"=>"Create", "author"=>{"author_name"=>"asd"}, "authenticity_token"=>"oKnMP5pOY8xDo2XDuptUnFKKTJv1BNJTKyPx1InOWoY="}
+  [4;35;1mAuthor Create (1.0ms)[0m   [0mINSERT INTO "authors" ("created_at", "photo_file_size", "author_name", "updated_at", "photo_file_name", "photo_url", "photo_content_type", "photo_updated_at") VALUES('2011-02-21 00:05:19', NULL, 'asd', '2011-02-21 00:05:19', NULL, NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/authors/3
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/authors]
+
+
+Processing AuthorsController#show (for 127.0.0.1 at 2011-02-20 17:05:19) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mAuthor Load (1.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 3) [0m
+Rendering template within layouts/authors
+Rendering authors/show
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" WHERE ("articles"."author_id" = 3) [0m
+Completed in 18ms (View: 10, DB: 2) | 200 OK [http://localhost/authors/3]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-02-20 17:05:19) [GET]
+
+ActionController::RoutingError (No route matches "/photos/original/missing.png" with {:method=>:get}):
+  haml (3.0.25) rails/./lib/sass/plugin/rack.rb:41:in `call'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/RailsInstaller/Ruby1.8.7/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-20 17:05:21) [GET]
+  [4;36;1mAuthor Load (1.0ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 16ms (View: 8, DB: 1) | 200 OK [http://localhost/authors]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-20 17:05:22) [GET]
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 2) [0m
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Completed in 95ms (View: 86, DB: 1) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#edit (for 127.0.0.1 at 2011-02-20 17:05:24) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mArticle Load (0.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+Rendering template within layouts/articles
+Rendering articles/edit
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" [0m
+Completed in 27ms (View: 20, DB: 0) | 200 OK [http://localhost/articles/3/edit]
+
+
+Processing ArticlesController#update (for 127.0.0.1 at 2011-02-20 17:05:27) [PUT]
+  Parameters: {"article"=>{"body"=>"\tLorem ipsum dolor sit amet, consectetur adipisicing \r\n  \t  \t  \telit, sed do eiusmod tempor incididunt ut labore et dolore magna \r\n  \t  \t  \taliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco\r\n  \t  \t  \tlaboris nisi ut aliquip ex ea commodo consequat. Duis aute irure \r\n  \t  \t  \tdolor in reprehenderit in voluptate velit esse cillum dolore eu \r\n  \t  \t  \tfugiat nulla pariatur. Excepteur sint occaecat cupidatat non \r\n  \t  \t  \tproident, sunt in culpa qui officia deserunt mollit anim id est \r\n  \t  \t  \tlaborum.\r\n  \t  \t  \t", "title"=>"Lorem Ipsum", "author_id"=>"3"}, "authenticity_token"=>"oKnMP5pOY8xDo2XDuptUnFKKTJv1BNJTKyPx1InOWoY=", "id"=>"3"}
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" WHERE ("articles"."id" = 3) [0m
+  [4;35;1mArticle Update (1.0ms)[0m   [0mUPDATE "articles" SET "updated_at" = '2011-02-21 00:05:27', "author_id" = '3', "update_count" = 1, "body" = '	Lorem ipsum dolor sit amet, consectetur adipisicing 
+ 	 	 	elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+ 	 	 	aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+ 	 	 	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+ 	 	 	dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+ 	 	 	fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+ 	 	 	proident, sunt in culpa qui officia deserunt mollit anim id est 
+ 	 	 	laborum.
+ 	 	 	' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/articles
+Completed in 16ms (DB: 2) | 302 Found [http://localhost/articles/3]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-20 17:05:27) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mAuthor Load (1.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 2) [0m
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Completed in 54ms (View: 42, DB: 2) | 200 OK [http://localhost/articles]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-20 17:08:07) [GET]
+  [4;35;1mAuthor Load (1.0ms)[0m   [0mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://localhost/authors]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-20 17:08:09) [GET]
+  [4;36;1mArticle Load (1.0ms)[0m   [0;1mSELECT * FROM "articles" LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (44.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 2) [0m
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Completed in 99ms (View: 44, DB: 45) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#new (for 127.0.0.1 at 2011-02-20 17:08:10) [GET]
+Rendering template within layouts/articles
+Rendering articles/new
+  [4;35;1mAuthor Load (0.0ms)[0m   [0mSELECT * FROM "authors" [0m
+Completed in 21ms (View: 16, DB: 0) | 200 OK [http://localhost/articles/new]
+
+
+Processing ArticlesController#create (for 127.0.0.1 at 2011-02-20 17:08:12) [POST]
+  Parameters: {"article"=>{"body"=>"df", "title"=>"", "author_id"=>""}, "authenticity_token"=>"oKnMP5pOY8xDo2XDuptUnFKKTJv1BNJTKyPx1InOWoY="}
+Rendering template within layouts/articles
+Rendering articles/new
+  [4;36;1mAuthor Load (0.0ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Completed in 33ms (View: 24, DB: 0) | 200 OK [http://localhost/articles]
+
+
+Processing ArticlesController#index (for 127.0.0.1 at 2011-02-20 17:08:17) [GET]
+  [4;35;1mArticle Load (1.0ms)[0m   [0mSELECT * FROM "articles" LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "articles" [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "articles" [0m
+Rendering template within layouts/articles
+Rendering articles/index
+  [4;36;1mAuthor Load (1.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 2) [0m
+  [4;35;1mAuthor Load (1.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mAuthor Load (1.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "authors" WHERE ("authors"."id" = 1) [0m
+Completed in 40ms (View: 28, DB: 4) | 200 OK [http://localhost/articles]
+
+
+Processing AuthorsController#index (for 127.0.0.1 at 2011-02-20 17:08:19) [GET]
+  [4;36;1mAuthor Load (1.0ms)[0m   [0;1mSELECT * FROM "authors" [0m
+Rendering template within layouts/authors
+Rendering authors/index
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://localhost/authors]
+
+
+Processing AuthorsController#new (for 127.0.0.1 at 2011-02-20 17:08:20) [GET]
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 16ms (View: 9, DB: 0) | 200 OK [http://localhost/authors/new]
+
+
+Processing AuthorsController#create (for 127.0.0.1 at 2011-02-20 17:08:23) [POST]
+  Parameters: {"commit"=>"Create", "author"=>{"author_name"=>""}, "authenticity_token"=>"oKnMP5pOY8xDo2XDuptUnFKKTJv1BNJTKyPx1InOWoY="}
+Rendering template within layouts/authors
+Rendering authors/new
+Completed in 16ms (View: 8, DB: 0) | 200 OK [http://localhost/authors]
