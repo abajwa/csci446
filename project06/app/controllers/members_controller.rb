@@ -14,13 +14,13 @@ class MembersController < ApplicationController
   end
 
   def edit
-    @member = Member.find(params[:id])
+    @member = current_member
   end
 
   def update
-    @member = Member.find(params[:id])
+    @member = current_member
     if @member.update_attributes(params[:member])
-      flash[:notice] = "Successfully updated member."
+      flash[:notice] = "Successfully updated profile."
       redirect_to root_url
     else
       render :action => 'edit'
