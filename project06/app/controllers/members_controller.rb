@@ -6,7 +6,7 @@ class MembersController < ApplicationController
   def create
     @member = Member.new(params[:member])
     if @member.save
-      flash[:notice] = "Successfully created member."
+      flash[:notice] = "Registeration Successful."
       redirect_to root_url
     else
       render :action => 'new'
