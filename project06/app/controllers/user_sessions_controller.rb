@@ -1,11 +1,11 @@
-class MemberSessionsController < ApplicationController
+class UserSessionsController < ApplicationController
   def new
-    @member_session = MemberSession.new
+    @user_session = UserSession.new
   end
 
   def create
-    @member_session = MemberSession.new(params[:member_session])
-    if @member_session.save
+    @user_session = UserSession.new(params[:user_session])
+    if @user_session.save
       flash[:notice] = "Successfully logged in."
       redirect_to root_url
     else
@@ -14,8 +14,8 @@ class MemberSessionsController < ApplicationController
   end
 
   def destroy
-    @member_session = MemberSession.find
-    @member_session.destroy
+    @user_session = UserSession.find
+    @user_session.destroy
     flash[:notice] = "Successfully logged out."
     redirect_to root_url
   end

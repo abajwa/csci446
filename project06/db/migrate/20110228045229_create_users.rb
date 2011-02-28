@@ -1,6 +1,6 @@
-class CreateMembers < ActiveRecord::Migration
+class CreateUsers < ActiveRecord::Migration
   def self.up
-    create_table :members do |t|
+    create_table :users do |t|
       t.string :username
       t.string :crypted_password
       t.string :password_salt
@@ -13,6 +13,6 @@ class CreateMembers < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :members
+    drop_table :users
   end
 end
