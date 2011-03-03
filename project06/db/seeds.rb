@@ -7,22 +7,22 @@
 #   Major.create(:name => 'Daley', :city => cities.first)
 
 Role.delete_all
-Role.create(:name => 'admin');
-Role.create(:name => 'member');
+Role.create(:name => 'admin')
+Role.create(:name => 'member')
 
 User.delete_all
-User.create(:username => 'administrator', 
-						:crypted_password => 'password',
+User.find_or_create_by_username(:username => 'administrator', 
+						:password => 'password',
 						:password_confirmation => 'password',
 						:first_name => 'Admin',
 						:last_name => 'Person',
 						:email => 'admin@gmail.com',
-						:role_id => Role.find_by_name('admin').id);
+						:role_id => Role.find_by_name('admin').id).save!
 
-User.create(:username => 'member', 
-						:crypted_password => 'password',
+User.find_or_create_by_username(:username => 'member', 
+						:password => 'password',
 						:password_confirmation => 'password',
-						:first_name => 'Admin',
+						:first_name => 'Member',
 						:last_name => 'Person',
-						:email => 'admin@gmail.com',
-						:role_id => Role.find_by_name('member').id);
+						:email => 'member@gmail.com',
+						:role_id => Role.find_by_name('member').id).save!
