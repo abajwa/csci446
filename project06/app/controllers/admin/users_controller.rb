@@ -2,7 +2,7 @@ class Admin::UsersController < Admin::AdminController
 	
 	before_filter :find_user, :only => [:show, :edit, :update, :destroy]
 	
-	USERS_PER_PAGE = 20
+	USERS_PER_PAGE = 5
 	
 	def create
 		@user = User.new(params[:user])
@@ -34,7 +34,7 @@ class Admin::UsersController < Admin::AdminController
 	end
 	
 	def index
-		@users = User.paginate(:page => params[:page], :per_page => USERS_PER_PAGE)
+		@users = User.paginate(:order => 'last_name ASC',:page => params[:page], :per_page => USERS_PER_PAGE)
 		respond_to do |format|
 			format.html
 			format.xml { render :xml => @users }

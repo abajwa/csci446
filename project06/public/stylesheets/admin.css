@@ -1,0 +1,45 @@
+/* admin sass */
+#navBar {
+  font-weight: bold;
+  border: solid 2px black;
+  width: 500px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle; }
+  #navBar a {
+    padding-right: 50px;
+    color: black;
+    text-decoration: none; }
+    #navBar a:hover {
+      background-color: white;
+      color: black; }
+    #navBar a:visited {
+      color: black; }
+
+table {
+  border-collapse: collapse;
+  border-top: solid 1px black;
+  border-bottom: solid 1px white; }
+
+#borderBottom {
+  width: 562px;
+  border-bottom: solid 1px black; }
+
+#roles table {
+  width: 300px;
+  border-collapse: collapse;
+  border-top: solid 1px black;
+  border-bottom: solid 1px white; }
+#roles #borderBottom {
+  width: 180px;
+  border-bottom: solid 1px black; }
+
+#name {
+  width: 85px; }
+
+#user {
+  width: 90px; }
+
+#login {
+  width: 100px; }

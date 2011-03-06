@@ -12,8 +12,7 @@
 		=link_to "Login", login_path
 		=link_to "Register", new_guest_user_path
 				
-	#notice
-		%p= notice
+	= flash_div :error, :notice
 	= yield
 	
 

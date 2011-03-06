@@ -17,8 +17,7 @@
 %body
 
 
-	#notice
-		%p= notice
+	= flash_div :error, :notice
 	= yield
 	
 

@@ -3,7 +3,7 @@
 %head
 	%meta{'http-equiv' => 'content-type', :content => 'text/html;charset=UTF-8'}/
 	%title 
-	= stylesheet_link_tag 'application'
+	= stylesheet_link_tag 'application', 'admin'
 
 #header
 	%h1 Admin
@@ -17,8 +17,5 @@
 		, admin. 
 		=link_to "Logout", logout_path
 
-	#notice
-		%p= notice
+	= flash_div :error, :notice
 	= yield
-	
-

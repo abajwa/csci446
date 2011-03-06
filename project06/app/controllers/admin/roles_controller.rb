@@ -34,7 +34,7 @@ class Admin::RolesController < Admin::AdminController
 	end
 	
 	def index
-		@roles = Role.paginate(:page => params[:page], :per_page => ROLES_PER_PAGE)
+		@roles = Role.paginate(:order => 'name ASC',:page => params[:page], :per_page => ROLES_PER_PAGE)
 		respond_to do |format|
 			format.html
 			format.xml { render :xml => @roles }

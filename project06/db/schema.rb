@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110306063454) do
+ActiveRecord::Schema.define(:version => 20110306165937) do
 
   create_table "roles", :force => true do |t|
     t.datetime "created_at"
@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(:version => 20110306063454) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+    t.datetime "last_login_at"
+    t.datetime "current_login_at"
   end
 
 end

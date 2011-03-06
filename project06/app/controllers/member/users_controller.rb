@@ -1,9 +1,7 @@
 class Member::UsersController < Member::MemberController
 	
 	before_filter :find_user, :only => [:edit, :update]
-	
-	USERS_PER_PAGE = 20
-	
+		
 	def update
 		respond_to do |format|
 			if @user.update_attributes(params[:user])
