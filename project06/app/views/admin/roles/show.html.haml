@@ -1,0 +1,15 @@
+%h1 Role
+
+%p
+  %strong ID:
+  =h @role.id
+%p
+  %strong Name:
+  =h @role.name
+
+%p
+  = link_to "Edit", edit_admin_role_path(@role)
+  |
+  = link_to "Destroy", [:admin, @role], :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", admin_roles_path

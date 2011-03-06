@@ -5,18 +5,22 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :user_sessions, :only => [:new, :create, :destroy]
 
-  #map.resources :users
-  
   map.namespace :admin do |admin|
   	admin.resources :roles
   	admin.resources :users
   	admin.root :controller => 'admin', :action => 'index'
   end
-
-  # set up same idea as above for members##########################################
   
-  # map.resources :users
+  map.namespace :member do |member|
+  	member.resources :users
+  	member.root :controller => 'member', :action => 'index'
+  end
 
+  map.namespace :guest do |guest|
+  	guest.resources :users
+  	guest.root :controller => 'guest', :action => 'index'
+  end
+  
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

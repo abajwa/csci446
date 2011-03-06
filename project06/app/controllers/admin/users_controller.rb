@@ -6,6 +6,7 @@ class Admin::UsersController < Admin::AdminController
 	
 	def create
 		@user = User.new(params[:user])
+		
 		respond_to do |format|
 			if @user.save
 				flash[:notice] = 'User was successfully created.'
@@ -21,11 +22,11 @@ class Admin::UsersController < Admin::AdminController
 	def destroy
 		respond_to do |format|
 			if @user.destroy
-				flash[:notice] = 'User was successfully destroyed.'
+				flash[:notice] = 'User was successfully deleted.'
 				format.html { redirect_to admin_users_path }
 				format.xml { head :ok }
 			else
-				flash[:error] = 'User could not be destroyed.'
+				flash[:error] = 'User could not be deleted.'
 				format.html { redirect_to admin_user_url(@user)}
 				format.xml { head :unprocessable_entity }
 			end
@@ -42,6 +43,7 @@ class Admin::UsersController < Admin::AdminController
 	
 	def new
 		@user = User.new
+		
 		respond_to do |format|
 			format.html
 			format.xml { render :xml => @user }
@@ -57,7 +59,7 @@ class Admin::UsersController < Admin::AdminController
 	
 	def update
 		respond_to do |format|
-			if @user.update_attributes(params[:users])
+			if @user.update_attributes(params[:user])
 				flash[:notice] = 'User was successfully updated.'
 				format.html { redirect_to admin_user_url(@user)}
 				format.xml { head :ok }
@@ -66,6 +68,9 @@ class Admin::UsersController < Admin::AdminController
 				format.xml { render :xml => @user.errors, :status => :unprocessable_entity }
 			end
 		end
+	end
+	
+	def edit
 	end
 	
 	private 

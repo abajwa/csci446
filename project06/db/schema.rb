@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(:version => 20110303182501) do
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "role_id"
+    t.integer  "role_id",           :default => 46
   end
 
 end

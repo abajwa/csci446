@@ -6,6 +6,7 @@ class Admin::RolesController < Admin::AdminController
 	
 	def create
 		@role = Role.new(params[:role])
+		
 		respond_to do |format|
 			if @role.save
 				flash[:notice] = 'Role was successfully created.'
@@ -42,6 +43,7 @@ class Admin::RolesController < Admin::AdminController
 	
 	def new
 		@role = Role.new
+		
 		respond_to do |format|
 			format.html
 			format.xml { render :xml => @role }
@@ -57,15 +59,18 @@ class Admin::RolesController < Admin::AdminController
 	
 	def update
 		respond_to do |format|
-			if @role.update_attributes(params[:users])
+			if @role.update_attributes(params[:role])
 				flash[:notice] = 'Role was successfully updated.'
-				format.html { redirect_to admin_user_url(@role)}
+				format.html { redirect_to admin_role_url(@role)}
 				format.xml { head :ok }
 			else
 				format.html { render :action => "edit" }
 				format.xml { render :xml => @role.errors, :status => :unprocessable_entity }
 			end
 		end
+	end
+	
+	def edit
 	end
 	
 	private 

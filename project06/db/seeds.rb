@@ -9,6 +9,7 @@
 Role.delete_all
 Role.create(:name => 'admin')
 Role.create(:name => 'member')
+Role.create(:name => 'guest')
 
 User.delete_all
 User.find_or_create_by_username(:username => 'administrator', 
