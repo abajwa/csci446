@@ -4,6 +4,7 @@ class Admin::AdminController  < ApplicationController
 	
 	filter_access_to :all
 	
+	layout 'admin'
 	def index
 	end
 	

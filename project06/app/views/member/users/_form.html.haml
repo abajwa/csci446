@@ -1,9 +1,9 @@
-- form_for([:member, @user]) do |f|
+- form_for([:member, @user], :html => {:multipart => true}) do |f|
   = f.error_messages
   %p
     = f.label :username
     %br
-    = f.text_field :username
+    = f.text_field :username, :disabled => "yes" 
   %p
     = f.label :password
     %br
@@ -24,5 +24,9 @@
     = f.label :email
     %br
     = f.text_field :email
+    
+  %p
+    = f.label :photo
+    = f.file_field :photo
   %p
     = f.submit

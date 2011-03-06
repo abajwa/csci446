@@ -32,15 +32,21 @@ class ApplicationController < ActionController::Base
   def require_user
   	unless current_user
   		flash[:notice] = "You must log in if you want to access that."
-  		redirect_to login_url
-  		return false
-  	end
+			redirect_to login_url
+		end
+  	return false
   end
   
   def require_no_user
   	if current_user
-  		flash[:notice] = "You must be logged out to access #{request.path}."
-  		redirect_to root_url
+  		flash[:notice] = "You must be logged out to access that page."
+  		if current_user.role_id == Role.find_by_name('member').id
+  			redirect_to member_root_url
+  		elsif current_user.role_id == Role.find_by_name('admin').id
+  			redirect_to admin_root_url
+  		else
+  			redirect_to root_url
+  		end
   		return false
   	end
   end

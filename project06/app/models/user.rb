@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
   
   belongs_to :role
   
+  has_attached_file :photo
+  
   # Return an array of roles as symbols for decl_auth
   def role_symbols
     return [role.name.to_sym]
