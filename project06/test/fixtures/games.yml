@@ -1,0 +1,9 @@
+one:
+  title: MyString
+  rating: MyString
+  user_id: 1
+
+two:
+  title: MyString
+  rating: MyString
+  user_id: 1

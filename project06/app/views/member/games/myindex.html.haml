@@ -1,4 +1,4 @@
-%h2 Gamez
+%h2 RAWRGGG
 
 #pagination
   = will_paginate @games
@@ -13,6 +13,10 @@
     %tr{:class => cycle('odd','even')}
       %td= h = game.title
       %td= h game.rating
-      %td= h game.created_at.to_s(:shorttime)+" by me"
-        
+      %td
+        - if current_user.id == game.user_id
+          = h game.created_at.to_s(:shorttime)+" by me"
+        - else
+          =h game.created_at.to_s(:shorttime)+" by "+User.find(game.user_id).first_name+" "+User.find(game.user_id).last_name
+     
 %p= link_to "New Game", new_member_game_path

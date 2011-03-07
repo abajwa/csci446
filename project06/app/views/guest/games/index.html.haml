@@ -1,0 +1,16 @@
+#pagination
+  = will_paginate @users
+
+%br
+
+%table#headers
+  %tr.titles
+    %th#title Title
+    %th#rating Rating
+    %th#date Date Added
+  - for game in @games
+    %tr{:class => cycle('odd','even')}
+      %td= h game.title
+      %td= h get_rating(game.rating)
+      %td= h game.created_at.to_s(:shorttime)+" by "+User.find(game.user_id).first_name+" "+User.find(game.user_id).last_name
+

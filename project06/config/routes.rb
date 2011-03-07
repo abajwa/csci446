@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-	map.root :controller => "user_sessions", :action => "new"
+	map.root :controller => "guest/games", :action => "index"
   map.login "login", :controller => "user_sessions", :action => "new"
   map.logout "logout", :controller => "user_sessions", :action => "destroy"
 
@@ -8,16 +8,19 @@ ActionController::Routing::Routes.draw do |map|
   map.namespace :admin do |admin|
   	admin.resources :roles
   	admin.resources :users
-  	admin.root :controller => 'admin', :action => 'index'
+  	admin.resources :games
+  	admin.root :controller => 'games', :action => 'index'
   end
   
   map.namespace :member do |member|
   	member.resources :users
-  	member.root :controller => 'member', :action => 'index'
+  	member.resources :games
+  	member.root :controller => 'games', :action => 'index'
   end
 
   map.namespace :guest do |guest|
   	guest.resources :users
+  	guest.resources :games
   	guest.root :controller => 'guest', :action => 'index'
   end
   

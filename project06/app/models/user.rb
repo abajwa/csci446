@@ -1,10 +1,11 @@
 class User < ActiveRecord::Base
-  acts_as_authentic #do |c|
- #   c.merge_validates_length_of_password_field_options({:minimum => 6})
- # end
+  acts_as_authentic do |c|
+    c.merge_validates_length_of_password_field_options({:minimum => 6})
+  end
   
   validates_presence_of :first_name, :last_name, :email
   belongs_to :role
+  belongs_to :games
   
   has_attached_file :photo,
   	:styles => {

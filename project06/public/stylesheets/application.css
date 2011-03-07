@@ -72,3 +72,7 @@ td, th {
 #errorExplanation ul li {
   font-size: 12px;
   list-style: square; }
+
+#borderBottom {
+  width: 562px;
+  border-bottom: solid 1px black; }

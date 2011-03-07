@@ -1,0 +1,18 @@
+- form_for [:member, @game] do |f|
+  = f.error_messages
+  %p
+    = f.label :title
+    %br
+    = f.text_field :title
+  %p
+    = f.label :rating
+    %br
+    - @num=4
+    - until @num == 0
+      = f.radio_button :rating, @num
+      = f.label get_rating(@num)
+      %br
+      - @num -= 1
+
+  %p
+    = f.submit

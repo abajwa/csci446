@@ -29,4 +29,7 @@
     = f.label :photo
     = f.file_field :photo
   %p
+    Current Photo:
+    =image_tag @user.photo.url
+  %p
     = f.submit

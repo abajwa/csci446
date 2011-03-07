@@ -3,17 +3,18 @@
 %head
 	%meta{'http-equiv' => 'content-type', :content => 'text/html;charset=UTF-8'}/
 	%title 
-	= stylesheet_link_tag 'application'
+	= stylesheet_link_tag 'application', 'member'
 
 #user_nav
 	Logged in as
 	= link_to current_user.first_name+' '+current_user.last_name, edit_member_user_path(current_user.id)
 	, member. 
+	=link_to "My Games", member_members_path
 	=link_to "Logout", logout_path
 	
 	%br
 #header
-	%h1 Member
+	%h1=link_to "Gamez", member_games_path
 %body
 
 

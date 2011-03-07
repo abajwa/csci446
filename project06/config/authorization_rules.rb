@@ -8,6 +8,7 @@ authorization do
 		has_permission_on :user_sessions, :to => :loginout
 		has_permission_on :member_users, :to => :manage
 		has_permission_on :member_member, :to => :manage
+		has_permission_on :member_games, :to => :manage
 
 		# :member_members
 		# :member_gamez etc..
@@ -19,6 +20,7 @@ authorization do
 		has_permission_on :admin_users, :to => :manage
 		has_permission_on :admin_roles, :to => :manage
 		has_permission_on :user_sessions, :to => :loginout
+		has_permission_on :admin_games, :to => :manage
 		#has_permission_on :admin_users, :to => :manage
 		#has_permission_on :admin_roles, :to => :manage
 		# :admin_gamez etc...

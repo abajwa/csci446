@@ -1,4 +1,7 @@
 class Member::MemberController  < ApplicationController
+	
+
+	
 	before_filter :require_user
 	
 	filter_access_to :all
@@ -6,6 +9,7 @@ class Member::MemberController  < ApplicationController
 	layout 'member'
 	
 	def index
+		@games = (Game.find_all_with_user_id(current_user.id)).paginate(:page => params[:page], :per_page => 10)
 	end
 	
 	protected

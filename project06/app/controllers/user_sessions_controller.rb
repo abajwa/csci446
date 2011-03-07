@@ -14,7 +14,7 @@ class UserSessionsController < ApplicationController
     	flash[:notice] = "Welcome back, "+@user_session.user.first_name+" "+@user_session.user.last_name
     #flash_message :notice, "Welcome back, "+@user_session.user.first_name+" "+@user_session.user.last_name
      if @user_session.user.role_id == Role.find_by_name('admin').id
-      	redirect_to admin_root_url
+     	 redirect_to admin_root_url
       else
       	redirect_to member_root_url
       end

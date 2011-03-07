@@ -1,0 +1,20 @@
+%br
+#pagination
+  = will_paginate @games
+%br
+%table#headers
+  %tr.titles
+    %th Title
+    %th Rating
+    %th Date Added
+    
+  - for game in @games
+    %tr{:class => cycle('odd','even')}
+      %td=link_to game.title, edit_member_game_path(game)
+      %td= h get_rating(game.rating)
+      %td
+        - if current_user.id == game.user_id
+          = h game.created_at.to_s(:shorttime)+" by me"
+        - else
+          =h game.created_at.to_s(:shorttime)+" by "+User.find(game.user_id).first_name+" "+User.find(game.user_id).last_name
+     

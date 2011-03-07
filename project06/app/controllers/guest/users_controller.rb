@@ -14,7 +14,7 @@ class Guest::UsersController < Guest::GuestController
 		@user = User.new(params[:user])
 		
 		respond_to do |format|
-			if @user.save
+			if verify_recaptcha(:private_key => '6LfLM8ISAAAAAL5C3tbViBpvm6UWlKEnMEWgDpAO') && @user.save
 				flash[:notice] = 'Welcome '+@user.first_name+' '+@user.last_name
 				format.html { redirect_to member_root_url}
 				format.xml { render :xml => @user, :status => :created, :location => @user }
