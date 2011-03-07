@@ -7,12 +7,10 @@
 			%th Name
 			%th.button
 			%th.button
-			%th.button
 		- for role in @roles
 			%tr{:class => cycle('odd','even')}
 				%td= h role.id
 				%td= h role.name
-				%td.button= link_to 'Show', [:admin, role]
 				%td.button= link_to 'Edit', edit_admin_role_path(role)
 				%td.button= link_to 'Destroy', [:admin, role], :confirm => 'Are you sure?', :method => :delete
 	#borderBottom

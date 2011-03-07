@@ -9,9 +9,7 @@
 		%th#name Name
 		%th#user Username
 		%th#login Last Login
-		%th.button
-		%th.button
-		%th.button
+		%th#numG Number of Games
 		
 	- for user in @users
 		%tr{:class => cycle('odd','even')}
@@ -24,8 +22,7 @@
 					=h time_ago_in_words(user.current_login_at)+" ago"
 				- else
 					=h "Never"
-			%td.button= link_to 'Show', [:admin, user]
-			%td.button= link_to 'Edit', edit_admin_user_path(user)
-			%td.button= link_to 'Destroy', [:admin, user], :confirm => 'Are you sure?', :method => :delete
+			%td=Game.find_all_by_user_id(user.id).count
+		
 #borderBottom
 %p= link_to "New User", new_admin_user_path

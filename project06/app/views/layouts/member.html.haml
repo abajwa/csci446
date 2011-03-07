@@ -7,14 +7,21 @@
 
 #user_nav
 	Logged in as
-	= link_to current_user.first_name+' '+current_user.last_name, edit_member_user_path(current_user.id)
-	, member. 
-	=link_to "My Games", member_members_path
+	- if current_user.role_id == Role.find_by_name("admin").id
+		= link_to current_user.first_name+' '+current_user.last_name, edit_admin_user_path(current_user.id)
+	-else
+		= link_to current_user.first_name+' '+current_user.last_name, edit_member_user_path(current_user.id)
+	,
+	=Role.find_by_id(current_user.role_id).name
+	="."
+	- if current_user.role_id == Role.find_by_name("admin").id
+		=link_to "Admin", admin_root_url
+	=link_to "My Games", member_root_url
 	=link_to "Logout", logout_path
 	
 	%br
 #header
-	%h1=link_to "Gamez", member_games_path
+	%h1=link_to "Gamez", root_url
 %body
 
 

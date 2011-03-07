@@ -1,5 +1,11 @@
 %h2 Gamez
 
+%h2
+  =Game.count()
+  ="Total Games"
+
+%p= link_to "New Game", new_admin_game_path
+
 #pagination
   = will_paginate @games
 	
@@ -19,4 +25,4 @@
         - else
           =h game.created_at.to_s(:shorttime)+" by "+User.find(game.user_id).first_name+" "+User.find(game.user_id).last_name
      
-%p= link_to "New Game", new_admin_game_path
+#borderBottom

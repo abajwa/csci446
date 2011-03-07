@@ -7,9 +7,7 @@ class User < ActiveRecord::Base
   belongs_to :role
   belongs_to :games
   
-  has_attached_file :photo,
-  	:styles => {
-      :thumb => "100x100#"}
+  has_attached_file :photo
   
   # Return an array of roles as symbols for decl_auth
   def role_symbols

@@ -5,7 +5,7 @@ class Member::GamesController < Member::MemberController
 	GAMES_PER_PAGE = 10
 	
   def index
-    @games = Game.paginate(:order => 'created_at ASC',:page => params[:page], :per_page => GAMES_PER_PAGE)
+    @games = (Game.find_all_by_user_id(current_user.id)).paginate(:order => 'created_at ASC',:page => params[:page], :per_page => GAMES_PER_PAGE)
   end
 
 

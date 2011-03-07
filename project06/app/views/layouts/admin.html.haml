@@ -10,11 +10,12 @@
 	= link_to current_user.first_name+' '+current_user.last_name, edit_admin_user_path(current_user.id)
 	, admin. 
 	=link_to "Admin", admin_root_url
+	=link_to "My Games", member_root_url
 	=link_to "Logout", logout_path
 	
 #header
 	%h1
-		=link_to "Gamez", admin_games_path
+		=link_to "Gamez", root_url
 		=Admin
 %body
 	#navBar

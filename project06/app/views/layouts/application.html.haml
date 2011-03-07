@@ -6,7 +6,7 @@
 	= stylesheet_link_tag 'application'
 
 #header
-	%h1 Title
+
 %body
 	#user_nav
 		- if current_user
@@ -15,10 +15,9 @@
 			|
 			=link_to "Logout", logout_path
 		- else
-			=link_to "Register", new_guest_user_path
-			|
 			=link_to "Login", login_path
-			
+			|
+			=link_to "Register", new_guest_user_path			
 			
 	= flash_div :error, :notice
 		

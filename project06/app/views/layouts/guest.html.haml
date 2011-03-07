@@ -5,12 +5,30 @@
 	%title 
 	= stylesheet_link_tag 'application', 'guest'
 
+#user_nav
+	-if current_user
+		Logged in as
+		- if current_user.role_id == Role.find_by_name("admin").id
+			= link_to current_user.first_name+' '+current_user.last_name, edit_admin_user_path(current_user.id)
+		-else
+			= link_to current_user.first_name+' '+current_user.last_name, edit_member_user_path(current_user.id)
+		,
+		=Role.find_by_id(current_user.role_id).name
+		="."
+		- if current_user.role_id == Role.find_by_name("admin").id
+			=link_to "Admin", admin_root_url
+		=link_to "My Games", member_root_url
+		=link_to "Logout", logout_path
+		
+	-else
+		=link_to "Login", login_path
+		|
+		=link_to "Register", new_guest_user_path
+	
 #header
 	%h1=link_to "Gamez", guest_games_path
 %body
-	#user_nav
-		=link_to "Login", login_path
-		=link_to "Register", new_guest_user_path
+
 		
 			
 	= flash_div :error, :notice

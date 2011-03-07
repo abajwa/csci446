@@ -10,7 +10,7 @@ class Admin::RolesController < Admin::AdminController
 		respond_to do |format|
 			if @role.save
 				flash[:notice] = 'Role was successfully created.'
-				format.html { redirect_to admin_role_url(@role) }
+				format.html { redirect_to admin_roles_url }
 				format.xml { render :xml => @role, :status => :created, :location => @role }
 			else
 				format.html { render :action => "new" }
@@ -27,7 +27,7 @@ class Admin::RolesController < Admin::AdminController
 				format.xml { head :ok }
 			else
 				flash[:error] = 'Role could not be destroyed.'
-				format.html {redirect_to admin_role_url(@role)}
+				format.html {redirect_to admin_roles_url}
 				format.xml { head :unprocessable_entity }
 			end
 		end
@@ -61,7 +61,7 @@ class Admin::RolesController < Admin::AdminController
 		respond_to do |format|
 			if @role.update_attributes(params[:role])
 				flash[:notice] = 'Role was successfully updated.'
-				format.html { redirect_to admin_role_url(@role)}
+				format.html { redirect_to admin_roles_url}
 				format.xml { head :ok }
 			else
 				format.html { render :action => "edit" }
